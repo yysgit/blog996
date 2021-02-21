@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.yys.szcp.mapper.DbLogMapper" >
+
+
+  <!--查询所有的日志-->
+  <select id="findLogList" resultType="java.util.Map" parameterType="java.util.Map" >
+    select
+      admin_name AS adminName,
+      operation,
+      method,
+      params,
+      ip,
+      create_time AS createTime
+    from db_log
+    order by create_time
+  </select>
+  <select id="findLogListCount"  parameterType="java.util.Map" resultType="java.lang.Integer" >
+    select count(*)
+    from db_log
+    order by create_time
+  </select>
+
+  <!--添加一条日志-->
+  <insert id="addLog" parameterType="com.yys.szcp.entity.DbLog" >
+    insert into db_log (admin_name, operation, method, params, ip,create_time)
+    values (#{adminName}, #{operation}, #{method}, #{params}, #{ip}, #{createTime})
+  </insert>
+
+<!--定期删除日志-->
+  <delete id="delLogsByDate" parameterType="java.util.Date" >
+    delete from db_log
+    where create_time > #{date}
+  </delete>
+
+</mapper>

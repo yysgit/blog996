@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.yys.szcp.mapper.DbMenuMapper">
+
+
+    <!--添加菜单-->
+    <insert id="addMenu" parameterType="com.yys.szcp.entity.DbMenu">
+    insert into db_menu (  parent_id,title, icon, href, perms, spread, sorting,create_time,update_time)
+    values ( #{parentId},#{title}, #{icon}, #{href}, #{perms}, #{spread}, #{sorting},now(),now());
+  </insert>
+
+
+    <!--通过菜单父id获取子级菜单列表-->
+    <select id="findMenuByParentId" resultType="com.yys.szcp.entity.DbMenu" parameterType="java.lang.Integer">
+    select
+      id,
+      title,
+      icon,
+      href,
+      perms,
+      spread,
+      parent_id AS parentId,
+      sorting,
+      create_time AS createTime,
+      update_time AS updateTime
+    from db_menu
+    where parent_id=#{parentId} and delete_status=0
+    order by sorting
+  </select>
+
+
+    <!--通过菜单id 获取菜单-->
+    <select id="findMenuById" resultType="com.yys.szcp.entity.DbMenu" parameterType="java.lang.Integer">
+    select
+      id,
+      title,
+      icon,
+      href,
+      perms,
+      spread,
+      parent_id AS parentId,
+      sorting,
+      create_time AS createTime,
+      update_time AS updateTime
+    from db_menu
+    where id=#{menuId} and delete_status=0
+  </select>
+
+    <!--更新菜单-->
+    <update id="updateMenu" parameterType="com.yys.szcp.entity.DbMenu">
+        update db_menu
+        set update_time = now()
+            ,title = #{title}
+            ,icon = #{icon}
+            ,href = #{href}
+            ,perms = #{perms}
+            ,sorting = #{sorting}
+        <if test="deleteStatus!=null and deleteStatus!=0 ">
+            ,delete_status = #{deleteStatus}
+        </if>
+        where id = #{id}
+    </update>
+    <update id="deleteMenu" parameterType="com.yys.szcp.entity.DbMenu">
+        update db_menu
+        set update_time = now()
+        ,delete_status = #{deleteStatus}
+        where id = #{id}
+    </update>
+
+
+
+
+    <!--通过菜单名称 获取菜单-->
+    <select id="findMenuByName" resultType="com.yys.szcp.entity.DbMenu">
+        select
+        id,
+        title,
+        icon,
+        href,
+        perms,
+        spread,
+        parent_id AS parentId,
+        sorting,
+        create_time AS createTime,
+        update_time AS updateTime
+        from db_menu
+        <if test="menuId==null or menuId==0">
+            where title=#{title} and parent_id=#{parentId} and delete_status=0;
+        </if>
+        <if test="menuId!=null and menuId!=0">
+            where id!=#{menuId} and parent_id=#{parentId} and title=#{title} and delete_status=0;
+        </if>
+    </select>
+
+
+    <!--通过角色id 得到所有的菜单-->
+    <select id="findMenuByRoleId" resultType="com.yys.szcp.entity.DbMenu" parameterType="java.lang.Integer">
+    select
+      dbm.id,
+      dbm.title,
+      dbm.icon,
+      dbm.href,
+      dbm.perms,
+      dbm.spread,
+      dbm.parent_id AS parentId,
+      dbm.sorting,
+      dbm.create_time AS createTime,
+      dbm.update_time AS updateTime
+    from db_role_menu dbrm
+    left join db_menu dbm ON dbrm.menu_id = dbm.id
+    where dbrm.role_id = #{roleId}  and dbm.delete_status=0
+    order by dbm.sorting desc
+  </select>
+
+
+</mapper>

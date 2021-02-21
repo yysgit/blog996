@@ -1,0 +1,80 @@
+
+server:
+  servlet:
+    session:
+      timeout: 600 #session失效时间
+  tomcat:
+    uri-encoding: utf-8 #编码
+#控制资源文件
+spring:
+  profiles:
+    active: dev
+  thymeleaf: #去掉html校验
+    cache: false
+    mode: LEGACYHTML5
+  aop:
+    auto: true
+  mvc: #访问静态文件
+    static-path-pattern: /static/**
+  resources:
+    static-locations: classpath:/static/
+
+  datasource: ## 使用druid数据源   #druid 数据源专有配置
+    initialSize: 5
+    minIdle: 5
+    maxActive: 20
+    maxWait: 60000
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 300000
+    validationQuery: SELECT 1 FROM DUAL
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+    poolPreparedStatements: true
+    #配置监控统计拦截的filters，stat:监控统计、log4j：日志记录、wall：防御sql注入
+    #如果允许时报错  java.lang.ClassNotFoundException: org.apache.log4j.Priority
+    #则导入 log4j 依赖即可，Maven 地址： https://mvnrepository.com/artifact/log4j/log4j
+    filters: stat,wall
+    maxPoolPreparedStatementPerConnectionSize: 20
+    useGlobalDataSourceStat: true
+    connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=500
+
+#去除过多日志
+logging:
+  level:
+    org:
+      springframework:
+        boot:
+          autoconfigure: ERROR
+    thymeleaf: info
+
+    #打印sql
+    com:
+      yys:
+        szcp:
+          mapper: debug
+
+#mybatis 配置
+mybatis:
+  typeAliasesPackage: com.yys.szcp.entity
+  mapperLocations: classpath:mapper/*.xml
+
+
+
+#访问templates 下的文件夹的html
+template:
+  path: templates/
+
+
+# 发行者
+jwt:
+  name: yys
+# 自定义秘钥: 密钥, 经过Base64加密, 可自行替换
+  base64Secret: shouzuancepingyys!123
+#jwt中过期时间设置(分)
+  jwtExpires: 120
+
+#文件导出路径
+pathDir: /usr/project/fullstack/ExcelFile/
+
+

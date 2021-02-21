@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.yys.szcp.mapper.DbAdminUserMapper">
+
+
+    <!--添加管理员用户-->
+    <insert id="addAdminUser" parameterType="com.yys.szcp.entity.DbAdminUser">
+    insert into db_admin_user (admin_name,admin_password,admin_fullname,admin_phone,organ_id,role_id,create_time,update_time)
+    values (#{adminName}, #{adminPassword},#{adminFullname},#{adminPhone},#{organId},#{roleId},now(),now());
+  </insert>
+
+    <!--查询管理员用户列表-->
+    <select id="findAdminUserListByOrganId" resultType="java.util.Map" parameterType="java.util.Map">
+        select
+        dbau.id,
+        dbau.admin_name AS adminName,
+        dbau.admin_fullname AS adminFullname,
+        dbau.admin_phone AS adminPhone,
+        dbau.organ_id AS organId,
+        dbau.role_id AS roleId,
+        dbau.create_time AS createTime,
+        dbau.update_time AS updateTime,
+        dbon.organ_name AS organName,
+        dbon.level ,
+        dbr.role_name AS roleName
+        from db_admin_user dbau
+        left join db_role dbr on dbr.id=dbau.role_id
+        left join db_organ dbon on dbon.id=dbau.organ_id
+        where dbau.organ_id in
+
+        <foreach item="item" collection="ids" index="index" open="(" separator="," close=")">
+            #{item}
+        </foreach>
+
+        and dbau.delete_status=0
+        order by dbau.update_time DESC limit #{page} , #{limit};
+    </select>
+    <select id="findAdminUserListByOrganIdCount" parameterType="java.util.Map" resultType="java.lang.Integer">
+        select count(*)
+        from db_admin_user
+        where organ_id in
+
+        <foreach item="item" collection="ids" index="index" open="(" separator="," close=")">
+            #{item}
+        </foreach>
+
+        and delete_status=0
+    </select>
+
+
+    <!--更新管理员用户-->
+    <update id="editPasswordAdminUserInit" parameterType="com.yys.szcp.entity.DbAdminUser">
+        update db_admin_user
+        set update_time =now()
+            ,admin_password = #{adminPassword}
+        where id = #{id}
+    </update>
+
+
+    <!--通过id查询单个管理员用户详细信息-->
+    <select id="findAdminUserINFOById" resultType="java.util.Map" parameterType="java.util.Map">
+   select
+      dbau.id,
+      dbau.admin_name AS adminName,
+      dbau.admin_fullname AS adminFullname,
+      dbau.admin_phone AS adminPhone,
+      dbau.organ_id AS organId,
+      dbau.role_id AS roleId,
+      dbau.create_time AS createTime,
+      dbau.update_time AS updateTime,
+      dbon.organ_name AS organName,
+      dbon.level ,
+      dbr.role_name AS roleName
+    from db_admin_user dbau
+    left join db_role dbr on dbr.id=dbau.role_id
+    left join db_organ dbon on dbon.id=dbau.organ_id
+    where dbau.id=#{adminUserId}
+  </select>
+
+    <!--通过id查询单个管理员用户-->
+    <select id="findAdminUserById" resultType="com.yys.szcp.entity.DbAdminUser" parameterType="java.util.Map">
+    select
+      dbau.id,
+      dbau.admin_name AS adminName,
+      dbau.admin_fullname AS adminFullname,
+      dbau.admin_phone AS adminPhone,
+      dbau.organ_id AS organId,
+      dbon.level ,
+      dbau.role_id AS roleId,
+      dbau.create_time AS createTime,
+      dbau.update_time AS updateTime
+    from db_admin_user dbau
+     left join db_organ dbon on dbon.id=dbau.organ_id
+    where dbau.id=#{adminUserId}
+  </select>
+
+
+    <!-- 登陆-->
+    <select id="findAdminUserByUsernamePassword" resultType="com.yys.szcp.entity.DbAdminUser"
+            parameterType="java.util.Map">
+    select
+       dbau.id,
+       dbau.admin_name AS adminName,
+       dbau.admin_fullname AS adminFullname,
+       dbau.admin_phone AS adminPhone,
+       dbau.organ_id AS organId,
+       dbau.role_id AS roleId,
+       dbau.create_time AS createTime,
+       dbau.update_time AS updateTime
+    from db_admin_user dbau
+    where dbau.admin_name=#{adminName} and dbau.admin_password=#{adminPassword} and dbau.delete_status=0;
+  </select>
+
+
+    <!--更新管理员用户-->
+    <update id="updateAdminUser" parameterType="com.yys.szcp.entity.DbAdminUser">
+        update db_admin_user
+        set update_time =now()
+            ,admin_name = #{adminName}
+            ,admin_fullname = #{adminFullname}
+            ,admin_phone = #{adminPhone}
+            ,organ_id = #{organId}
+            ,role_id = #{roleId}
+        where id = #{id}
+    </update>
+
+
+    <!--更新管理员用户-->
+    <update id="deleteAdminUser" parameterType="com.yys.szcp.entity.DbAdminUser">
+        update db_admin_user
+        set update_time =now()
+            ,delete_status = #{deleteStatus}
+        where id = #{id}
+    </update>
+
+
+    <!--通过登陆名称查询单个管理员用户-->
+    <select id="findAdminUserByAdminName" resultType="com.yys.szcp.entity.DbAdminUser">
+        select
+        dbau.id,
+        dbau.admin_name AS adminName,
+        dbau.admin_fullname AS adminFullname,
+        dbau.admin_phone AS adminPhone,
+        dbau.organ_id AS organId,
+        dbau.role_id AS roleId,
+        dbon.level,
+        dbau.create_time AS createTime,
+        dbau.update_time AS updateTime
+        from db_admin_user dbau
+        left join Db_organ dbon on dbon.id=dbau.organ_id
+        <if test="adminUserId==null or adminUserId==0">
+            where dbau.admin_name=#{adminName};
+        </if>
+        <if test="adminUserId!=null and adminUserId!=0">
+            where dbau.id!=#{adminUserId} and dbau.admin_name=#{adminName};
+        </if>
+
+    </select>
+
+
+</mapper>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.yys.szcp.mapper.DbOrganMapper" >
+
+
+
+
+  <!--添加机构 -->
+  <insert id="addOrgan" parameterType="com.yys.szcp.entity.DbOrgan" >
+    insert into db_organ ( parent_id,organ_name,remake,sorting,create_time,update_time)
+    values (#{parentId}, #{organName}, #{remake}, #{sorting},now(),now());
+  </insert>
+
+
+  <!--通过机构父id获取子级机构列表-->
+  <select id="findOrganByParentId" resultType="com.yys.szcp.entity.DbOrgan" parameterType="java.lang.Integer" >
+    select
+      id,
+      organ_name AS organName,
+      parent_id AS parentId,
+      remake AS remake,
+      sorting,
+      level,
+      create_time AS createTime,
+      update_time AS updateTime
+    from db_organ
+    where parent_id=#{parentId} and delete_status=0
+    order by sorting
+  </select>
+
+
+  <!--通过机构id获取机构-->
+  <select id="findOrganById" resultType="com.yys.szcp.entity.DbOrgan" parameterType="java.lang.Integer" >
+    select
+      id,
+      organ_name AS organName,
+      parent_id AS parentId,
+      remake AS remake,
+      sorting,
+      level,
+      create_time AS createTime,
+      update_time AS updateTime
+    from db_organ
+    where id=#{organId} and delete_status=0
+  </select>
+
+  <select id="findOrganByAdminUserId" resultType="com.yys.szcp.entity.DbOrgan" parameterType="java.lang.Integer" >
+    select
+      id,
+      organ_name AS organName,
+      parent_id AS parentId,
+      remake AS remake,
+      sorting,
+      level,
+      create_time AS createTime,
+      update_time AS updateTime
+    from db_organ
+    where id=(select organ_id from db_admin_user where id=#{organId}) and delete_status=0
+  </select>
+
+
+
+
+  <!--更新机构-->
+  <update id="updateOrgan" parameterType="com.yys.szcp.entity.DbOrgan" >
+    update db_organ
+    set update_time = now()
+      ,organ_name = #{organName}
+      ,remake = #{remake}
+      ,sorting = #{sorting}
+    <if test="deleteStatus!=null and deleteStatus!='' ">
+      ,delete_status = #{deleteStatus}
+    </if>
+    where id = #{id}
+  </update>
+  <update id="deleteOrgan" parameterType="com.yys.szcp.entity.DbOrgan" >
+    update db_organ
+    set update_time = now()
+      ,delete_status = #{deleteStatus}
+    where id = #{id}
+  </update>
+
+
+
+  <!--通过角色名称 获取机构-->
+  <select id="findOrganByName" resultType="com.yys.szcp.entity.DbOrgan">
+    select
+    id,
+    organ_name AS organName,
+    parent_id AS parentId,
+    remake AS remake,
+    sorting,
+    level,
+    create_time AS createTime,
+    update_time AS updateTime
+    from db_organ
+    <if test="organId==null or organId==0">
+      where organ_name=#{organName} and parent_id=#{parentId} and delete_status=0;
+    </if>
+    <if test="organId!=null and organId!=0">
+      where id != #{organId} and organ_name=#{organName} and parent_id=#{parentId} and delete_status=0;
+    </if>
+  </select>
+
+
+</mapper>
