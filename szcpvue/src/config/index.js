@@ -17,12 +17,14 @@ export default {
    * @description api请求基础路径
    */
   baseUrl: {
-    //dev: 'http://47.107.227.121:7071',
-    // dev: 'http://localhost:7071',
+    // dev: 'http://47.107.227.121:7071',
+    // pro: 'http://47.107.227.121:7071'
+    dev: 'http://localhost:7071',
+    pro: 'http://localhost:7071',
 
-
-    dev: 'http://118.31.187.222:7071',
-    pro: 'http://118.31.187.222:7071'
+    //
+    // dev: 'https://api.blog996.com',
+    // pro: 'https://api.blog996.com'
   },
   /**
    * @description 默认打开的首页的路由name值，默认为home

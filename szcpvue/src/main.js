@@ -71,11 +71,11 @@ store.dispatch('getUserInfo').then((data) => {
     render: h => h(App)
   })
 
-  if(data==null){
-    router.push({
-      name:'sys/login'
-    })
-  }
+  // if(data==null){
+  //   router.push({
+  //     name:'sys/login'
+  //   })
+  // }
   /*else if(data.code==501){
     router.push({
       name:'login'

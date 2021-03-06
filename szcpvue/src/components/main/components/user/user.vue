@@ -100,7 +100,7 @@ export default {
       this.handleLogOut().then(() => {
         console.log("退出系统handleLogOut");
         this.$router.push({
-          name: 'login'
+          name: 'sys/login'
         })
       })
     },

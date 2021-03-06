@@ -48,36 +48,47 @@ router.beforeEach((to, from, next) => {
 
   //得到是否有Token,如果有, 表示登陆过了
   const token = getToken();
-  // console.log(to.name+":::"+token);
+  console.log(to.name+":::"+token);
 
   console.log("访问路径：", to.path);
 
-  if (to.path.indexOf("sys")==-1) {
+  console.log(store.state.user.authentionList);
+  
 
+  if (to.path.indexOf("sys")==-1) {
+console.log(1);
     next() // 正常跳转
   } else if (token && store.state.user.meunList.length == 0) {
+    console.log(2);
     setToken("");
     next({
       name: LOGIN_PAGE_NAME // 跳转到登录页
     })
   } else{
     if (!token && to.name !== LOGIN_PAGE_NAME) {
+      console.log(3);
       // 未登录且要跳转的页面不是登录页: 强制跳转到登陆页面
       next({
         name: LOGIN_PAGE_NAME // 跳转到登录页
       })
     } else if (!token && to.name === LOGIN_PAGE_NAME) {
+      console.log(4);
       // 未登陆且要跳转的页面是登录页: 跳转到登陆页面
       next() // 跳转
     } else if (token && to.name === LOGIN_PAGE_NAME) {
+      console.log(5);
       // 已登录且要跳转的页面是登录页 : 强制跳转到homeName 页面
       next({
         name: homeName // 跳转到homeName页
       })
     } else if (menuVerifAuthention(to.name, store.state.user.authentionList)) {
+      console.log(6);
       // 已登录且要跳转的页面不是登陆页面: 正常访问(添加权限控制)
       next() // 正常跳转
     }
+
+    console.log(7);
+
   }
 })
 

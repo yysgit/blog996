@@ -43,7 +43,7 @@ export default [
         children: [
           {
             path: '/md',
-            name: 'index',
+            name: 'md',
             meta: {
               title: 'java全栈知识点',
               hideInMenu: true
@@ -78,7 +78,7 @@ export default [
     children: [
       {
         path: '/sys/home',
-        name: 'home',
+        name: 'sys/home',
         meta: {
           hideInMenu: true,
           title: '首页',
