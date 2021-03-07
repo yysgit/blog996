@@ -53,6 +53,9 @@ public class MenuToRoleTreeUtil {
                 menuToRoleTree.setId(menu.getId().toString());
                 menuToRoleTree.setTitle(menu.getTitle());
                 menuToRoleTree.setChildren(getgetMenuToRoleTreeChildTWO(menu.getId(),menuList,menuListToChecked));
+                if(menuToRoleTree.getChildren()==null || menuToRoleTree.getChildren().size()==0 ){
+                    menuToRoleTree.setChecked(isChecked(menu.getId(),menuListToChecked));
+                }
                 menuToRoleTreeList.add(menuToRoleTree);
             }
         }

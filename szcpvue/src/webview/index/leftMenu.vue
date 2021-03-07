@@ -39,7 +39,7 @@
       </Menu>
     </div>
     <router-view />
-    <div style="text-align: center;">©2021 blog996.com 版权所有 ICP证: 豫ICP备2021005024号-1</div>
+    <div style="text-align: center;">©2021 blog996.com 版权所有  <a href="https://beian.miit.gov.cn">豫ICP备2021005024号-1</a></div>
   </div>
 </template>
 
