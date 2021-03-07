@@ -19,12 +19,12 @@ import { setToken, getToken } from '@/libs/util'
 
 export default {
   state: {
-    that:'',
+    that: '',
     username: '',
     userId: '',
-    userRoleId:'',
-    userOrganId:'',
-    userLevel:'',
+    userRoleId: '',
+    userOrganId: '',
+    userLevel: '',
     avatorImgPath: '',
     token: getToken(),
     access: '',
@@ -34,72 +34,77 @@ export default {
     messageReadedList: [],
     messageTrashList: [],
     messageContentStore: {},
-    meunList:[],
-    authentionList:[],
-    iconList:[],
-    adminUser:{}
-
+    meunList: [],
+    authentionList: [],
+    iconList: [],
+    adminUser: {},
+    menuIsShow: false
   },
   mutations: {
-    setThat(state,that){
+    setThat(state, that) {
       state.that = that
     },
-    setAvator (state, avatorPath) {
+    setAvator(state, avatorPath) {
       state.avatorImgPath = avatorPath
     },
-    setUserId (state, id) {
+    setUserId(state, id) {
       state.userId = id
     },
-    setUserRoleId (state, id) {
+    setUserRoleId(state, id) {
       state.userRoleId = id
     },
-    setUserOrganId (state, id) {
+    setUserOrganId(state, id) {
       state.userOrganId = id
     },
-    setUserLevel (state, level){
-      state.userLevel=level
+    setUserLevel(state, level) {
+      state.userLevel = level
     },
-    setUserName (state, name) {
+    setUserName(state, name) {
       state.username = name
     },
-    setAccess (state, access) {
+    setAccess(state, access) {
       state.access = access
     },
-    setToken (state, token) {
+    setToken(state, token) {
       state.token = token
       setToken(token)
     },
-    setHasGetInfo (state, status) {
+    setHasGetInfo(state, status) {
       state.hasGetInfo = status
     },
-    setMessageCount (state, count) {
+    setMessageCount(state, count) {
       state.unreadCount = count
     },
-    setMessageUnreadList (state, list) {
+    setMessageUnreadList(state, list) {
       state.messageUnreadList = list
     },
-    setMessageReadedList (state, list) {
+    setMessageReadedList(state, list) {
       state.messageReadedList = list
     },
-    setMessageTrashList (state, list) {
+    setMessageTrashList(state, list) {
       state.messageTrashList = list
     },
-    setMeunList (state, list) {
+    setMeunList(state, list) {
       state.meunList = list
     },
-    setAuthentionList (state, list) {
+    setAuthentionList(state, list) {
       state.authentionList = list
     },
-    setIconList(state,list){
+    setIconList(state, list) {
       state.iconList = list
     },
-    setAdminUser (state, user) {
+    setAdminUser(state, user) {
       state.adminUser = user
     },
-    updateMessageContentStore (state, { msg_id, content }) {
+    setMenuIsShow(state, menuIsShow) {
+      state.menuIsShow = menuIsShow
+    },
+
+
+    updateMessageContentStore(state, { msg_id, content }) {
       state.messageContentStore[msg_id] = content
     },
-    moveMsg (state, { from, to, msg_id }) {
+    moveMsg(state, { from, to, msg_id }) {
       const index = state[from].findIndex(_ => _.msg_id === msg_id)
       const msgItem = state[from].splice(index, 1)[0]
       msgItem.loading = false
@@ -113,8 +118,18 @@ export default {
   },
   actions: {
 
+
+    //设置参数是否显示
+    setMenuIsShow({ commit }, { menuIsShow }) {
+      return new Promise((resolve, reject) => {
+        commit('setMenuIsShow', menuIsShow);
+        resolve("success");
+      })
+    },
+
+
     //设置that
-    setThatVue({commit},{that}){
+    setThatVue({ commit }, { that }) {
       return new Promise((resolve, reject) => {
         commit('setThat', that);
         resolve("success");
@@ -122,10 +137,10 @@ export default {
     },
 
     // 登录
-    handleLogin ({ commit }, {username, password ,vcode}) {
+    handleLogin({ commit }, { username, password, vcode }) {
       username = username.trim()
       return new Promise((resolve, reject) => {
-       console.log(username,password);
+        console.log(username, password);
         login({
           username,
           password,
@@ -133,7 +148,7 @@ export default {
         }).then(res => {
 
           const data = res.data;
-          if(data.code==200){
+          if (data.code == 200) {
             commit('setToken', data.msg)
           }
           resolve(data)
@@ -144,7 +159,7 @@ export default {
     },
 
     // 退出登录
-    handleLogOut ({ state, commit }) {
+    handleLogOut({ state, commit }) {
       return new Promise((resolve, reject) => {
         /*logout(state.token).then(() => {
           commit('setToken', '')
@@ -160,17 +175,17 @@ export default {
       })
     },
     // 获取用户相关信息
-    getUserInfo ({ state, commit }) {
+    getUserInfo({ state, commit }) {
       return new Promise((resolve, reject) => {
         try {
           getUserInfo(state.token).then(res => {
             if (res.data == '') {
               resolve(null);
-            } else if(res.data.code!=200){
+            } else if (res.data.code != 200) {
               resolve(res.data);
-            }else {
+            } else {
               const data = res.data.data
-             // console.log(data);
+              // console.log(data);
               commit('setAvator', data.adminUser.adminFullname)
               commit('setUserName', data.adminUser.adminName)
               commit('setUserId', data.adminUser.id)
@@ -194,27 +209,10 @@ export default {
     },
 
     //提交表单
-    addAdminUser({ state, commit },{adminUser}){
-  return new Promise((resolve, reject) => {
-    try {
-      addAdminUser(state.token,adminUser).then(res => {
-
-        const data = res.data;
-        resolve(data)
-      }).catch(err => {
-        reject(err)
-      })
-    } catch (error) {
-      reject(error)
-    }
-  })
-},
-
-
-    editAdminUserById({ state, commit },{adminUser}){
+    addAdminUser({ state, commit }, { adminUser }) {
       return new Promise((resolve, reject) => {
         try {
-          editAdminUserById(state.token,adminUser).then(res => {
+          addAdminUser(state.token, adminUser).then(res => {
 
             const data = res.data;
             resolve(data)
@@ -228,42 +226,10 @@ export default {
     },
 
 
-    updatePasswordAdminUser({ state, commit },{adminUser}){
+    editAdminUserById({ state, commit }, { adminUser }) {
       return new Promise((resolve, reject) => {
         try {
-          updatePasswordAdminUser(state.token,adminUser).then(res => {
-
-            const data = res.data;
-            resolve(data)
-          }).catch(err => {
-            reject(err)
-          })
-        } catch (error) {
-          reject(error)
-        }
-      })
-    },
-
-    deleteAdminUserById({ state, commit },{adminUserId}){
-      return new Promise((resolve, reject) => {
-        try {
-          deleteAdminUserById(state.token,adminUserId).then(res => {
-
-            const data = res.data;
-            resolve(data)
-          }).catch(err => {
-            reject(err)
-          })
-        } catch (error) {
-          reject(error)
-        }
-      })
-    },
-
-    editPasswordAdminUserById({ state, commit },{adminUserId}){
-      return new Promise((resolve, reject) => {
-        try {
-          editPasswordAdminUserById(state.token,adminUserId).then(res => {
+          editAdminUserById(state.token, adminUser).then(res => {
 
             const data = res.data;
             resolve(data)
@@ -277,7 +243,56 @@ export default {
     },
 
 
-    getOrganUserTree({ state, commit }){
+    updatePasswordAdminUser({ state, commit }, { adminUser }) {
+      return new Promise((resolve, reject) => {
+        try {
+          updatePasswordAdminUser(state.token, adminUser).then(res => {
+
+            const data = res.data;
+            resolve(data)
+          }).catch(err => {
+            reject(err)
+          })
+        } catch (error) {
+          reject(error)
+        }
+      })
+    },
+
+    deleteAdminUserById({ state, commit }, { adminUserId }) {
+      return new Promise((resolve, reject) => {
+        try {
+          deleteAdminUserById(state.token, adminUserId).then(res => {
+
+            const data = res.data;
+            resolve(data)
+          }).catch(err => {
+            reject(err)
+          })
+        } catch (error) {
+          reject(error)
+        }
+      })
+    },
+
+    editPasswordAdminUserById({ state, commit }, { adminUserId }) {
+      return new Promise((resolve, reject) => {
+        try {
+          editPasswordAdminUserById(state.token, adminUserId).then(res => {
+
+            const data = res.data;
+            resolve(data)
+          }).catch(err => {
+            reject(err)
+          })
+        } catch (error) {
+          reject(error)
+        }
+      })
+    },
+
+
+    getOrganUserTree({ state, commit }) {
       return new Promise((resolve, reject) => {
         try {
           getOrganUserTree(state.token).then(res => {
@@ -293,7 +308,7 @@ export default {
       })
     },
 
-    getRoleAllList({ state, commit }){
+    getRoleAllList({ state, commit }) {
       return new Promise((resolve, reject) => {
         try {
           getRoleAllList(state.token).then(res => {
@@ -309,7 +324,7 @@ export default {
       })
     },
 
-    getHomeData({ state, commit }){
+    getHomeData({ state, commit }) {
       return new Promise((resolve, reject) => {
         try {
           getHomeData(state.token).then(res => {
@@ -325,10 +340,10 @@ export default {
       })
     },
     //用户管理页面
-    getAdminUserList({ state, commit },{searchPream}){
+    getAdminUserList({ state, commit }, { searchPream }) {
       return new Promise((resolve, reject) => {
         try {
-          getAdminUserList(state.token,searchPream).then(res => {
+          getAdminUserList(state.token, searchPream).then(res => {
             const data = res.data;
             resolve(data)
           }).catch(err => {

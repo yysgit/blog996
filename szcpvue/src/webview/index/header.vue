@@ -1,12 +1,8 @@
 <template>
-  <div>
-
+  <div :class="{sidebar_open:menuIsShow}">
     <div class="header">
       <div class="sidebar-button">
-        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon">
-          <path fill="currentColor"
-                d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path>
-        </svg>
+        <Icon type="md-menu" style=" font-size: 1.3rem; display: block;" @click="menuIsShowClick" />
       </div>
       <div style=" max-width: 200px;">
         <a href="/">
@@ -15,138 +11,174 @@
       </div>
       <div class="link" style="max-width: 1130px;">
         <div class="search-box">
-
           <Input search placeholder="Enter something..." />
         </div>
         <div class="menu">
+          <Dropdown>
+            <a href="javascript:void(0)">
+              hover 触发
+              <Icon type="md-arrow-dropdown" />
+            </a>
+            <DropdownMenu slot="list">
+              <DropdownItem>驴打滚</DropdownItem>
+              <DropdownItem>炸酱面</DropdownItem>
+              <DropdownItem>豆汁儿</DropdownItem>
+              <DropdownItem>冰糖葫芦</DropdownItem>
+              <DropdownItem>北京烤鸭</DropdownItem>
+            </DropdownMenu>
+          </Dropdown>
 
-            <Dropdown>
-              <a href="javascript:void(0)" >
-                hover 触发
-                <Icon type="md-arrow-dropdown" />
-              </a>
-              <DropdownMenu slot="list">
-                <DropdownItem>驴打滚</DropdownItem>
-                <DropdownItem>炸酱面</DropdownItem>
-                <DropdownItem>豆汁儿</DropdownItem>
-                <DropdownItem>冰糖葫芦</DropdownItem>
-                <DropdownItem>北京烤鸭</DropdownItem>
-              </DropdownMenu>
-            </Dropdown>
+          <Dropdown>
+            <a href="javascript:void(0)">
+              hover 触发
+              <Icon type="md-arrow-dropdown" />
+            </a>
+            <DropdownMenu slot="list">
+              <DropdownItem>驴打滚</DropdownItem>
+              <DropdownItem>炸酱面</DropdownItem>
+              <DropdownItem>豆汁儿</DropdownItem>
+              <DropdownItem>冰糖葫芦</DropdownItem>
+              <DropdownItem>北京烤鸭</DropdownItem>
+            </DropdownMenu>
+          </Dropdown>
 
-            <Dropdown>
-              <a href="javascript:void(0)" >
-                hover 触发
-                <Icon type="md-arrow-dropdown" />
-              </a>
-              <DropdownMenu slot="list">
-                <DropdownItem>驴打滚</DropdownItem>
-                <DropdownItem>炸酱面</DropdownItem>
-                <DropdownItem>豆汁儿</DropdownItem>
-                <DropdownItem>冰糖葫芦</DropdownItem>
-                <DropdownItem>北京烤鸭</DropdownItem>
-              </DropdownMenu>
-            </Dropdown>
-
-            <a href="/" style="margin-left:1.1rem;"> 关于</a>
-
-
+          <a href="/" style="margin-left:1.1rem;">关于</a>
         </div>
       </div>
-
-
     </div>
 
-    <router-view/>
+    <router-view />
   </div>
 </template>
 
 <script>
-  import {mapActions} from 'vuex'
+import { mapActions } from "vuex";
 
-  export default {
-    name: 'index_page',
-    data() {
-      return {
+export default {
+  name: "index_page",
+  data() {
+    return {
+      menuIsShow: false
+    };
+  },
+  created() {},
+  computed: {
+    isFollow() {
+      return this.$store.state.user.menuIsShow;
+    }
+  },
+  watch: {
+    isFollow(newVal, oldVal) {
+      //do something
+      this.menuIsShow = this.$store.state.user.menuIsShow;
+    }
+  },
+  mounted() {},
+  methods: {
+    ...mapActions(["setMenuIsShow"]),
 
-      }
-    },
-    created() {
-
-    },
-    mounted() {
-
-    },
-    methods: {
-      ...mapActions([]),
-
-
+    menuIsShowClick() {
+      this.menuIsShow = !this.$store.state.user.menuIsShow;
+      var menuIsShow = this.menuIsShow;
+      this.setMenuIsShow({ menuIsShow }).then(res => {});
     }
   }
+};
 </script>
 
 <style lang="less">
-  .header {
-    padding: .7rem 1.5rem;
-    line-height: 2.2rem;
-    background-color: #4c6069;
-    color: #fec41b;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 9999;
-    right: 0;
-    height: 3.6rem;
-    display: block;
-    box-sizing: border-box;
+.header {
+  padding: 0.7rem 1.5rem;
+  line-height: 2.2rem;
+  background-color: #4c6069;
+  color: #fec41b;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 20000;
+  right: 0;
+  height: 3.6rem;
+  display: block;
+  box-sizing: border-box;
 
-    .sidebar-button {
-      cursor: pointer;
-      display: none;
-      width: 1.25rem;
-      height: 1.25rem;
-      position: absolute;
-      padding: .6rem;
-      top: .6rem;
-      left: 1rem;
-    }
-
-    .site-name {
-      display: inline-block;
-      font-size: 1.3rem;
-      font-weight: 600;
-      color: #fec41b;
-      position: relative;
-    }
-
-    .link {
-      padding-left: 1.5rem;
-      box-sizing: border-box;
-      white-space: nowrap;
-      font-size: .9rem;
-      position: absolute;
-      right: 1.5rem;
-      top: .7rem;
-      display: flex;
-    }
-
-    .ivu-dropdown {
-      margin-left:1.1rem;
-    }
-
-    .menu{
-      margin-left:1.1rem;
-    }
-    .menu a{
-      color: hsla(0,0%,100%,.7);
-    }
-    .menu a:hover{
-      color: #fec41b;
-      border-bottom: 2px solid #fec41b;
-    }
-
-
+  .sidebar-button {
+    cursor: pointer;
+    display: none;
+    width: 1.25rem;
+    height: 1.25rem;
+    position: absolute;
+    padding: 0.6rem;
+    top: 0.6rem;
+    left: 1rem;
   }
 
+  .site-name {
+    display: inline-block;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #fec41b;
+    position: relative;
+  }
 
+  .link {
+    padding-left: 1.5rem;
+    box-sizing: border-box;
+    white-space: nowrap;
+    font-size: 0.9rem;
+    position: absolute;
+    right: 1.5rem;
+    top: 0.7rem;
+    display: flex;
+  }
+
+  .ivu-dropdown {
+    margin-left: 1.1rem;
+  }
+
+  .menu {
+    margin-left: 1.1rem;
+  }
+  .menu a {
+    color: hsla(0, 0%, 100%, 0.7);
+  }
+  .menu a:hover {
+    color: #fec41b;
+    border-bottom: 2px solid #fec41b;
+  }
+
+  @media (max-width: 719px) {
+    .menu {
+      display: none;
+    }
+    .header {
+      padding-left: 4rem;
+    }
+    .sidebar-button {
+      display: block;
+    }
+  }
+}
+
+@media (max-width: 719px) {
+  .header {
+    padding-left: 4rem;
+  }
+  .sidebar_open .left_menu {
+    transform: translateX(0);
+  }
+}
+
+@media (max-width: 959px) {
+  .search-box input {
+    cursor: pointer;
+    width: 0;
+    border-color: transparent;
+    position: relative;
+  }
+  .search-box input:focus {
+    cursor: text;
+    left: 0;
+    width: 10rem;
+  }
+}
 </style>

@@ -12,11 +12,12 @@ import sysmarkdown from './module/sysmarkdown'
 Vue.use(Vuex)
 
 export default new Vuex.Store({
+
   state: {
-    //
+  
   },
   mutations: {
-    //
+    
   },
   actions: {
     //
