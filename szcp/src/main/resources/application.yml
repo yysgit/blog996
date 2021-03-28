@@ -1,5 +1,7 @@
 
 server:
+  maxPostSize: -1
+  maxHttpHeaderSize: 1024000  # 10M
   servlet:
     session:
       timeout: 600 #session失效时间

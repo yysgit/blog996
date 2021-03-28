@@ -2,6 +2,7 @@ package com.yys.szcp.mapper;
 
 import com.yys.szcp.entity.DbAdminUser;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 import java.util.Map;
@@ -62,7 +63,7 @@ public interface DbAdminUserMapper {
      * @param username
      * @return
      */
-  List<DbAdminUser> findAdminUserByUsername(Integer adminUserId, String username);
+  List<DbAdminUser> findAdminUserByAdminName(@Param("adminUserId") Integer adminUserId,@Param("username") String username);
 
     /**
      * 初始化密码
@@ -72,24 +73,6 @@ public interface DbAdminUserMapper {
   int editPasswordAdminUserInit(DbAdminUser adminUser);
 
 
-    /**
-     * 增加新业务员金额
-     * @param map
-     * @return
-     */
-    int updateAdminUserForMoney(Map map);
 
-    /**
-     * 根据机构ID查询父类ID用户:如根据商户的机构ID 查询父类的商户利率
-     * @param map
-     * @return
-     */
-    List<DbAdminUser> findAdminUserByChildOrgan(Map map);
 
-    /**
-     * 通过机构Id查询最大子机构商户的管理用户
-     * @param map
-     * @return
-     */
-    List<DbAdminUser> findChildAdminUserByOrgan(Map map);
 }

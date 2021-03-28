@@ -65,9 +65,15 @@ public class JwtInterceptor implements HandlerInterceptor {
         String url = request.getServletPath();
         String myUrl = url.substring(1, url.length());
         logger.info("访问路径:" + url);
-        if (myUrl.contains("static/") || myUrl.contains("markdown/")) {
+        if (myUrl.contains("static/")) {
             return true;
         }
+        if (myUrl.contains("findArticleMenuToArticleListForHome")
+                || myUrl.contains("markdown")) {
+            return true;
+        }
+
+
 
 		if (myUrl.contains("swagger")) {
             System.out.println("---Joe---swagger");

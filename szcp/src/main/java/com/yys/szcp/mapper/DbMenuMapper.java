@@ -2,6 +2,7 @@ package com.yys.szcp.mapper;
 
 import com.yys.szcp.entity.DbMenu;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
@@ -35,7 +36,7 @@ public interface DbMenuMapper {
      * @param parentId
      * @return
      */
-    List<DbMenu> findMenuByName(Integer menuId, Integer parentId, String title);
+    List<DbMenu> findMenuByName(@Param("menuId") Integer menuId,@Param("parentId") Integer parentId, @Param("title") String title);
 
     /**
      * 更新菜单

@@ -38,7 +38,8 @@ export default {
     authentionList: [],
     iconList: [],
     adminUser: {},
-    menuIsShow: false
+    menuIsShow: false,
+    articleUrl: '',
   },
   mutations: {
     setThat(state, that) {
@@ -99,6 +100,10 @@ export default {
     setMenuIsShow(state, menuIsShow) {
       state.menuIsShow = menuIsShow
     },
+    setArticleUrl(state, articleUrl) {
+      state.articleUrl = articleUrl
+    },
+    
 
 
     updateMessageContentStore(state, { msg_id, content }) {
@@ -126,6 +131,14 @@ export default {
         resolve("success");
       })
     },
+
+//设置参数是否显示
+setArticleUrl({ commit }, { articleUrl }) {
+  return new Promise((resolve, reject) => {
+    commit('setArticleUrl', articleUrl);
+    resolve("success");
+  })
+},
 
 
     //设置that

@@ -64,23 +64,23 @@ class HttpRequest {
 
         console.log('res.data.code',  res.data.code);
 
-        if (res.data.code != 200) {
-
-          console.log('res.data.msg',  res.data.msg);
-
+        if (res.data.code == 501) {
+          console.log('res.data.msg', res.data.msg);
           that.$Modal.error({
             title: '信息',
             content: res.data.msg,
             onOk: () => {
               console.log("跳转到:" + that.$config.login);
-
-              store.commit('setToken','');
-
+              store.commit('setToken', '');
               that.$router.push({
                 name: that.$config['login']
               })
             }
           })
+        }
+        if (res.data.code == 500 || res.data.code == 502) {
+          console.log('res.data.msg', res.data.msg);
+          that.$Message.error(res.data.msg);
         }
       }
 

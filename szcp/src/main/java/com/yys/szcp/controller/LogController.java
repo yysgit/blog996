@@ -4,6 +4,8 @@ package com.yys.szcp.controller;
 import com.yys.szcp.constant.ExceptionConstant;
 import com.yys.szcp.service.DbLogService;
 import com.yys.szcp.utils.ResultUtil;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -16,8 +18,9 @@ import java.util.Map;
 @Controller
 @RequestMapping("sys/log")
 public class LogController {
-	
-	@Autowired
+    private static final Logger logger = LoggerFactory.getLogger(LogController.class);
+
+    @Autowired
 	private DbLogService logServiceImpl;
 
 	@RequestMapping("getLogList")

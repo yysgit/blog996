@@ -147,7 +147,7 @@
         dbau.create_time AS createTime,
         dbau.update_time AS updateTime
         from db_admin_user dbau
-        left join Db_organ dbon on dbon.id=dbau.organ_id
+        left join db_organ dbon on dbon.id=dbau.organ_id
         <if test="adminUserId==null or adminUserId==0">
             where dbau.admin_name=#{adminName};
         </if>

@@ -1,23 +1,11 @@
 <template>
-  <!--编辑-->
-  <!--<div>-->
-  <!--<mavon-editor-->
-  <!--v-model="content"-->
-  <!--ref="md"-->
-  <!--@change="change"-->
-  <!--style="min-height: 600px"-->
-  <!--/>-->
-
-  <!--<button @click="submit">提交</button>-->
-  <!--</div>-->
-
   <!--回显-->
   <div class="page" @click="setMenuIsShowClick">
     <article>
       <div style="padding:20px">
         <mavon-editor
           class="md"
-          :value="Blog"
+          :value="blogContent"
           :subfield="false"
           :defaultOpen="'preview'"
           :toolbarsFlag="false"
@@ -44,53 +32,55 @@ export default {
     return {
       content: "", // 输入的markdown
       html: "", // 及时转的html
-      Blog: "",
+      blogContent: "",
       currentPage: 1,
       fetchNum: 10,
       totalPage: 0,
       loading: false, //表格加载转圈
-      loadingModel: false //按钮加载转圈
+      loadingModel: false, //按钮加载转圈
+      articleUrl: ""
     };
   },
+  created() {
+    this.getArticleContent();
+    // this.findList();
+  },
+  computed: {
+    isFollow() {
+      return this.$store.state.user.articleUrl;
+    }
+  },
+  watch: {
+    isFollow(newVal, oldVal) {
+      console.log(newVal);
+      console.log(oldVal);
+      //do something
+      this.articleUrl = this.$store.state.user.articleUrl;
+      this.getArticleContent();
+    }
+  },
   methods: {
-    ...mapActions(["markdownTest", "findMarkdownList", "setMenuIsShow"]),
+    ...mapActions([
+      "markdownTest",
+      "findMarkdownList",
+      "setMenuIsShow",
+      "getMarkdownContent"
+    ]),
 
     setMenuIsShowClick() {
       var menuIsShow = false;
       this.setMenuIsShow({ menuIsShow }).then(res => {});
     },
 
-    // 所有操作都会被解析重新渲染
-    change(value, render) {
-      // render 为 markdown 解析后的结果[html]
-      this.html = render;
-    },
-    // 提交
-    submit() {
-      console.log(this.content);
-      console.log(this.html);
-    },
-    domarkdownTest() {
-      this.markdownTest().then(res => {
-        // console.log(res);
-        this.Blog = res.msg;
-      });
-    },
-    findList() {
-      this.loading = true;
-      let searchPream = {
-        page: this.currentPage,
-        limit: this.fetchNum
-      };
-      this.findMarkdownList({ searchPream }).then(res => {
-        console.log(res);
-        this.loading = true;
+    getArticleContent() {
+      this.articleUrl = this.$store.state.user.articleUrl;
+      console.log(this.articleUrl);
+      let url = this.articleUrl;
+
+      this.getMarkdownContent({ url }).then(res => {
+        this.blogContent = res.data;
       });
     }
-  },
-  created() {
-    this.domarkdownTest();
-    // this.findList();
   }
 };
 </script>

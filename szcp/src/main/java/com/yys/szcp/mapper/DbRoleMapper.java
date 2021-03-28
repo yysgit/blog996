@@ -2,6 +2,7 @@ package com.yys.szcp.mapper;
 
 import com.yys.szcp.entity.DbRole;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 import java.util.Map;
@@ -59,5 +60,5 @@ public interface DbRoleMapper {
      * @param roleName
      * @return
      */
-    List<DbRole> findRoleByName(Integer roleId, String roleName);
+    List<DbRole> findRoleByName(@Param("roleId")  Integer roleId,@Param("roleName") String roleName);
 }

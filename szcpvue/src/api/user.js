@@ -336,65 +336,6 @@ export const restoreTrash = msg_id => {
   })
 }
 
-export const markdownTest= (token) => {
-  return axios.request({
-    url: '/markdown/2020-10-14-1602681071986.md',
-    params: {
-      token
-    },
-    method: 'get'
-  })
-}
-export const getMarkdownList= (token,searchPream) => {
-  return axios.request({
-    url: '/sys/article/findMarkdownList',
-    params: {
-      token,
-      searchPream
-    },
-    method: 'get'
-  })
-}
 
-export const addMarkdown= (token,dbMarkdown,content) => {
-  return axios.request({
-    url: '/sys/article/addMarkdown',
-    params: {
-      token,
-      dbMarkdown,
-      content
-    },
-    method: 'post'
-  })
-}
-export const editMarkdown= (token,dbMarkdown,content) => {
-  return axios.request({
-    url: '/sys/article/editMarkdown',
-    params: {
-      token,
-      dbMarkdown,
-      content
-    },
-    method: 'put'
-  })
-}
-export const delMarkdown= (token,id) => {
-  return axios.request({
-    url: '/sys/article/delMarkdown',
-    params: {
-      token,
-      id
-    },
-    method: 'delete'
-  })
-}
-export const getMarkdownByid= (token,id) => {
-  return axios.request({
-    url: '/sys/article/getMarkdownByid',
-    params: {
-      token,
-      id
-    },
-    method: 'get'
-  })
-}
+
+

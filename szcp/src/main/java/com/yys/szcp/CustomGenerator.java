@@ -50,9 +50,9 @@ public class CustomGenerator {
         });*/
 
         dsc.setDriverName("com.mysql.cj.jdbc.Driver");
-        dsc.setUrl("jdbc:mysql://47.107.227.121:3306/szcp?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone = GMT");
+        dsc.setUrl("jdbc:mysql://118.31.187.222:3306/fullstackdevelopment?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone = GMT");
         dsc.setUsername("root");
-        dsc.setPassword("sxzt888888");
+        dsc.setPassword("123456");
         mpg.setDataSource(dsc);
 
         // 策略配置

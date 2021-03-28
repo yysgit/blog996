@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div style="min-width:1000px">
+    <div style="min-width:1000px" id="icon_my">
     <Card shadow>
 
       <Row type="flex" justify="center" align="top" class="code-row-bg" >
@@ -46,7 +46,7 @@
 </script>
 
 <style>
-  .ivu-col-span-3 {
+ #icon_my .ivu-col-span-3 {
     display: block;
     width: 12.5%;
     text-align: center;

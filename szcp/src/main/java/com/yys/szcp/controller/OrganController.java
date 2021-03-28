@@ -31,7 +31,7 @@ import java.util.Map;
 @RequestMapping("sys/organ/")
 public class OrganController {
 
-    private static final Logger logger = LoggerFactory.getLogger(RoleController.class);
+    private static final Logger logger = LoggerFactory.getLogger(OrganController.class);
 
     @Autowired
     private DbOrganService organService;

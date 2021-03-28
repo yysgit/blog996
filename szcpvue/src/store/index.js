@@ -8,6 +8,8 @@ import sysmenu from './module/sysmenu'
 import sysorgan from './module/sysorgan'
 import sysrole from './module/sysrole'
 import sysmarkdown from './module/sysmarkdown'
+import sysarticlemenu  from './module/sysarticlemenu'
+import sysarticle  from './module/sysarticle'
 
 Vue.use(Vuex)
 
@@ -29,6 +31,8 @@ export default new Vuex.Store({
     sysmenu,
     sysorgan,
     sysrole,
-    sysmarkdown
+    sysmarkdown,
+    sysarticlemenu,
+    sysarticle
   }
 })

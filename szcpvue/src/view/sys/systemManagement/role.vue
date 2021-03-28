@@ -122,7 +122,7 @@
             }
           },
           {title: '角色名', width: 200, key: 'roleName'},
-          {title: '备注', key: 'roleRemark'},
+          {title: '备注', key: 'remark'},
           {
             title: '操作',
             key: 'handle',

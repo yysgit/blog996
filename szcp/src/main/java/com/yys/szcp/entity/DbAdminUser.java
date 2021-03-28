@@ -29,6 +29,7 @@ public class DbAdminUser{
      * 所属父级
      */
 	private Integer parentId;
+
     /**
      * 管理员名称
      */

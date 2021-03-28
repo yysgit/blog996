@@ -55,6 +55,25 @@ input{
   color:#fec41b!important;
 }
 
+
+textarea::-webkit-input-placeholder{
+  color:#fec41b!important;
+}
+textarea:-moz-placeholder{
+  color:#fec41b!important;
+}
+textarea::-moz-placeholder{
+  color:#fec41b!important;
+}
+textarea:-ms-input-placeholder{
+  color:#fec41b!important;
+}
+textarea{
+  color:#fec41b!important;
+}
+
+
+
 #app {
   .size;
 }

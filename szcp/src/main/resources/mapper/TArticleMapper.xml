@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.yys.szcp.mapper.TArticleMapper">
+
+
+    <!--添加文章-->
+    <insert id="addArticle" parameterType="com.yys.szcp.entity.TArticle">
+        insert into t_article (article_menu_id, title, url, remark,sorting, create_user_id, update_user_id, create_time,
+                               update_time)
+        values (#{articleMenuId}, #{title}, #{url}, #{remark}, #{sorting},#{createUserId}, #{updateUserId}, now(),
+                now());
+    </insert>
+
+    <!--查询文章列表-->
+    <select id="findArticleListByArticleMenuId" resultType="java.util.Map" parameterType="java.util.Map">
+        select
+        ta.id,
+        ta.article_menu_id AS articleMenuId,
+        ta.title AS title,
+        ta.sorting AS sorting,
+        ta.url AS url,
+        ta.remark AS remark,
+        ta.create_time AS createTime,
+        ta.update_time AS updateTime
+        from t_article ta
+        where ta.article_menu_id =#{articleMenuId}
+        and ta.delete_status=0
+        order by ta.sorting DESC limit #{page} , #{limit};
+    </select>
+    <select id="findArticleListByArticleMenuIdCount" parameterType="java.util.Map" resultType="java.lang.Integer">
+        select count(*)
+        from t_article
+        where article_menu_id =#{articleMenuId}
+        and delete_status=0
+    </select>
+
+
+    <!--更新文章-->
+    <update id="updateArticle" parameterType="com.yys.szcp.entity.TArticle">
+        update t_article
+        set update_time =now()
+          , title       = #{title}
+          , url         = #{url}
+          , sorting         = #{sorting}
+          , remark      = #{remark}
+        where id = #{id}
+    </update>
+
+
+    <!--删除文章-->
+    <update id="deleteArticle" parameterType="com.yys.szcp.entity.TArticle">
+        update t_article
+        set update_time   =now()
+          , delete_status = #{deleteStatus}
+        where id = #{id}
+    </update>
+
+
+    <!--通过文章名称查询单个文章-->
+    <select id="findArticleByTitle" resultType="com.yys.szcp.entity.TArticle">
+        select
+        ta.id AS articleMenuId,
+        ta.article_menu_id AS articleMenuId,
+        ta.title AS title,
+        ta.url AS url,
+        ta.sorting AS sorting,
+        ta.remark AS remark,
+        ta.create_time AS createTime,
+        ta.update_time AS updateTime
+        from t_article ta
+        <if test="articleId==null or articleId==0">
+            where ta.title=#{title};
+        </if>
+        <if test="articleId!=null and articleId!=0">
+            where ta.id!=#{articleId} and ta.title=#{title};
+        </if>
+
+    </select>
+
+
+</mapper>

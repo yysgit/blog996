@@ -2,6 +2,7 @@ package com.yys.szcp.mapper;
 
 import com.yys.szcp.entity.DbOrgan;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
@@ -52,7 +53,7 @@ public interface DbOrganMapper {
      * @param organName
      * @return
      */
-    List<DbOrgan> findOrganByName(Integer organId, Integer parentId, String organName);
+    List<DbOrgan> findOrganByName(@Param("organId") Integer organId,@Param("parentId") Integer parentId, @Param("organName") String organName);
 
     /**
      * 通过人员ID查询机构信息

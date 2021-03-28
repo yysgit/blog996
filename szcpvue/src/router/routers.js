@@ -101,22 +101,22 @@ export default [
     component: Main,
     children: [
       {
-        path: 'sys/articlesCompile',
-        name: 'sys/articlesCompile',
+        path: 'sys/article',
+        name: 'sys/article',
         meta: {
           icon: 'md-arrow-dropdown-circle',
           title: '文章管理'
         },
-        component: () => import('@/view/sys/articlesManagerment/articlesCompile.vue')
+        component: () => import('@/view/sys/articlesManagerment/article.vue')
       },
       {
-        path: 'sys/articlesTree',
-        name: 'sys/articlesTree',
+        path: 'sys/articleMenu',
+        name: 'sys/articleMenu',
         meta: {
           icon: 'md-trending-up',
           title: '文章树管理'
         },
-        component: () => import('@/view/sys/articlesManagerment/articlesTree.vue')
+        component: () => import('@/view/sys/articlesManagerment/articleMenu.vue')
       },
 
     ]
@@ -178,15 +178,6 @@ export default [
         },
         component: () => import('@/view/sys/systemManagement/icon.vue')
       },
-      {
-        path: 'sys/markdown',
-        name: 'sys/markdown',
-        meta: {
-          icon: 'md-book',
-          title: '文章管理'
-        },
-        component: () => import('@/view/sys/systemManagement/markdown.vue')
-      }
     ]
   },
 ]
