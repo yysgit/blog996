@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.yys.szcp.mapper.TArticleMenuMapper">
+
+
+    <!--添加文章菜单-->
+    <insert id="addArticleMenu" parameterType="com.yys.szcp.entity.TArticleMenu">
+        insert into t_article_menu (parent_id, title, sorting, remark, create_user_id, update_user_id,
+                                    create_time, update_time)
+        values (#{parentId}, #{title}, #{sorting}, #{remark}, #{createUserId}, #{updateUserId}, now(),
+                now());
+    </insert>
+
+
+    <!--通过菜单id 获取菜单-->
+    <select id="findArticleMenuById" resultType="com.yys.szcp.entity.TArticleMenu" parameterType="java.lang.Integer">
+        select id,
+               title,
+               parent_id   AS parentId,
+               sorting,
+               remark,
+               create_time AS createTime,
+               update_time AS updateTime
+        from t_article_menu
+        where id = #{articleMenuId}
+          and delete_status = 0
+    </select>
+
+
+    <!--通过菜单父id获取子级文章菜单列表-->
+    <select id="findArticleMenuByParentId" resultType="com.yys.szcp.entity.TArticleMenu" parameterType="java.lang.Integer">
+        select id,
+               title,
+               parent_id   AS parentId,
+               sorting,
+               remark,
+               create_time AS createTime,
+               update_time AS updateTime
+        from t_article_menu
+        where parent_id = #{parentId}
+          and delete_status = 0
+        order by sorting
+    </select>
+
+    <!--查询所有文章菜单-->
+    <select id="findArticleMenuList" resultType="com.yys.szcp.entity.TArticleMenu">
+        select id,
+               title,
+               parent_id   AS parentId,
+               sorting,
+               remark,
+               create_time AS createTime,
+               update_time AS updateTime
+        from t_article_menu
+        where  delete_status = 0
+        order by sorting
+    </select>
+
+    <!--通过菜单名称 获取菜单-->
+    <select id="findArticleMenuByName" resultType="com.yys.szcp.entity.TArticleMenu">
+        select
+        id,
+        title,
+        parent_id AS parentId,
+        sorting,
+        remark,
+        create_time AS createTime,
+        update_time AS updateTime
+        from t_article_menu
+        <if test="articleMenuId==null or articleMenuId==0">
+            where title=#{title} and parent_id=#{parentId} and delete_status=0;
+        </if>
+        <if test="articleMenuId!=null and articleMenuId!=0">
+            where id!=#{articleMenuId} and parent_id=#{parentId} and title=#{title} and delete_status=0;
+        </if>
+    </select>
+
+    <!--更新菜单-->
+    <update id="updateArticleMenu" parameterType="com.yys.szcp.entity.TArticleMenu">
+        update t_article_menu
+        set update_time = now()
+        ,update_user_id = #{updateUserId}
+        ,title = #{title}
+        ,remark = #{remark}
+        ,sorting = #{sorting}
+        <if test="deleteStatus!=null and deleteStatus!=0 ">
+            ,delete_status = #{deleteStatus}
+        </if>
+        where id = #{id}
+    </update>
+<!--    删除文章菜单-->
+    <update id="deleteArticleMenu" parameterType="com.yys.szcp.entity.TArticleMenu">
+        update t_article_menu
+        set update_time    = now()
+          , update_user_id = #{updateUserId}
+          , delete_status  = #{deleteStatus}
+        where id = #{id}
+    </update>
+
+
+    <select id="findArticleByArticleMenuId" resultType="com.yys.szcp.entity.TArticle">
+        select
+            ta.id,
+            ta.article_menu_id AS articleMenuId,
+            ta.title AS title,
+            ta.sorting AS sorting,
+            ta.url AS url,
+            ta.remark AS remark,
+            ta.create_time AS createTime,
+            ta.update_time AS updateTime
+        from t_article ta
+        where ta.article_menu_id =#{articleMenuId}
+          and ta.delete_status=0
+        order by ta.sorting DESC ;
+    </select>
+
+
+</mapper>
