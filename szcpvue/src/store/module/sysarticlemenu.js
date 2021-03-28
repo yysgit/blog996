@@ -95,6 +95,7 @@ export default {
         }
       })
     },
+    
     getArticleMenuToArticleListForHome({ state, commit }) {
       return new Promise((resolve, reject) => {
         try {

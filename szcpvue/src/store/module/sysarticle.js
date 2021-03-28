@@ -65,6 +65,7 @@ export default {
         }
       })
     },
+    
     //文章菜单管理页面
     getArticleList({ state, commit },{searchPream}){
       return new Promise((resolve, reject) => {

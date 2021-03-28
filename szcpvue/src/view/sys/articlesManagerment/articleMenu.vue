@@ -267,6 +267,7 @@ export default {
         sorting: "",
         parentId: 0
       },
+      
       //表单验证
       ruleValidateArticleMenuEdit: {
         title: [

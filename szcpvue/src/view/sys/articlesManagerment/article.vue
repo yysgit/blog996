@@ -422,6 +422,7 @@ export default {
       this.modalArticleContentEdit = true;
     },
 
+
     editArticleContentButton() {
       console.log(this.formValidateArticleContentEdit.articleContent);
 
