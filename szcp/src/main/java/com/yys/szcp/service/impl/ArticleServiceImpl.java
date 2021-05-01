@@ -9,10 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
+import java.io.*;
 import java.util.List;
 import java.util.Map;
 
@@ -65,55 +62,49 @@ public class ArticleServiceImpl implements TArticleService {
     public String getMarkdown(String path) {
         path = path.replaceAll("-","/");
         FileInputStream fileInputStream = null;
+        BufferedReader bufferedReader =null;
         StringBuilder builder = new StringBuilder();
         if (path==null || "".equals(path)){
             return null;
         }
         try {
             fileInputStream = new FileInputStream(new File(markdownPath+path));
-            byte[] buf = new byte[1024]; //数据中转站 临时缓冲区
-            int length = 0;
-            //循环读取文件内容，输入流中将最多buf.length个字节的数据读入一个buf数组中,返回类型是读取到的字节数。
-            //当文件读取到结尾时返回 -1,循环结束。
-            while((length = fileInputStream.read(buf)) != -1){
-                builder.append(new String(buf, 0, length));
+            bufferedReader = new BufferedReader(new InputStreamReader(fileInputStream,"UTF-8"));
+            String s = null;
+            while((s = bufferedReader.readLine())!=null){
+                builder.append(System.lineSeparator()+s);
             }
-
         } catch (Exception e) {
-            //e.printStackTrace();
             logger.error("markdown读取失败:"+e);
         }finally {
             try {
-                fileInputStream.close();
+                bufferedReader.close();
             }catch (IOException e){
-                //e.printStackTrace();
                 logger.error("markdown读取失败:"+e);
             }
         }
         return builder.toString();
     }
     @Override
-    public void saveMarkdown(String content,String path){
-      /*  String localDate = LocalDate.now().toString();
-        String name = String.valueOf(System.currentTimeMillis());
-        String dirName = url.replaceAll("-","/");*/
+    public void saveMarkdown(String content,String path,Integer num){
         path = path.replaceAll("-","/");
-       /* File dir = new File(markdownPath+path);
-        if (!dir.exists()) {
-            dir.mkdirs();
-        }
-        String filePath = dirName+"/"+name+".md";*/
         File markdownFile = new File(markdownPath+path);
         FileOutputStream fos = null;
+        OutputStreamWriter oStreamWriter =null;
         try {
             byte[] bytes = content.getBytes();
-            fos = new FileOutputStream(markdownFile);
-            fos.write(bytes);
+            if(num==0){
+                fos = new FileOutputStream(markdownFile);
+            }else{
+                fos = new FileOutputStream(markdownFile,true);
+            }
+            oStreamWriter=new OutputStreamWriter(fos, "utf-8");
+            oStreamWriter.write(content);
         } catch (IOException e) {
             e.printStackTrace();
         }finally {
             try {
-                fos.close();
+                oStreamWriter.close();
             }catch (IOException e){
                 logger.error("markdown写入失败:"+e);
             }

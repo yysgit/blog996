@@ -1,18 +1,27 @@
 <template>
-  <div style=" margin-top: 3.6rem;">
+  <div style>
     <div class="left_menu">
-      <Menu active-name="1-2" :open-names="['1']" style="width: 100%;" @on-select="getMarkdownContent" >
-
-        <Submenu v-for="item in data1"  :name="item.id" :key="item.id">
-          <template slot="title">
-            {{item.title}}
-          </template>
-          <MenuItem v-for="itemChild in item.children"  :name="itemChild.url" :key="itemChild.id" >{{itemChild.title}}</MenuItem>
+      <Menu
+        active-name="1-2"
+        :open-names="['1']"
+        style="width: 100%;"
+        @on-select="getMarkdownContent"
+      >
+        <Submenu v-for="item in data1" :name="item.id" :key="item.id">
+          <template slot="title">{{item.title}}</template>
+          <MenuItem
+            v-for="itemChild in item.children"
+            :name="itemChild.url"
+            :key="itemChild.id"
+          >{{itemChild.title}}</MenuItem>
         </Submenu>
       </Menu>
     </div>
     <router-view />
-    <div style="text-align: center;">©2021 blog996.com 版权所有  <a href="https://beian.miit.gov.cn">豫ICP备2021005024号-1</a></div>
+    <div style="text-align: center;">
+      ©2021 blog996.com 版权所有
+      <a href="https://beian.miit.gov.cn">豫ICP备2021005024号-1</a>
+    </div>
   </div>
 </template>
 
@@ -23,7 +32,7 @@ export default {
   name: "index_page",
   data() {
     return {
-      data1:[],
+      data1: []
     };
   },
   created() {
@@ -32,22 +41,19 @@ export default {
   },
   mounted() {},
   methods: {
-    ...mapActions([
-      "getArticleMenuToArticleListForHome",
-      "setArticleUrl",
-    ]),
-    getArticleMenuList(){
-    this.getArticleMenuToArticleListForHome().then(res => {
+    ...mapActions(["getArticleMenuToArticleListForHome", "setArticleUrl"]),
+    getArticleMenuList() {
+      this.getArticleMenuToArticleListForHome().then(res => {
         this.data1 = res.data;
+        this.getMarkdownContent(this.data1[0].children[0].url);
         this.loadingTable = false;
       });
     },
 
-    getMarkdownContent(articleUrl){
-        console.log(articleUrl);
-         this.setArticleUrl({ articleUrl }).then(res => {});
-    },
-    
+    getMarkdownContent(articleUrl) {
+      console.log(articleUrl);
+      this.setArticleUrl({ articleUrl }).then(res => {});
+    }
   }
 };
 </script>
@@ -56,6 +62,7 @@ export default {
 .left_menu {
   font-size: 16px;
   background-color: #fff;
+
   width: 20rem;
   position: fixed;
   z-index: 10;
@@ -89,6 +96,7 @@ export default {
 @media (max-width: 959px) {
   .left_menu {
     font-size: 15px;
+    padding-top: 3.6rem;
     width: 16.4rem;
   }
 }

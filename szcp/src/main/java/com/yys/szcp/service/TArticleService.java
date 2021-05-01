@@ -66,5 +66,5 @@ public interface TArticleService {
      * @param path
      * @return
      */
-    void saveMarkdown(String articleContent,String path);
+    void saveMarkdown(String articleContent,String path,Integer num);
 }

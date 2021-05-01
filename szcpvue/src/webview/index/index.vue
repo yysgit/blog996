@@ -1,8 +1,8 @@
 <template>
   <!--回显-->
-  <div class="page" @click="setMenuIsShowClick">
+  <div class="page" @click="setMenuIsShowClick" style="   padding-top: 3.6rem;" id="article_top">
     <article>
-      <div style="padding:20px">
+      <div style="padding:20px;">
         <mavon-editor
           class="md"
           :value="blogContent"
@@ -38,11 +38,12 @@ export default {
       totalPage: 0,
       loading: false, //表格加载转圈
       loadingModel: false, //按钮加载转圈
-      articleUrl: ""
+      articleUrl: "",
+      editorShow: false
     };
   },
   created() {
-    this.getArticleContent();
+    // this.getArticleContent();
     // this.findList();
   },
   computed: {
@@ -51,6 +52,7 @@ export default {
     }
   },
   watch: {
+    //监听url变化
     isFollow(newVal, oldVal) {
       console.log(newVal);
       console.log(oldVal);
@@ -76,10 +78,16 @@ export default {
       this.articleUrl = this.$store.state.user.articleUrl;
       console.log(this.articleUrl);
       let url = this.articleUrl;
+      console.log(document.getElementById("article_top"));
+      if (document.getElementById("article_top") != null) {
+        document.getElementById("article_top").scrollIntoView();
+      }
 
       this.getMarkdownContent({ url }).then(res => {
         this.blogContent = res.data;
       });
+      var menuIsShow = false;
+      this.setMenuIsShow({ menuIsShow }).then(res => {});
     }
   }
 };

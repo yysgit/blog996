@@ -38,13 +38,13 @@
                   :label-width="80"
                 >
                   <FormItem label="标题" prop="title">
-                    <Input v-model="formValidateArticleAdd.title" placeholder="标题"></Input>
+                    <Input v-model="formValidateArticleAdd.title" placeholder="标题" />
                   </FormItem>
                   <FormItem label="排序" prop="sorting">
-                    <Input v-model="formValidateArticleAdd.sorting" placeholder="排序"></Input>
+                    <Input v-model="formValidateArticleAdd.sorting" placeholder="排序" />
                   </FormItem>
                   <FormItem label="备" prop="remark">
-                    <Input v-model="formValidateArticleAdd.remark" placeholder="备注"></Input>
+                    <Input v-model="formValidateArticleAdd.remark" placeholder="备注" />
                   </FormItem>
                 </Form>
                 <div slot="footer">
@@ -67,13 +67,13 @@
                   :label-width="80"
                 >
                   <FormItem label="标题" prop="title">
-                    <Input v-model="formValidateArticleEdit.title" placeholder="标题"></Input>
+                    <Input v-model="formValidateArticleEdit.title" placeholder="标题" />
                   </FormItem>
                   <FormItem label="排序" prop="sorting">
-                    <Input v-model="formValidateArticleEdit.sorting" placeholder="排序"></Input>
+                    <Input v-model="formValidateArticleEdit.sorting" placeholder="排序" />
                   </FormItem>
                   <FormItem label="备" prop="remark">
-                    <Input v-model="formValidateArticleEdit.remark" placeholder="备注"></Input>
+                    <Input v-model="formValidateArticleEdit.remark" placeholder="备注" />
                   </FormItem>
                 </Form>
                 <div slot="footer">
@@ -107,6 +107,8 @@
                       ref="md"
                       @change="articleChange"
                       style="min-height: 600px"
+                      @imgAdd="handleEditorImgAdd"
+                      @imgDel="handleEditorImgDel"
                     />
                   </div>
                 </Form>
@@ -133,7 +135,15 @@ import SplitPane from "_c/split-pane";
 import { mapActions } from "vuex";
 import { permsVerifAuthention } from "@/libs/util";
 import { mavonEditor } from "mavon-editor";
+import { setToken, getToken } from "@/libs/util";
 import "mavon-editor/dist/css/index.css";
+import config from "@/config";
+
+const baseUrl =
+  process.env.NODE_ENV === "development"
+    ? config.baseUrl.dev
+    : config.baseUrl.pro;
+
 export default {
   name: "split_pane_page",
   components: {
@@ -176,6 +186,9 @@ export default {
       totalPage: 0,
       articleMenuId: "",
 
+      //文章内容
+      token: getToken(),
+      imgFile: [],
       modalArticleContentEdit: false,
 
       formValidateArticleContentEdit: {
@@ -422,27 +435,122 @@ export default {
       this.modalArticleContentEdit = true;
     },
 
-
     editArticleContentButton() {
-      console.log(this.formValidateArticleContentEdit.articleContent);
+      console.log(this.formValidateArticleContentEdit.articleContent.length);
 
-      this.formValidateArticleContentEdit.articleContent= this.formValidateArticleContentEdit.articleContent.split("[").join("#1#").split("]").join("#2#");
-      let articleContent = this.formValidateArticleContentEdit;
+      this.formValidateArticleContentEdit.articleContent = this.formValidateArticleContentEdit.articleContent
+        .split("[")
+        .join("#1#")
+        .split("]")
+        .join("#2#");
+
+      console.log(this.formValidateArticleContentEdit.articleContent.length);
+      let articleContentALL = this.formValidateArticleContentEdit
+        .articleContent;
+      console.log(articleContentALL.length);
+
+      var contentList = [];
+      var n = 5000;
+      for (var i = 0, l = articleContentALL.length; i < l / n; i++) {
+        var a = articleContentALL.slice(n * i, n * (i + 1));
+        contentList.push(a);
+      }
+
+      console.log(contentList);
       this.loadingModel = true;
-      this.editArticleContent({ articleContent }).then(res => {
-        //console.log("请求:" + res);
-        this.loadingModel = false;
-        this.modalArticleContentEdit = false; //关闭弹窗
-        //情况表单数据
-        //表单
-        this.formValidateArticleContentEdit = {
-          articleContent: ""
-        };
-        //刷新页面
-        this.currentPage = 1;
-        this.queryList();
-      });
+      this.addContent(contentList, 0, this.formValidateArticleContentEdit.url);
       this.loadingModel = false;
+      this.modalArticleContentEdit = false; //关闭弹窗
+
+      // if (articleContentALL.length > 1000) {
+      //   var contentList = [];
+      //   var n = 1000;
+      //   for (var i = 0, l = articleContentALL.length; i < l / n; i++) {
+      //     var a = articleContentALL.slice(n * i, n * (i + 1));
+      //     contentList.push(a);
+      //   }
+
+      //   console.log(contentList);
+      //   this.loadingModel = true;
+      //   this.addContent(
+      //     contentList,
+      //     0,
+      //     this.formValidateArticleContentEdit.url
+      //   );
+      //   this.loadingModel = false;
+      //   this.modalArticleContentEdit = false; //关闭弹窗
+      // } else {
+      //   this.loadingModel = true;
+
+      //   let articleContent = {
+      //     articleContent: articleContentALL,
+      //     num: 0,
+      //     url: this.formValidateArticleContentEdit.url
+      //   };
+
+      //   this.editArticleContent({ articleContent }).then(res => {
+      //     //console.log("请求:" + res);
+      //     this.loadingModel = false;
+      //     this.modalArticleContentEdit = false; //关闭弹窗
+      //     //情况表单数据
+      //     //表单
+      //     this.formValidateArticleContentEdit = {
+      //       articleContent: "",
+      //       url: ""
+      //     };
+      //     //刷新页面
+      //     this.currentPage = 1;
+      //     this.queryList();
+      //   });
+      //   //console.log("请求:" + res);
+      //   this.loadingModel = false;
+      // }
+    },
+
+    addContent(contentList, i, url) {
+      console.log("第" + i + "次请求----");
+      var sss = window.setTimeout(() => {
+        let instance = this.$axios.create({
+          withCredentials: true,
+          headers: {
+            Authorization: this.token,
+            "Content-Type": "multipart/form-data"
+          }
+        });
+
+        let formdata = new FormData();
+        formdata.append(
+          "articleContent",
+          this.formValidateArticleContentEdit.articleContent
+        );
+        formdata.append("num", 0);
+        formdata.append("url", this.formValidateArticleContentEdit.url);
+
+        let articleContent = {
+          articleContent: this.formValidateArticleContentEdit.articleContent,
+          num: 0,
+          url: this.formValidateArticleContentEdit.url
+        };
+        instance
+          .post(baseUrl + "/sys/article/updateArticleContent", formdata)
+          .then(res => {
+            if (i < contentList.length - 1) {
+              //执行任务
+              this.addContent(contentList, i + 1, url);
+            }
+          });
+      }, 500);
+
+      // console.log("第" + i + "次请求----");
+      // var sss = window.setTimeout(() => {
+      //   this.editArticleContent({ articleContent }).then(res => {
+      //     if (i < contentList.length - 1) {
+      //       //执行任务
+      //       this.addContent(contentList, i + 1, url);
+      //     }
+      //   });
+      // }, 500);
+      // clearInterval(sss); //取消执行
     },
 
     //添加按钮点击
@@ -552,6 +660,51 @@ export default {
           this.$Message.error("验证错误!");
         }
       });
+    },
+
+    //添加图片
+    handleEditorImgAdd(pos, $file) {
+      let formdata = new FormData();
+      formdata.append("file", $file);
+      this.imgFile[pos] = $file;
+      let instance = this.$axios.create({
+        withCredentials: true,
+        headers: {
+          Authorization: this.token,
+          "Content-Type": "multipart/form-data"
+        }
+      });
+      instance.post(baseUrl + "/sys/image/uploadImage", formdata).then(res => {
+        if (res.data.code === 200) {
+          this.$Message.success("上传成功");
+          let url = baseUrl + res.data.msg;
+          let name = $file.name;
+          if (name.includes("-")) {
+            name = name.replace(/-/g, "");
+          }
+          let content = this.formValidateArticleContentEdit.articleContent;
+          // 第二步.将返回的url替换到文本原位置![...](0) -> ![...](url)  这里是必须要有的
+          if (content.includes(name)) {
+            let oStr = `(${pos})`;
+            let nStr = `(${url})`;
+            let index = content.indexOf(oStr);
+            let str = content.replace(oStr, "");
+            let insertStr = (soure, start, newStr) => {
+              return soure.slice(0, start) + newStr + soure.slice(start);
+            };
+            this.formValidateArticleContentEdit.articleContent = insertStr(
+              str,
+              index,
+              nStr
+            );
+          }
+        } else {
+          this.$Message.error(res.data.msg);
+        }
+      });
+    },
+    handleEditorImgDel(pos) {
+      delete this.imgFile[pos];
     }
   }
 };

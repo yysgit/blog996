@@ -79,5 +79,8 @@ jwt:
 #文件导出路径
 pathDir: /usr/project/fullstack/ExcelFile/
 
+#pathDirImg: /usr/project/fullstackdevelopment/markdownImage/
 #markdown-path: /usr/project/fullstackdevelopment/markdown/
+
+pathDirImg: H:\MyGitProject\blog_image\
 markdown-path: H:\MyGitProject\blog_md\

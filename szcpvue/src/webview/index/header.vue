@@ -13,7 +13,7 @@
         <div class="search-box">
           <Input search placeholder="Enter something..." />
         </div>
-        <div class="menu">
+        <!-- <div class="menu">
           <Dropdown>
             <a href="javascript:void(0)">
               hover 触发
@@ -43,7 +43,7 @@
           </Dropdown>
 
           <a href="/" style="margin-left:1.1rem;">关于</a>
-        </div>
+        </div> -->
       </div>
     </div>
 

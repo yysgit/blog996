@@ -14,6 +14,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
@@ -175,18 +176,22 @@ public class ArticleController {
      */
     @RequestMapping("/updateArticleContent")
     @ResponseBody
-    public ResultUtil updateArticleContent(HttpServletRequest request, String articleContent) {
+    public ResultUtil updateArticleContent(HttpServletRequest request,
+                                           @RequestParam(value = "articleContent", required = false) String articleContent,
+                                           @RequestParam(value = "num", required = false) String num,
+                                           @RequestParam(value = "url", required = false) String url
+    ) {
         try {
-            Map articleContentParam = (Map) JSONUtils.parse(articleContent);
-            String articleContentList= StringISNULLUtil.mapToString(articleContentParam.get("articleContent"));
+            String articleContentList= articleContent;
+            Integer number= StringISNULLUtil.mapToInteger(num);
             articleContentList= articleContentList.replaceAll("#1#","[");
             articleContentList= articleContentList.replaceAll("#2#","]");
-            articleService.saveMarkdown(articleContentList, StringISNULLUtil.mapToString(articleContentParam.get("url")));
+            articleService.saveMarkdown(articleContentList, url,number);
             return ResultUtil.success("更新成功!");
         } catch (Exception e) {
 
             logger.error("更新文章错误: " + e);
-            return ResultUtil.error("更新失败!");
+            return ResultUtil.error("更新失败!"+e);
         }
     }
 

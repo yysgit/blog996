@@ -19,15 +19,15 @@ export default {
   baseUrl: {
     // dev: 'http://47.107.227.121:7071',
     // pro: 'http://47.107.227.121:7071'
-    dev: 'http://localhost:7071',
-    pro: 'http://localhost:7071',
+    // dev: 'http://localhost:7071',
+    // pro: 'http://localhost:7071',
 
-    //
-    // dev: 'https://api.blog996.com',
-    // pro: 'https://api.blog996.com'
+
+    dev: 'https://api.blog996.com',
+    pro: 'https://api.blog996.com'
   },
   /**
-   * @description 默认打开的首页的路由name值，默认为home
+   * @description 默认打开的首页的路由name值，默认为hSome
    */
   homeName: 'sys/home',
   /**
