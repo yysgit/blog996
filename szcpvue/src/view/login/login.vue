@@ -5,10 +5,10 @@
 <template>
   <div class="login">
     <div class="login-con">
-      <Card icon="log-in" title="伞亮科技" :bordered="false">
+      <Card icon="log-in" title="全栈九九六" :bordered="false">
         <div class="form-con">
           <login-form @on-success-valid="handleSubmit"></login-form>
-          <p class="login-tip" style="color: green">伞亮科技有限公司</p>
+          <p class="login-tip" style="color: green">全栈九九六工作室</p>
         </div>
       </Card>
     </div>

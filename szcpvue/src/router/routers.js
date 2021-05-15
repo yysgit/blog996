@@ -121,6 +121,37 @@ export default [
 
     ]
   },
+  {
+    path: '',
+    name: '基金管理',
+    meta: {
+      hideInMenu: true,
+      icon: 'logo-buffer',
+      title: '基金管理'
+    },
+    component: Main,
+    children: [
+      {
+        path: 'sys/fundInfo',
+        name: 'sys/fundInfo',
+        meta: {
+          icon: 'md-arrow-dropdown-circle',
+          title: '我的基金'
+        },
+        component: () => import('@/view/sys/fundManagerment/fundInfo.vue')
+      },
+      {
+        path: 'sys/fundType',
+        name: 'sys/fundType',
+        meta: {
+          icon: 'md-trending-up',
+          title: '基金类型'
+        },
+        component: () => import('@/view/sys/fundManagerment/fundType.vue')
+      },
+
+    ]
+  },
 
 
   {

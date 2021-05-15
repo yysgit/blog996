@@ -9,6 +9,8 @@ import sysorgan from './module/sysorgan'
 import sysrole from './module/sysrole'
 import sysmarkdown from './module/sysmarkdown'
 import sysarticlemenu  from './module/sysarticlemenu'
+import sysfundtype  from './module/sysfundtype'
+import sysfundinfo  from './module/sysfundinfo'
 import sysarticle  from './module/sysarticle'
 
 Vue.use(Vuex)
@@ -33,6 +35,8 @@ export default new Vuex.Store({
     sysrole,
     sysmarkdown,
     sysarticlemenu,
+    sysfundtype,
+    sysfundinfo,
     sysarticle
   }
 })

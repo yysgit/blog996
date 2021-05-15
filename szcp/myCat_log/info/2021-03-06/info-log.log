@@ -1,0 +1,594 @@
+[INFO ] 11:03:58.094 [main] com.yys.szcp.SzcpApplication - Starting SzcpApplication on WINMICR-S3SJB84 with PID 12948 (H:\MyGitProject\blog996\szcp\target\classes started by Administrator in H:\MyGitProject\blog996\szcp)
+[INFO ] 11:03:58.098 [main] com.yys.szcp.SzcpApplication - The following profiles are active: dev
+[INFO ] 11:04:03.468 [main] o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+[INFO ] 11:04:03.500 [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+[INFO ] 11:04:03.644 [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 50ms. Found 0 Redis repository interfaces.
+[INFO ] 11:04:05.702 [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] 11:04:07.603 [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 7071 (http)
+[INFO ] 11:04:07.780 [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-7071"]
+[INFO ] 11:04:07.784 [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+[INFO ] 11:04:07.785 [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.30]
+[INFO ] 11:04:08.268 [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[INFO ] 11:04:08.269 [main] o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 9816 ms
+[INFO ] 11:04:08.464 [main] o.s.b.web.servlet.RegistrationBean - Servlet statViewServlet was not registered (possibly already registered?)
+[INFO ] 11:04:08.478 [main] o.s.b.web.servlet.RegistrationBean - Filter webStatFilter was not registered (possibly already registered?)
+[INFO ] 11:04:11.025 [main] c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+[INFO ] 11:04:14.951 [main] s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+[INFO ] 11:04:16.940 [main] o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+[INFO ] 11:04:18.286 [main] o.s.s.c.ThreadPoolTaskScheduler - Initializing ExecutorService 'taskScheduler'
+[INFO ] 11:04:18.538 [main] s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+[INFO ] 11:04:18.629 [main] s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+[INFO ] 11:04:18.849 [main] s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+[INFO ] 11:04:21.191 [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-7071"]
+[INFO ] 11:04:21.370 [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 7071 (http) with context path ''
+[INFO ] 11:04:21.382 [main] com.yys.szcp.SzcpApplication - Started SzcpApplication in 26.341 seconds (JVM running for 35.591)
+[INFO ] 12:18:05.467 [main] com.yys.szcp.SzcpApplication - Starting SzcpApplication on WINMICR-S3SJB84 with PID 5832 (H:\MyGitProject\blog996\szcp\target\classes started by Administrator in H:\MyGitProject\blog996\szcp)
+[INFO ] 12:18:05.467 [main] com.yys.szcp.SzcpApplication - The following profiles are active: dev
+[INFO ] 12:18:10.962 [main] o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+[INFO ] 12:18:10.993 [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+[INFO ] 12:18:11.367 [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 46ms. Found 0 Redis repository interfaces.
+[INFO ] 12:18:13.769 [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] 12:18:15.142 [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 7071 (http)
+[INFO ] 12:18:15.173 [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-7071"]
+[INFO ] 12:18:15.173 [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+[INFO ] 12:18:15.173 [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.30]
+[INFO ] 12:18:15.625 [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[INFO ] 12:18:15.625 [main] o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 9844 ms
+[INFO ] 12:18:15.783 [main] o.s.b.web.servlet.RegistrationBean - Servlet statViewServlet was not registered (possibly already registered?)
+[INFO ] 12:18:15.799 [main] o.s.b.web.servlet.RegistrationBean - Filter webStatFilter was not registered (possibly already registered?)
+[INFO ] 12:18:18.032 [main] c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+[INFO ] 12:18:21.457 [main] s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+[INFO ] 12:18:26.042 [main] o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+[INFO ] 12:18:28.918 [main] o.s.s.c.ThreadPoolTaskScheduler - Initializing ExecutorService 'taskScheduler'
+[INFO ] 12:18:29.582 [main] s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+[INFO ] 12:18:30.326 [main] s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+[INFO ] 12:18:30.655 [main] s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+[INFO ] 12:18:32.827 [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-7071"]
+[INFO ] 12:18:32.951 [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 7071 (http) with context path ''
+[INFO ] 12:18:32.967 [main] com.yys.szcp.SzcpApplication - Started SzcpApplication in 30.721 seconds (JVM running for 41.143)
+[INFO ] 12:21:19.382 [http-nio-7071-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO ] 12:21:19.389 [http-nio-7071-exec-1] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[INFO ] 12:21:19.440 [http-nio-7071-exec-1] o.s.web.servlet.DispatcherServlet - Completed initialization in 51 ms
+[INFO ] 12:21:19.616 [http-nio-7071-exec-1] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserInfo
+[INFO ] 12:21:19.627 [http-nio-7071-exec-1] c.yys.szcp.config.jwt.JwtInterceptor - ===== 用户未登录, 请先登录:/sys/admin/findAdminUserInfo
+[INFO ] 12:21:20.019 [http-nio-7071-exec-4] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserInfo
+[INFO ] 12:21:20.022 [http-nio-7071-exec-4] c.yys.szcp.config.jwt.JwtInterceptor - ===== token格式异常 =====
+[INFO ] 12:21:29.955 [http-nio-7071-exec-7] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserInfo
+[INFO ] 12:21:29.955 [http-nio-7071-exec-7] c.yys.szcp.config.jwt.JwtInterceptor - ===== token格式异常 =====
+[INFO ] 12:21:46.411 [http-nio-7071-exec-8] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserInfo
+[INFO ] 12:21:46.411 [http-nio-7071-exec-8] c.yys.szcp.config.jwt.JwtInterceptor - ===== token格式异常 =====
+[INFO ] 12:22:35.212 [http-nio-7071-exec-6] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserInfo
+[INFO ] 12:22:35.212 [http-nio-7071-exec-6] c.yys.szcp.config.jwt.JwtInterceptor - ===== token格式异常 =====
+[INFO ] 12:24:18.231 [http-nio-7071-exec-1] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserInfo
+[INFO ] 12:24:18.231 [http-nio-7071-exec-1] c.yys.szcp.config.jwt.JwtInterceptor - ===== token格式异常 =====
+[INFO ] 12:25:16.742 [http-nio-7071-exec-3] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserInfo
+[INFO ] 12:25:16.742 [http-nio-7071-exec-3] c.yys.szcp.config.jwt.JwtInterceptor - ===== token格式异常 =====
+[INFO ] 12:29:25.471 [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler - Shutting down ExecutorService 'taskScheduler'
+[INFO ] 12:29:25.471 [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+[INFO ] 12:29:25.567 [SpringContextShutdownHook] c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+[INFO ] 12:34:42.095 [main] com.yys.szcp.SzcpApplication - Starting SzcpApplication on WINMICR-S3SJB84 with PID 6372 (H:\MyGitProject\blog996\szcp\target\classes started by Administrator in H:\MyGitProject\blog996\szcp)
+[INFO ] 12:34:42.098 [main] com.yys.szcp.SzcpApplication - The following profiles are active: dev
+[INFO ] 12:34:45.497 [main] o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+[INFO ] 12:34:45.515 [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+[INFO ] 12:34:45.626 [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 47ms. Found 0 Redis repository interfaces.
+[INFO ] 12:34:47.321 [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] 12:34:49.854 [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 7071 (http)
+[INFO ] 12:34:49.928 [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-7071"]
+[INFO ] 12:34:49.931 [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+[INFO ] 12:34:49.944 [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.30]
+[INFO ] 12:34:50.529 [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[INFO ] 12:34:50.535 [main] o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 8200 ms
+[INFO ] 12:34:50.694 [main] o.s.b.web.servlet.RegistrationBean - Servlet statViewServlet was not registered (possibly already registered?)
+[INFO ] 12:34:50.707 [main] o.s.b.web.servlet.RegistrationBean - Filter webStatFilter was not registered (possibly already registered?)
+[INFO ] 12:34:52.726 [main] c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+[INFO ] 12:34:56.486 [main] s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+[INFO ] 12:34:58.556 [main] o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+[INFO ] 12:34:59.853 [main] o.s.s.c.ThreadPoolTaskScheduler - Initializing ExecutorService 'taskScheduler'
+[INFO ] 12:35:00.102 [main] s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+[INFO ] 12:35:00.178 [main] s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+[INFO ] 12:35:00.385 [main] s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+[INFO ] 12:35:03.345 [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-7071"]
+[INFO ] 12:35:03.494 [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 7071 (http) with context path ''
+[INFO ] 12:35:03.506 [main] com.yys.szcp.SzcpApplication - Started SzcpApplication in 23.295 seconds (JVM running for 27.595)
+[INFO ] 12:43:30.692 [http-nio-7071-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO ] 12:43:30.692 [http-nio-7071-exec-1] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[INFO ] 12:43:30.719 [http-nio-7071-exec-1] o.s.web.servlet.DispatcherServlet - Completed initialization in 27 ms
+[INFO ] 12:43:30.794 [http-nio-7071-exec-1] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserInfo
+[INFO ] 12:43:30.804 [http-nio-7071-exec-1] c.yys.szcp.config.jwt.JwtInterceptor - ===== token格式异常 =====
+[INFO ] 12:44:05.655 [http-nio-7071-exec-4] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserInfo
+[INFO ] 12:44:05.656 [http-nio-7071-exec-4] c.yys.szcp.config.jwt.JwtInterceptor - ===== token格式异常 =====
+[INFO ] 12:46:23.696 [http-nio-7071-exec-5] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserInfo
+[INFO ] 12:46:23.696 [http-nio-7071-exec-5] c.yys.szcp.config.jwt.JwtInterceptor - ===== token格式异常 =====
+[INFO ] 12:47:02.047 [http-nio-7071-exec-3] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserInfo
+[INFO ] 12:47:02.047 [http-nio-7071-exec-3] c.yys.szcp.config.jwt.JwtInterceptor - ===== token格式异常 =====
+[INFO ] 12:47:29.868 [http-nio-7071-exec-9] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserInfo
+[INFO ] 12:47:29.869 [http-nio-7071-exec-9] c.yys.szcp.config.jwt.JwtInterceptor - ===== token格式异常 =====
+[INFO ] 12:48:34.456 [http-nio-7071-exec-6] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserInfo
+[INFO ] 12:48:34.457 [http-nio-7071-exec-6] c.yys.szcp.config.jwt.JwtInterceptor - ===== token格式异常 =====
+[INFO ] 12:49:27.257 [http-nio-7071-exec-2] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserInfo
+[INFO ] 12:49:27.257 [http-nio-7071-exec-2] c.yys.szcp.config.jwt.JwtInterceptor - ===== token格式异常 =====
+[INFO ] 12:49:34.114 [http-nio-7071-exec-7] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserInfo
+[INFO ] 12:49:34.114 [http-nio-7071-exec-7] c.yys.szcp.config.jwt.JwtInterceptor - ===== token格式异常 =====
+[INFO ] 12:49:35.161 [http-nio-7071-exec-1] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/markdown/2020-10-14-1602681071986.md
+[INFO ] 12:49:35.191 [http-nio-7071-exec-4] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/markdown/2020-10-14-1602681071986.md
+[INFO ] 12:49:53.878 [http-nio-7071-exec-8] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserInfo
+[INFO ] 12:49:53.878 [http-nio-7071-exec-8] c.yys.szcp.config.jwt.JwtInterceptor - ===== token格式异常 =====
+[INFO ] 12:49:55.029 [http-nio-7071-exec-5] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/markdown/2020-10-14-1602681071986.md
+[INFO ] 12:49:58.785 [http-nio-7071-exec-3] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserInfo
+[INFO ] 12:49:58.785 [http-nio-7071-exec-3] c.yys.szcp.config.jwt.JwtInterceptor - ===== token格式异常 =====
+[INFO ] 12:49:59.891 [http-nio-7071-exec-9] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/markdown/2020-10-14-1602681071986.md
+[INFO ] 12:50:09.083 [http-nio-7071-exec-10] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserInfo
+[INFO ] 12:50:09.083 [http-nio-7071-exec-10] c.yys.szcp.config.jwt.JwtInterceptor - ===== token格式异常 =====
+[INFO ] 12:50:10.324 [http-nio-7071-exec-6] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/markdown/2020-10-14-1602681071986.md
+[INFO ] 12:50:49.028 [http-nio-7071-exec-2] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserInfo
+[INFO ] 12:50:49.029 [http-nio-7071-exec-2] c.yys.szcp.config.jwt.JwtInterceptor - ===== token格式异常 =====
+[INFO ] 12:50:50.378 [http-nio-7071-exec-7] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/markdown/2020-10-14-1602681071986.md
+[INFO ] 12:51:29.903 [http-nio-7071-exec-1] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserInfo
+[INFO ] 12:51:29.904 [http-nio-7071-exec-1] c.yys.szcp.config.jwt.JwtInterceptor - ===== token格式异常 =====
+[INFO ] 12:51:32.095 [http-nio-7071-exec-4] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserInfo
+[INFO ] 12:51:32.096 [http-nio-7071-exec-4] c.yys.szcp.config.jwt.JwtInterceptor - ===== token格式异常 =====
+[INFO ] 12:51:33.575 [http-nio-7071-exec-8] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/markdown/2020-10-14-1602681071986.md
+[INFO ] 12:51:39.837 [http-nio-7071-exec-5] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserInfo
+[INFO ] 12:51:39.837 [http-nio-7071-exec-5] c.yys.szcp.config.jwt.JwtInterceptor - ===== token格式异常 =====
+[INFO ] 12:52:08.386 [http-nio-7071-exec-3] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserInfo
+[INFO ] 12:52:08.387 [http-nio-7071-exec-3] c.yys.szcp.config.jwt.JwtInterceptor - ===== token格式异常 =====
+[INFO ] 12:52:09.448 [http-nio-7071-exec-9] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/markdown/2020-10-14-1602681071986.md
+[INFO ] 12:52:21.412 [http-nio-7071-exec-10] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserInfo
+[INFO ] 12:52:21.414 [http-nio-7071-exec-10] c.yys.szcp.config.jwt.JwtInterceptor - ===== token格式异常 =====
+[INFO ] 12:52:24.357 [http-nio-7071-exec-6] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/login
+[INFO ] 12:52:24.357 [http-nio-7071-exec-6] c.yys.szcp.config.jwt.JwtInterceptor - ===== 用户未登录, 请先登录:/sys/admin/login
+[INFO ] 12:52:24.373 [http-nio-7071-exec-2] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/login
+[INFO ] 12:52:24.395 [http-nio-7071-exec-2] c.y.szcp.controller.AdminController - 输出info级别的日志.....
+[INFO ] 12:52:26.503 [http-nio-7071-exec-7] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserInfo
+[INFO ] 12:52:26.504 [http-nio-7071-exec-7] c.yys.szcp.config.jwt.JwtInterceptor - ===== 用户未登录, 请先登录:/sys/admin/findAdminUserInfo
+[INFO ] 12:52:26.512 [http-nio-7071-exec-1] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserInfo
+[INFO ] 12:52:49.858 [http-nio-7071-exec-4] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserInfo
+[INFO ] 12:53:13.824 [http-nio-7071-exec-8] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/markdown/2020-10-14-1602681071986.md
+[INFO ] 12:53:13.856 [http-nio-7071-exec-5] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/markdown/2020-10-14-1602681071986.md
+[INFO ] 12:53:21.811 [http-nio-7071-exec-3] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserInfo
+[INFO ] 12:55:41.121 [http-nio-7071-exec-6] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserInfo
+[INFO ] 12:55:41.122 [http-nio-7071-exec-6] c.yys.szcp.config.jwt.JwtInterceptor - ===== token格式异常 =====
+[INFO ] 12:55:42.282 [http-nio-7071-exec-2] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/markdown/2020-10-14-1602681071986.md
+[INFO ] 12:55:52.272 [http-nio-7071-exec-7] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserInfo
+[INFO ] 12:55:52.273 [http-nio-7071-exec-7] c.yys.szcp.config.jwt.JwtInterceptor - ===== token格式异常 =====
+[INFO ] 12:55:53.660 [http-nio-7071-exec-1] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/markdown/2020-10-14-1602681071986.md
+[INFO ] 12:56:09.970 [http-nio-7071-exec-4] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserInfo
+[INFO ] 12:56:09.970 [http-nio-7071-exec-4] c.yys.szcp.config.jwt.JwtInterceptor - ===== token格式异常 =====
+[INFO ] 12:56:12.459 [http-nio-7071-exec-8] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/login
+[INFO ] 12:56:12.461 [http-nio-7071-exec-8] c.y.szcp.controller.AdminController - 输出info级别的日志.....
+[INFO ] 12:56:12.515 [http-nio-7071-exec-5] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserInfo
+[INFO ] 12:56:12.515 [http-nio-7071-exec-5] c.yys.szcp.config.jwt.JwtInterceptor - ===== 用户未登录, 请先登录:/sys/admin/findAdminUserInfo
+[INFO ] 12:56:12.524 [http-nio-7071-exec-3] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserInfo
+[INFO ] 12:56:55.063 [http-nio-7071-exec-9] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserInfo
+[INFO ] 12:56:56.255 [http-nio-7071-exec-10] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/markdown/2020-10-14-1602681071986.md
+[INFO ] 12:56:56.283 [http-nio-7071-exec-6] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/markdown/2020-10-14-1602681071986.md
+[INFO ] 12:57:01.253 [http-nio-7071-exec-2] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserInfo
+[INFO ] 12:57:56.728 [http-nio-7071-exec-7] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserInfo
+[INFO ] 12:59:16.716 [http-nio-7071-exec-4] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserInfo
+[INFO ] 12:59:52.013 [http-nio-7071-exec-8] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserInfo
+[INFO ] 12:59:52.013 [http-nio-7071-exec-8] c.yys.szcp.config.jwt.JwtInterceptor - ===== 用户未登录, 请先登录:/sys/admin/findAdminUserInfo
+[INFO ] 12:59:52.026 [http-nio-7071-exec-5] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserInfo
+[INFO ] 13:00:42.605 [http-nio-7071-exec-3] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserInfo
+[INFO ] 13:02:34.602 [http-nio-7071-exec-10] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserInfo
+[INFO ] 13:04:50.708 [http-nio-7071-exec-2] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserInfo
+[INFO ] 13:06:39.197 [http-nio-7071-exec-1] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserInfo
+[INFO ] 13:08:04.071 [http-nio-7071-exec-8] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserInfo
+[INFO ] 13:08:36.987 [http-nio-7071-exec-5] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserInfo
+[INFO ] 13:08:50.673 [http-nio-7071-exec-3] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserInfo
+[INFO ] 13:09:39.385 [http-nio-7071-exec-9] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserInfo
+[INFO ] 13:09:45.012 [http-nio-7071-exec-10] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserInfo
+[INFO ] 13:09:53.607 [http-nio-7071-exec-6] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserInfo
+[INFO ] 13:10:10.123 [http-nio-7071-exec-2] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserInfo
+[INFO ] 13:11:21.128 [http-nio-7071-exec-1] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserInfo
+[INFO ] 13:11:22.143 [http-nio-7071-exec-4] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/markdown/2020-10-14-1602681071986.md
+[INFO ] 13:11:37.280 [http-nio-7071-exec-8] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserInfo
+[INFO ] 13:13:03.091 [http-nio-7071-exec-3] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserInfo
+[INFO ] 13:13:27.495 [http-nio-7071-exec-9] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserInfo
+[INFO ] 13:15:18.582 [http-nio-7071-exec-6] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserInfo
+[INFO ] 13:15:32.000 [http-nio-7071-exec-2] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserInfo
+[INFO ] 13:15:42.264 [http-nio-7071-exec-7] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserInfo
+[INFO ] 13:16:41.011 [http-nio-7071-exec-1] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserInfo
+[INFO ] 13:16:50.050 [http-nio-7071-exec-4] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserListByOrganId
+[INFO ] 13:16:50.051 [http-nio-7071-exec-4] c.yys.szcp.config.jwt.JwtInterceptor - ===== 用户未登录, 请先登录:/sys/admin/findAdminUserListByOrganId
+[INFO ] 13:16:50.062 [http-nio-7071-exec-8] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/organ/findOrganUserTree
+[INFO ] 13:16:50.063 [http-nio-7071-exec-8] c.yys.szcp.config.jwt.JwtInterceptor - ===== 用户未登录, 请先登录:/sys/organ/findOrganUserTree
+[INFO ] 13:16:50.066 [http-nio-7071-exec-5] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserListByOrganId
+[INFO ] 13:16:50.077 [http-nio-7071-exec-3] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/organ/findOrganUserTree
+[INFO ] 13:16:55.341 [http-nio-7071-exec-9] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/organ/findOrganTree
+[INFO ] 13:16:55.341 [http-nio-7071-exec-9] c.yys.szcp.config.jwt.JwtInterceptor - ===== 用户未登录, 请先登录:/sys/organ/findOrganTree
+[INFO ] 13:16:55.353 [http-nio-7071-exec-10] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/organ/findOrganTree
+[INFO ] 13:16:59.929 [http-nio-7071-exec-6] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/menu/findMenuByMyRoleId
+[INFO ] 13:16:59.929 [http-nio-7071-exec-6] c.yys.szcp.config.jwt.JwtInterceptor - ===== 用户未登录, 请先登录:/sys/menu/findMenuByMyRoleId
+[INFO ] 13:16:59.937 [http-nio-7071-exec-2] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/menu/findMenuByMyRoleId
+[INFO ] 13:17:10.940 [http-nio-7071-exec-7] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/role/findRoleList
+[INFO ] 13:17:10.940 [http-nio-7071-exec-7] c.yys.szcp.config.jwt.JwtInterceptor - ===== 用户未登录, 请先登录:/sys/role/findRoleList
+[INFO ] 13:17:10.998 [http-nio-7071-exec-1] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/role/findRoleList
+[INFO ] 13:17:34.940 [http-nio-7071-exec-4] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserInfo
+[INFO ] 13:17:34.940 [http-nio-7071-exec-4] c.yys.szcp.config.jwt.JwtInterceptor - ===== 用户未登录, 请先登录:/sys/admin/findAdminUserInfo
+[INFO ] 13:17:34.955 [http-nio-7071-exec-8] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserInfo
+[INFO ] 13:17:34.957 [http-nio-7071-exec-8] c.yys.szcp.config.jwt.JwtInterceptor - ===== token格式异常 =====
+[INFO ] 13:17:59.097 [http-nio-7071-exec-5] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserInfo
+[INFO ] 13:17:59.098 [http-nio-7071-exec-5] c.yys.szcp.config.jwt.JwtInterceptor - ===== token格式异常 =====
+[INFO ] 13:18:02.505 [http-nio-7071-exec-9] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserInfo
+[INFO ] 13:18:02.507 [http-nio-7071-exec-9] c.yys.szcp.config.jwt.JwtInterceptor - ===== token格式异常 =====
+[INFO ] 13:18:03.823 [http-nio-7071-exec-10] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/markdown/2020-10-14-1602681071986.md
+[INFO ] 13:18:11.522 [http-nio-7071-exec-6] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserInfo
+[INFO ] 13:18:11.525 [http-nio-7071-exec-6] c.yys.szcp.config.jwt.JwtInterceptor - ===== token格式异常 =====
+[INFO ] 13:18:12.408 [http-nio-7071-exec-2] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/markdown/2020-10-14-1602681071986.md
+[INFO ] 13:18:24.052 [http-nio-7071-exec-1] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserInfo
+[INFO ] 13:18:24.054 [http-nio-7071-exec-1] c.yys.szcp.config.jwt.JwtInterceptor - ===== token格式异常 =====
+[INFO ] 13:18:26.111 [http-nio-7071-exec-4] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/login
+[INFO ] 13:18:26.113 [http-nio-7071-exec-4] c.y.szcp.controller.AdminController - 输出info级别的日志.....
+[INFO ] 13:18:26.275 [http-nio-7071-exec-8] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserInfo
+[INFO ] 13:18:26.275 [http-nio-7071-exec-8] c.yys.szcp.config.jwt.JwtInterceptor - ===== 用户未登录, 请先登录:/sys/admin/findAdminUserInfo
+[INFO ] 13:18:26.288 [http-nio-7071-exec-3] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserInfo
+[INFO ] 13:18:33.994 [http-nio-7071-exec-5] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserInfo
+[INFO ] 13:19:15.506 [http-nio-7071-exec-9] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserInfo
+[INFO ] 13:19:15.507 [http-nio-7071-exec-9] c.yys.szcp.config.jwt.JwtInterceptor - ===== token格式异常 =====
+[INFO ] 13:19:16.354 [http-nio-7071-exec-10] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/markdown/2020-10-14-1602681071986.md
+[INFO ] 13:19:28.280 [http-nio-7071-exec-6] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserInfo
+[INFO ] 13:19:28.281 [http-nio-7071-exec-6] c.yys.szcp.config.jwt.JwtInterceptor - ===== token格式异常 =====
+[INFO ] 13:19:32.325 [http-nio-7071-exec-7] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/login
+[INFO ] 13:19:32.326 [http-nio-7071-exec-7] c.y.szcp.controller.AdminController - 输出info级别的日志.....
+[INFO ] 13:19:32.376 [http-nio-7071-exec-2] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserInfo
+[INFO ] 13:19:32.377 [http-nio-7071-exec-2] c.yys.szcp.config.jwt.JwtInterceptor - ===== 用户未登录, 请先登录:/sys/admin/findAdminUserInfo
+[INFO ] 13:19:32.388 [http-nio-7071-exec-1] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserInfo
+[INFO ] 13:20:13.361 [http-nio-7071-exec-4] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserInfo
+[INFO ] 13:20:14.447 [http-nio-7071-exec-8] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/markdown/2020-10-14-1602681071986.md
+[INFO ] 13:20:14.460 [http-nio-7071-exec-3] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/markdown/2020-10-14-1602681071986.md
+[INFO ] 13:20:22.493 [http-nio-7071-exec-5] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserInfo
+[INFO ] 13:21:03.236 [http-nio-7071-exec-9] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserInfo
+[INFO ] 13:21:22.370 [http-nio-7071-exec-10] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserInfo
+[INFO ] 13:21:22.371 [http-nio-7071-exec-10] c.yys.szcp.config.jwt.JwtInterceptor - ===== 用户未登录, 请先登录:/sys/admin/findAdminUserInfo
+[INFO ] 13:21:22.382 [http-nio-7071-exec-6] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserInfo
+[INFO ] 13:22:56.596 [http-nio-7071-exec-2] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserInfo
+[INFO ] 13:23:29.422 [http-nio-7071-exec-1] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserInfo
+[INFO ] 13:23:41.252 [http-nio-7071-exec-4] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserInfo
+[INFO ] 13:23:41.252 [http-nio-7071-exec-4] c.yys.szcp.config.jwt.JwtInterceptor - ===== 用户未登录, 请先登录:/sys/admin/findAdminUserInfo
+[INFO ] 13:23:41.268 [http-nio-7071-exec-8] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserInfo
+[INFO ] 13:24:23.596 [http-nio-7071-exec-3] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserInfo
+[INFO ] 13:24:29.247 [http-nio-7071-exec-5] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserInfo
+[INFO ] 13:24:30.587 [http-nio-7071-exec-9] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/markdown/2020-10-14-1602681071986.md
+[INFO ] 13:24:47.041 [http-nio-7071-exec-6] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserInfo
+[INFO ] 13:24:48.389 [http-nio-7071-exec-7] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/markdown/2020-10-14-1602681071986.md
+[INFO ] 13:24:52.259 [http-nio-7071-exec-2] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserInfo
+[INFO ] 13:24:53.554 [http-nio-7071-exec-1] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/markdown/2020-10-14-1602681071986.md
+[INFO ] 13:25:05.548 [http-nio-7071-exec-4] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserInfo
+[INFO ] 13:25:21.657 [http-nio-7071-exec-8] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/article/findMarkdownList
+[INFO ] 13:25:21.657 [http-nio-7071-exec-8] c.yys.szcp.config.jwt.JwtInterceptor - ===== 用户未登录, 请先登录:/sys/article/findMarkdownList
+[INFO ] 13:25:21.673 [http-nio-7071-exec-3] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/article/findMarkdownList
+[INFO ] 13:25:22.847 [http-nio-7071-exec-5] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/menu/findAllIcon
+[INFO ] 13:25:22.848 [http-nio-7071-exec-5] c.yys.szcp.config.jwt.JwtInterceptor - ===== 用户未登录, 请先登录:/sys/menu/findAllIcon
+[INFO ] 13:25:22.866 [http-nio-7071-exec-9] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/menu/findAllIcon
+[INFO ] 13:26:02.050 [http-nio-7071-exec-10] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserInfo
+[INFO ] 13:26:02.957 [http-nio-7071-exec-6] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/menu/findAllIcon
+[INFO ] 13:26:18.247 [http-nio-7071-exec-7] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserListByOrganId
+[INFO ] 13:26:18.247 [http-nio-7071-exec-7] c.yys.szcp.config.jwt.JwtInterceptor - ===== 用户未登录, 请先登录:/sys/admin/findAdminUserListByOrganId
+[INFO ] 13:26:18.259 [http-nio-7071-exec-2] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/organ/findOrganUserTree
+[INFO ] 13:26:18.259 [http-nio-7071-exec-2] c.yys.szcp.config.jwt.JwtInterceptor - ===== 用户未登录, 请先登录:/sys/organ/findOrganUserTree
+[INFO ] 13:26:18.262 [http-nio-7071-exec-1] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserListByOrganId
+[INFO ] 13:26:18.268 [http-nio-7071-exec-4] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/organ/findOrganUserTree
+[INFO ] 13:26:24.309 [http-nio-7071-exec-8] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserListByOrganId
+[INFO ] 13:26:24.330 [http-nio-7071-exec-3] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/organ/findOrganUserTree
+[INFO ] 13:28:10.314 [http-nio-7071-exec-6] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserInfo
+[INFO ] 13:31:08.514 [http-nio-7071-exec-2] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserListByOrganId
+[INFO ] 13:31:08.515 [http-nio-7071-exec-4] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/organ/findOrganUserTree
+[INFO ] 13:31:41.306 [http-nio-7071-exec-1] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserInfo
+[INFO ] 13:31:43.069 [http-nio-7071-exec-8] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserListByOrganId
+[INFO ] 13:31:43.096 [http-nio-7071-exec-3] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/organ/findOrganUserTree
+[INFO ] 13:31:49.052 [http-nio-7071-exec-5] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/menu/findMenuByMyRoleId
+[INFO ] 13:31:49.052 [http-nio-7071-exec-5] c.yys.szcp.config.jwt.JwtInterceptor - ===== 用户未登录, 请先登录:/sys/menu/findMenuByMyRoleId
+[INFO ] 13:31:49.068 [http-nio-7071-exec-9] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/menu/findMenuByMyRoleId
+[INFO ] 13:32:06.877 [http-nio-7071-exec-10] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserInfo
+[INFO ] 13:32:06.878 [http-nio-7071-exec-10] c.yys.szcp.config.jwt.JwtInterceptor - ===== 用户未登录, 请先登录:/sys/admin/findAdminUserInfo
+[INFO ] 13:32:06.921 [http-nio-7071-exec-6] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserInfo
+[INFO ] 13:32:08.281 [http-nio-7071-exec-7] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/menu/findMenuByMyRoleId
+[INFO ] 13:32:08.282 [http-nio-7071-exec-7] c.yys.szcp.config.jwt.JwtInterceptor - ===== 用户未登录, 请先登录:/sys/menu/findMenuByMyRoleId
+[INFO ] 13:32:08.295 [http-nio-7071-exec-4] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/menu/findMenuByMyRoleId
+[INFO ] 13:32:29.908 [http-nio-7071-exec-2] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/role/findRoleList
+[INFO ] 13:32:29.908 [http-nio-7071-exec-2] c.yys.szcp.config.jwt.JwtInterceptor - ===== 用户未登录, 请先登录:/sys/role/findRoleList
+[INFO ] 13:32:29.918 [http-nio-7071-exec-1] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/role/findRoleList
+[INFO ] 13:32:32.193 [http-nio-7071-exec-8] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/organ/findOrganTree
+[INFO ] 13:32:32.193 [http-nio-7071-exec-8] c.yys.szcp.config.jwt.JwtInterceptor - ===== 用户未登录, 请先登录:/sys/organ/findOrganTree
+[INFO ] 13:32:32.204 [http-nio-7071-exec-3] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/organ/findOrganTree
+[INFO ] 13:32:34.110 [http-nio-7071-exec-5] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/menu/findAllIcon
+[INFO ] 13:32:37.128 [http-nio-7071-exec-9] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/role/findRoleList
+[INFO ] 13:32:52.154 [http-nio-7071-exec-10] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserInfo
+[INFO ] 13:32:53.037 [http-nio-7071-exec-6] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/role/findRoleList
+[INFO ] 13:33:02.612 [http-nio-7071-exec-7] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserInfo
+[INFO ] 13:33:02.612 [http-nio-7071-exec-7] c.yys.szcp.config.jwt.JwtInterceptor - ===== 用户未登录, 请先登录:/sys/admin/findAdminUserInfo
+[INFO ] 13:33:02.624 [http-nio-7071-exec-4] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserInfo
+[INFO ] 13:33:03.535 [http-nio-7071-exec-2] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/role/findRoleList
+[INFO ] 13:33:03.535 [http-nio-7071-exec-2] c.yys.szcp.config.jwt.JwtInterceptor - ===== 用户未登录, 请先登录:/sys/role/findRoleList
+[INFO ] 13:33:03.549 [http-nio-7071-exec-1] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/role/findRoleList
+[INFO ] 13:33:05.693 [http-nio-7071-exec-8] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserListByOrganId
+[INFO ] 13:33:05.707 [http-nio-7071-exec-3] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/organ/findOrganUserTree
+[INFO ] 13:33:08.196 [http-nio-7071-exec-5] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/role/findRoleList
+[INFO ] 13:34:52.953 [http-nio-7071-exec-6] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserInfo
+[INFO ] 13:34:53.974 [http-nio-7071-exec-7] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/role/findRoleList
+[INFO ] 13:37:51.527 [http-nio-7071-exec-2] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserInfo
+[INFO ] 13:37:51.527 [http-nio-7071-exec-2] c.yys.szcp.config.jwt.JwtInterceptor - ===== 用户未登录, 请先登录:/sys/admin/findAdminUserInfo
+[INFO ] 13:37:51.539 [http-nio-7071-exec-1] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserInfo
+[INFO ] 13:37:52.611 [http-nio-7071-exec-3] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/role/findRoleList
+[INFO ] 13:37:52.611 [http-nio-7071-exec-3] c.yys.szcp.config.jwt.JwtInterceptor - ===== 用户未登录, 请先登录:/sys/role/findRoleList
+[INFO ] 13:37:52.620 [http-nio-7071-exec-8] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/role/findRoleList
+[INFO ] 13:40:55.754 [http-nio-7071-exec-10] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserInfo
+[INFO ] 13:40:57.953 [http-nio-7071-exec-6] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/role/findRoleList
+[INFO ] 13:41:01.839 [http-nio-7071-exec-7] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserListByOrganId
+[INFO ] 13:41:01.896 [http-nio-7071-exec-4] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/organ/findOrganUserTree
+[INFO ] 13:41:08.756 [http-nio-7071-exec-2] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserInfo
+[INFO ] 13:41:08.756 [http-nio-7071-exec-2] c.yys.szcp.config.jwt.JwtInterceptor - ===== 用户未登录, 请先登录:/sys/admin/findAdminUserInfo
+[INFO ] 13:41:08.771 [http-nio-7071-exec-1] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserInfo
+[INFO ] 13:41:09.973 [http-nio-7071-exec-3] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserListByOrganId
+[INFO ] 13:41:09.973 [http-nio-7071-exec-3] c.yys.szcp.config.jwt.JwtInterceptor - ===== 用户未登录, 请先登录:/sys/admin/findAdminUserListByOrganId
+[INFO ] 13:41:09.983 [http-nio-7071-exec-8] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/organ/findOrganUserTree
+[INFO ] 13:41:09.983 [http-nio-7071-exec-8] c.yys.szcp.config.jwt.JwtInterceptor - ===== 用户未登录, 请先登录:/sys/organ/findOrganUserTree
+[INFO ] 13:41:09.992 [http-nio-7071-exec-9] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserListByOrganId
+[INFO ] 13:41:10.007 [http-nio-7071-exec-5] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/organ/findOrganUserTree
+[INFO ] 13:41:21.918 [http-nio-7071-exec-10] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserInfo
+[INFO ] 13:41:21.919 [http-nio-7071-exec-10] c.yys.szcp.config.jwt.JwtInterceptor - ===== 用户未登录, 请先登录:/sys/admin/findAdminUserInfo
+[INFO ] 13:41:21.931 [http-nio-7071-exec-6] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserInfo
+[INFO ] 13:42:32.337 [http-nio-7071-exec-1] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserInfo
+[INFO ] 13:42:32.338 [http-nio-7071-exec-1] c.yys.szcp.config.jwt.JwtInterceptor - ===== token格式异常 =====
+[INFO ] 13:42:37.958 [http-nio-7071-exec-3] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/login
+[INFO ] 13:42:37.959 [http-nio-7071-exec-3] c.y.szcp.controller.AdminController - 输出info级别的日志.....
+[INFO ] 13:42:38.040 [http-nio-7071-exec-8] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserInfo
+[INFO ] 13:42:38.041 [http-nio-7071-exec-8] c.yys.szcp.config.jwt.JwtInterceptor - ===== 用户未登录, 请先登录:/sys/admin/findAdminUserInfo
+[INFO ] 13:42:38.049 [http-nio-7071-exec-9] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserInfo
+[INFO ] 13:43:21.465 [http-nio-7071-exec-5] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserInfo
+[INFO ] 13:43:22.525 [http-nio-7071-exec-10] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/markdown/2020-10-14-1602681071986.md
+[INFO ] 13:43:22.538 [http-nio-7071-exec-6] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/markdown/2020-10-14-1602681071986.md
+[INFO ] 13:43:29.544 [http-nio-7071-exec-7] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserInfo
+[INFO ] 13:43:50.073 [http-nio-7071-exec-4] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserInfo
+[INFO ] 13:44:08.625 [http-nio-7071-exec-2] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserInfo
+[INFO ] 13:44:08.627 [http-nio-7071-exec-2] c.yys.szcp.config.jwt.JwtInterceptor - ===== 用户未登录, 请先登录:/sys/admin/findAdminUserInfo
+[INFO ] 13:44:08.646 [http-nio-7071-exec-1] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserInfo
+[INFO ] 13:44:35.476 [http-nio-7071-exec-3] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserInfo
+[INFO ] 13:44:52.395 [http-nio-7071-exec-8] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserInfo
+[INFO ] 13:44:53.562 [http-nio-7071-exec-9] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/markdown/2020-10-14-1602681071986.md
+[INFO ] 13:45:01.703 [http-nio-7071-exec-5] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserInfo
+[INFO ] 13:45:26.493 [http-nio-7071-exec-10] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/login
+[INFO ] 13:45:26.495 [http-nio-7071-exec-10] c.y.szcp.controller.AdminController - 输出info级别的日志.....
+[INFO ] 13:45:26.550 [http-nio-7071-exec-6] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserInfo
+[INFO ] 13:45:26.550 [http-nio-7071-exec-6] c.yys.szcp.config.jwt.JwtInterceptor - ===== 用户未登录, 请先登录:/sys/admin/findAdminUserInfo
+[INFO ] 13:45:26.562 [http-nio-7071-exec-7] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserInfo
+[INFO ] 13:45:46.701 [http-nio-7071-exec-4] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserInfo
+[INFO ] 13:45:47.788 [http-nio-7071-exec-2] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/markdown/2020-10-14-1602681071986.md
+[INFO ] 13:45:47.809 [http-nio-7071-exec-1] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/markdown/2020-10-14-1602681071986.md
+[INFO ] 13:45:53.119 [http-nio-7071-exec-3] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserInfo
+[INFO ] 13:46:09.780 [http-nio-7071-exec-9] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserInfo
+[INFO ] 13:47:19.816 [http-nio-7071-exec-10] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserInfo
+[INFO ] 13:50:05.155 [http-nio-7071-exec-7] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserInfo
+[INFO ] 13:50:22.492 [http-nio-7071-exec-4] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserInfo
+[INFO ] 13:51:14.167 [http-nio-7071-exec-2] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserInfo
+[INFO ] 13:52:07.767 [http-nio-7071-exec-1] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserInfo
+[INFO ] 13:53:10.421 [http-nio-7071-exec-8] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserInfo
+[INFO ] 13:53:10.421 [http-nio-7071-exec-8] c.yys.szcp.config.jwt.JwtInterceptor - ===== 用户未登录, 请先登录:/sys/admin/findAdminUserInfo
+[INFO ] 13:53:10.436 [http-nio-7071-exec-9] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserInfo
+[INFO ] 13:53:19.931 [http-nio-7071-exec-10] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/login
+[INFO ] 13:53:19.931 [http-nio-7071-exec-10] c.yys.szcp.config.jwt.JwtInterceptor - ===== 用户未登录, 请先登录:/sys/admin/login
+[INFO ] 13:53:19.944 [http-nio-7071-exec-6] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/login
+[INFO ] 13:53:19.945 [http-nio-7071-exec-6] c.y.szcp.controller.AdminController - 输出info级别的日志.....
+[INFO ] 13:53:20.004 [http-nio-7071-exec-7] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserInfo
+[INFO ] 13:53:20.004 [http-nio-7071-exec-7] c.yys.szcp.config.jwt.JwtInterceptor - ===== 用户未登录, 请先登录:/sys/admin/findAdminUserInfo
+[INFO ] 13:53:20.019 [http-nio-7071-exec-4] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserInfo
+[INFO ] 13:53:30.773 [http-nio-7071-exec-2] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserInfo
+[INFO ] 13:53:30.774 [http-nio-7071-exec-2] c.yys.szcp.config.jwt.JwtInterceptor - ===== token格式异常 =====
+[INFO ] 13:53:32.138 [http-nio-7071-exec-1] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/markdown/2020-10-14-1602681071986.md
+[INFO ] 13:53:32.162 [http-nio-7071-exec-3] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/markdown/2020-10-14-1602681071986.md
+[INFO ] 13:53:38.064 [http-nio-7071-exec-5] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserInfo
+[INFO ] 13:53:38.066 [http-nio-7071-exec-5] c.yys.szcp.config.jwt.JwtInterceptor - ===== token格式异常 =====
+[INFO ] 13:53:39.134 [http-nio-7071-exec-10] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/markdown/2020-10-14-1602681071986.md
+[INFO ] 13:53:42.885 [http-nio-7071-exec-6] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserInfo
+[INFO ] 13:53:42.885 [http-nio-7071-exec-6] c.yys.szcp.config.jwt.JwtInterceptor - ===== token格式异常 =====
+[INFO ] 13:53:52.581 [http-nio-7071-exec-7] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserInfo
+[INFO ] 13:53:52.582 [http-nio-7071-exec-7] c.yys.szcp.config.jwt.JwtInterceptor - ===== token格式异常 =====
+[INFO ] 13:53:53.766 [http-nio-7071-exec-4] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/markdown/2020-10-14-1602681071986.md
+[INFO ] 13:57:14.048 [http-nio-7071-exec-1] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserInfo
+[INFO ] 13:57:14.048 [http-nio-7071-exec-1] c.yys.szcp.config.jwt.JwtInterceptor - ===== token格式异常 =====
+[INFO ] 13:57:22.059 [http-nio-7071-exec-9] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserInfo
+[INFO ] 13:57:22.060 [http-nio-7071-exec-9] c.yys.szcp.config.jwt.JwtInterceptor - ===== token格式异常 =====
+[INFO ] 13:57:24.022 [http-nio-7071-exec-8] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/login
+[INFO ] 13:57:24.029 [http-nio-7071-exec-8] c.y.szcp.controller.AdminController - 输出info级别的日志.....
+[INFO ] 13:57:24.283 [http-nio-7071-exec-5] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserInfo
+[INFO ] 13:57:24.283 [http-nio-7071-exec-5] c.yys.szcp.config.jwt.JwtInterceptor - ===== 用户未登录, 请先登录:/sys/admin/findAdminUserInfo
+[INFO ] 13:57:24.291 [http-nio-7071-exec-10] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserInfo
+[INFO ] 13:57:29.506 [http-nio-7071-exec-7] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/article/findMarkdownList
+[INFO ] 13:57:29.507 [http-nio-7071-exec-7] c.yys.szcp.config.jwt.JwtInterceptor - ===== 用户未登录, 请先登录:/sys/article/findMarkdownList
+[INFO ] 13:57:29.521 [http-nio-7071-exec-4] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/article/findMarkdownList
+[INFO ] 13:57:42.504 [http-nio-7071-exec-1] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/menu/findAllIcon
+[INFO ] 13:57:44.854 [http-nio-7071-exec-3] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/article/findMarkdownList
+[INFO ] 13:58:33.844 [http-nio-7071-exec-8] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserInfo
+[INFO ] 13:58:35.379 [http-nio-7071-exec-5] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/article/findMarkdownList
+[INFO ] 13:58:43.453 [http-nio-7071-exec-6] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/menu/findAllIcon
+[INFO ] 13:58:46.668 [http-nio-7071-exec-7] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/article/findMarkdownList
+[INFO ] 13:58:48.598 [http-nio-7071-exec-2] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserListByOrganId
+[INFO ] 13:58:48.603 [http-nio-7071-exec-2] c.yys.szcp.config.jwt.JwtInterceptor - ===== 用户未登录, 请先登录:/sys/admin/findAdminUserListByOrganId
+[INFO ] 13:58:48.606 [http-nio-7071-exec-1] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/organ/findOrganUserTree
+[INFO ] 13:58:48.609 [http-nio-7071-exec-1] c.yys.szcp.config.jwt.JwtInterceptor - ===== 用户未登录, 请先登录:/sys/organ/findOrganUserTree
+[INFO ] 13:58:48.627 [http-nio-7071-exec-3] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserListByOrganId
+[INFO ] 13:58:48.628 [http-nio-7071-exec-9] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/organ/findOrganUserTree
+[INFO ] 13:58:51.561 [http-nio-7071-exec-8] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/organ/findOrganTree
+[INFO ] 13:58:51.561 [http-nio-7071-exec-8] c.yys.szcp.config.jwt.JwtInterceptor - ===== 用户未登录, 请先登录:/sys/organ/findOrganTree
+[INFO ] 13:58:51.572 [http-nio-7071-exec-5] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/organ/findOrganTree
+[INFO ] 13:58:56.653 [http-nio-7071-exec-10] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserListByOrganId
+[INFO ] 13:58:56.662 [http-nio-7071-exec-6] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/organ/findOrganUserTree
+[INFO ] 14:00:44.525 [http-nio-7071-exec-1] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/article/findMarkdownList
+[INFO ] 14:01:04.557 [http-nio-7071-exec-9] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserInfo
+[INFO ] 14:01:06.255 [http-nio-7071-exec-8] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/article/findMarkdownList
+[INFO ] 14:01:39.096 [http-nio-7071-exec-10] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserInfo
+[INFO ] 14:01:40.725 [http-nio-7071-exec-6] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/article/findMarkdownList
+[INFO ] 14:01:49.980 [http-nio-7071-exec-2] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserListByOrganId
+[INFO ] 14:01:49.998 [http-nio-7071-exec-4] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/organ/findOrganUserTree
+[INFO ] 14:01:51.385 [http-nio-7071-exec-1] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/menu/findAllIcon
+[INFO ] 14:01:53.359 [http-nio-7071-exec-3] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/article/findMarkdownList
+[INFO ] 14:01:59.994 [http-nio-7071-exec-5] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/menu/findAllIcon
+[INFO ] 14:02:02.388 [http-nio-7071-exec-10] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserListByOrganId
+[INFO ] 14:02:02.397 [http-nio-7071-exec-6] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/organ/findOrganUserTree
+[INFO ] 14:02:06.807 [http-nio-7071-exec-7] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserInfo
+[INFO ] 14:02:07.932 [http-nio-7071-exec-2] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/markdown/2020-10-14-1602681071986.md
+[INFO ] 14:02:07.978 [http-nio-7071-exec-4] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/markdown/2020-10-14-1602681071986.md
+[INFO ] 14:04:53.631 [http-nio-7071-exec-9] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserInfo
+[INFO ] 14:04:55.009 [http-nio-7071-exec-8] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/markdown/2020-10-14-1602681071986.md
+[INFO ] 14:08:37.814 [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler - Shutting down ExecutorService 'taskScheduler'
+[INFO ] 14:08:37.820 [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+[INFO ] 14:08:37.953 [SpringContextShutdownHook] c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+[INFO ] 14:08:49.923 [main] com.yys.szcp.SzcpApplication - Starting SzcpApplication on WINMICR-S3SJB84 with PID 5376 (H:\MyGitProject\blog996\szcp\target\classes started by Administrator in H:\MyGitProject\blog996\szcp)
+[INFO ] 14:08:49.932 [main] com.yys.szcp.SzcpApplication - The following profiles are active: dev
+[INFO ] 14:08:52.890 [main] o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+[INFO ] 14:08:52.899 [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+[INFO ] 14:08:53.010 [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 39ms. Found 0 Redis repository interfaces.
+[INFO ] 14:08:54.148 [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] 14:08:55.042 [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 7071 (http)
+[INFO ] 14:08:55.066 [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-7071"]
+[INFO ] 14:08:55.068 [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+[INFO ] 14:08:55.069 [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.30]
+[INFO ] 14:08:55.380 [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[INFO ] 14:08:55.381 [main] o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 5281 ms
+[INFO ] 14:08:55.514 [main] o.s.b.web.servlet.RegistrationBean - Servlet statViewServlet was not registered (possibly already registered?)
+[INFO ] 14:08:55.522 [main] o.s.b.web.servlet.RegistrationBean - Filter webStatFilter was not registered (possibly already registered?)
+[INFO ] 14:08:57.433 [main] c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+[INFO ] 14:08:59.539 [main] s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+[INFO ] 14:09:00.853 [main] o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+[INFO ] 14:09:01.780 [main] o.s.s.c.ThreadPoolTaskScheduler - Initializing ExecutorService 'taskScheduler'
+[INFO ] 14:09:01.956 [main] s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+[INFO ] 14:09:02.010 [main] s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+[INFO ] 14:09:02.164 [main] s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+[INFO ] 14:09:03.584 [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-7071"]
+[INFO ] 14:09:03.657 [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 7071 (http) with context path ''
+[INFO ] 14:09:03.666 [main] com.yys.szcp.SzcpApplication - Started SzcpApplication in 15.299 seconds (JVM running for 18.948)
+[INFO ] 14:09:49.629 [http-nio-7071-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO ] 14:09:49.630 [http-nio-7071-exec-1] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[INFO ] 14:09:49.697 [http-nio-7071-exec-1] o.s.web.servlet.DispatcherServlet - Completed initialization in 66 ms
+[INFO ] 14:09:49.797 [http-nio-7071-exec-1] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserInfo
+[INFO ] 14:09:53.679 [http-nio-7071-exec-2] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/markdown/2020-10-14-1602681071986.md
+[INFO ] 14:12:02.073 [http-nio-7071-exec-4] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserInfo
+[INFO ] 14:12:03.718 [http-nio-7071-exec-5] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/markdown/2020-10-14-1602681071986.md
+[INFO ] 14:12:14.884 [http-nio-7071-exec-7] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserInfo
+[INFO ] 14:12:16.476 [http-nio-7071-exec-8] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/markdown/2020-10-14-1602681071986.md
+[INFO ] 14:13:02.000 [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler - Shutting down ExecutorService 'taskScheduler'
+[INFO ] 14:13:02.004 [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+[INFO ] 14:13:02.065 [SpringContextShutdownHook] c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+[INFO ] 14:13:11.252 [main] com.yys.szcp.SzcpApplication - Starting SzcpApplication on WINMICR-S3SJB84 with PID 6140 (H:\MyGitProject\blog996\szcp\target\classes started by Administrator in H:\MyGitProject\blog996\szcp)
+[INFO ] 14:13:11.261 [main] com.yys.szcp.SzcpApplication - The following profiles are active: dev
+[INFO ] 14:13:14.676 [main] o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+[INFO ] 14:13:14.683 [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+[INFO ] 14:13:14.793 [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 33ms. Found 0 Redis repository interfaces.
+[INFO ] 14:13:15.902 [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] 14:13:16.738 [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 7071 (http)
+[INFO ] 14:13:16.759 [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-7071"]
+[INFO ] 14:13:16.761 [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+[INFO ] 14:13:16.762 [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.30]
+[INFO ] 14:13:17.062 [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[INFO ] 14:13:17.063 [main] o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 5646 ms
+[INFO ] 14:13:17.188 [main] o.s.b.web.servlet.RegistrationBean - Servlet statViewServlet was not registered (possibly already registered?)
+[INFO ] 14:13:17.214 [main] o.s.b.web.servlet.RegistrationBean - Filter webStatFilter was not registered (possibly already registered?)
+[INFO ] 14:13:18.659 [main] c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+[INFO ] 14:13:20.714 [main] s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+[INFO ] 14:13:21.909 [main] o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+[INFO ] 14:13:23.080 [main] o.s.s.c.ThreadPoolTaskScheduler - Initializing ExecutorService 'taskScheduler'
+[INFO ] 14:13:23.240 [main] s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+[INFO ] 14:13:23.286 [main] s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+[INFO ] 14:13:23.438 [main] s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+[INFO ] 14:13:24.874 [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-7071"]
+[INFO ] 14:13:24.968 [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 7071 (http) with context path ''
+[INFO ] 14:13:24.979 [main] com.yys.szcp.SzcpApplication - Started SzcpApplication in 15.192 seconds (JVM running for 18.281)
+[INFO ] 14:13:59.626 [http-nio-7071-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO ] 14:13:59.627 [http-nio-7071-exec-1] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[INFO ] 14:13:59.783 [http-nio-7071-exec-1] o.s.web.servlet.DispatcherServlet - Completed initialization in 155 ms
+[INFO ] 14:14:00.119 [http-nio-7071-exec-1] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserInfo
+[INFO ] 14:14:03.978 [http-nio-7071-exec-2] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/markdown/2020-10-14-1602681071986.md
+[INFO ] 14:16:51.191 [http-nio-7071-exec-4] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserInfo
+[INFO ] 14:16:52.624 [http-nio-7071-exec-5] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/markdown/2020-10-14-1602681071986.md
+[INFO ] 14:18:09.245 [http-nio-7071-exec-7] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserInfo
+[INFO ] 14:18:10.683 [http-nio-7071-exec-8] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/markdown/2020-10-14-1602681071986.md
+[INFO ] 14:19:28.273 [http-nio-7071-exec-10] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserInfo
+[INFO ] 14:19:29.524 [http-nio-7071-exec-2] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/markdown/2020-10-14-1602681071986.md
+[INFO ] 14:33:05.111 [http-nio-7071-exec-4] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserInfo
+[INFO ] 14:33:07.947 [http-nio-7071-exec-5] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/markdown/2020-10-14-1602681071986.md
+[INFO ] 14:37:20.593 [http-nio-7071-exec-7] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/markdown/2020-10-14-1602681071986.md
+[INFO ] 14:46:49.998 [http-nio-7071-exec-9] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserInfo
+[INFO ] 14:46:51.597 [http-nio-7071-exec-10] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/markdown/2020-10-14-1602681071986.md
+[INFO ] 14:46:52.393 [http-nio-7071-exec-1] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserInfo
+[INFO ] 14:46:53.601 [http-nio-7071-exec-2] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/markdown/2020-10-14-1602681071986.md
+[INFO ] 14:52:03.395 [http-nio-7071-exec-4] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserInfo
+[INFO ] 14:52:07.335 [http-nio-7071-exec-5] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/markdown/2020-10-14-1602681071986.md
+[INFO ] 14:54:52.583 [http-nio-7071-exec-7] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/markdown/2020-10-14-1602681071986.md
+[INFO ] 14:54:57.791 [http-nio-7071-exec-8] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserInfo
+[INFO ] 14:54:59.065 [http-nio-7071-exec-9] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/markdown/2020-10-14-1602681071986.md
+[INFO ] 14:55:37.283 [http-nio-7071-exec-10] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/markdown/2020-10-14-1602681071986.md
+[INFO ] 14:59:15.007 [http-nio-7071-exec-2] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/markdown/2020-10-14-1602681071986.md
+[INFO ] 15:01:25.611 [http-nio-7071-exec-4] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserInfo
+[INFO ] 15:01:25.612 [http-nio-7071-exec-4] c.yys.szcp.config.jwt.JwtInterceptor - ===== 用户未登录, 请先登录:/sys/admin/findAdminUserInfo
+[INFO ] 15:01:26.535 [http-nio-7071-exec-5] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserInfo
+[INFO ] 15:01:27.708 [http-nio-7071-exec-6] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/markdown/2020-10-14-1602681071986.md
+[INFO ] 15:06:27.698 [http-nio-7071-exec-9] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserInfo
+[INFO ] 15:06:27.699 [http-nio-7071-exec-9] c.yys.szcp.config.jwt.JwtInterceptor - ===== 用户未登录, 请先登录:/sys/admin/findAdminUserInfo
+[INFO ] 15:06:27.744 [http-nio-7071-exec-10] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserInfo
+[INFO ] 15:06:29.525 [http-nio-7071-exec-1] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/markdown/2020-10-14-1602681071986.md
+[INFO ] 15:06:29.548 [http-nio-7071-exec-2] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/markdown/2020-10-14-1602681071986.md
+[INFO ] 15:06:57.878 [http-nio-7071-exec-4] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/markdown/2020-10-14-1602681071986.md
+[INFO ] 15:08:01.961 [http-nio-7071-exec-6] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserInfo
+[INFO ] 15:08:01.962 [http-nio-7071-exec-6] c.yys.szcp.config.jwt.JwtInterceptor - ===== 用户未登录, 请先登录:/sys/admin/findAdminUserInfo
+[INFO ] 15:08:01.979 [http-nio-7071-exec-7] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserInfo
+[INFO ] 15:08:03.714 [http-nio-7071-exec-8] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/markdown/2020-10-14-1602681071986.md
+[INFO ] 15:08:03.763 [http-nio-7071-exec-9] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/markdown/2020-10-14-1602681071986.md
+[INFO ] 15:09:21.988 [http-nio-7071-exec-1] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserInfo
+[INFO ] 15:09:23.302 [http-nio-7071-exec-2] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/markdown/2020-10-14-1602681071986.md
+[INFO ] 15:10:33.013 [http-nio-7071-exec-4] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserInfo
+[INFO ] 15:10:33.014 [http-nio-7071-exec-4] c.yys.szcp.config.jwt.JwtInterceptor - ===== 用户未登录, 请先登录:/sys/admin/findAdminUserInfo
+[INFO ] 15:10:33.041 [http-nio-7071-exec-5] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserInfo
+[INFO ] 15:10:34.926 [http-nio-7071-exec-6] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/markdown/2020-10-14-1602681071986.md
+[INFO ] 15:10:34.946 [http-nio-7071-exec-7] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/markdown/2020-10-14-1602681071986.md
+[INFO ] 15:15:25.233 [http-nio-7071-exec-9] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/sys/admin/findAdminUserInfo
+[INFO ] 15:15:26.720 [http-nio-7071-exec-10] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/markdown/2020-10-14-1602681071986.md
+[INFO ] 15:22:46.547 [http-nio-7071-exec-2] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/markdown/2020-10-14-1602681071986.md
+[INFO ] 15:28:32.361 [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler - Shutting down ExecutorService 'taskScheduler'
+[INFO ] 15:28:32.643 [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+[INFO ] 15:28:33.955 [SpringContextShutdownHook] c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+[INFO ] 15:29:04.351 [main] o.s.b.t.c.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.yys.szcp.SzcpApplicationTests], using SpringBootContextLoader
+[INFO ] 15:29:04.381 [main] o.s.t.c.s.AbstractContextLoader - Could not detect default resource locations for test class [com.yys.szcp.SzcpApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+[INFO ] 15:29:04.385 [main] o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.yys.szcp.SzcpApplicationTests]: SzcpApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+[INFO ] 15:29:04.817 [main] o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.yys.szcp.SzcpApplication for test class com.yys.szcp.SzcpApplicationTests
+[INFO ] 15:29:05.172 [main] o.s.b.t.c.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+[INFO ] 15:29:05.233 [main] o.s.b.t.c.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@1ba3fc4, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@bf48f6, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@a85c4, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@39680d, org.springframework.test.context.support.DirtiesContextTestExecutionListener@833051, org.springframework.test.context.transaction.TransactionalTestExecutionListener@852c0f, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@37aefe, org.springframework.test.context.event.EventPublishingTestExecutionListener@199c6b5, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@6374ef, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@1b3d178, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@c4ddae, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@1fb0bed, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@82c5f1]
+[INFO ] 15:29:06.609 [main] com.yys.szcp.SzcpApplicationTests - Starting SzcpApplicationTests on WINMICR-S3SJB84 with PID 6696 (started by Administrator in H:\MyGitProject\blog996\szcp)
+[INFO ] 15:29:06.612 [main] com.yys.szcp.SzcpApplicationTests - The following profiles are active: dev
+[INFO ] 15:29:11.355 [main] o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+[INFO ] 15:29:11.365 [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+[INFO ] 15:29:11.462 [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 36ms. Found 0 Redis repository interfaces.
+[INFO ] 15:29:13.254 [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] 15:29:16.308 [main] c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+[INFO ] 15:29:21.596 [main] s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+[INFO ] 15:29:24.752 [main] o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+[INFO ] 15:29:26.416 [main] o.s.s.c.ThreadPoolTaskScheduler - Initializing ExecutorService 'taskScheduler'
+[INFO ] 15:29:26.664 [main] s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+[INFO ] 15:29:26.785 [main] s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+[INFO ] 15:29:26.911 [main] s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+[INFO ] 15:29:28.975 [main] com.yys.szcp.SzcpApplicationTests - Started SzcpApplicationTests in 23.534 seconds (JVM running for 28.103)
+[INFO ] 15:29:29.880 [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler - Shutting down ExecutorService 'taskScheduler'
+[INFO ] 15:29:29.883 [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+[INFO ] 15:29:29.944 [SpringContextShutdownHook] c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+[INFO ] 15:42:33.426 [main] o.s.b.t.c.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.yys.szcp.SzcpApplicationTests], using SpringBootContextLoader
+[INFO ] 15:42:33.449 [main] o.s.t.c.s.AbstractContextLoader - Could not detect default resource locations for test class [com.yys.szcp.SzcpApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+[INFO ] 15:42:33.452 [main] o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.yys.szcp.SzcpApplicationTests]: SzcpApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+[INFO ] 15:42:33.777 [main] o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.yys.szcp.SzcpApplication for test class com.yys.szcp.SzcpApplicationTests
+[INFO ] 15:42:34.109 [main] o.s.b.t.c.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+[INFO ] 15:42:34.153 [main] o.s.b.t.c.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@1ba3fc4, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@bf48f6, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@a85c4, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@39680d, org.springframework.test.context.support.DirtiesContextTestExecutionListener@833051, org.springframework.test.context.transaction.TransactionalTestExecutionListener@852c0f, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@37aefe, org.springframework.test.context.event.EventPublishingTestExecutionListener@199c6b5, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@6374ef, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@1b3d178, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@c4ddae, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@1fb0bed, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@82c5f1]
+[INFO ] 15:42:35.226 [main] com.yys.szcp.SzcpApplicationTests - Starting SzcpApplicationTests on WINMICR-S3SJB84 with PID 3516 (started by Administrator in H:\MyGitProject\blog996\szcp)
+[INFO ] 15:42:35.228 [main] com.yys.szcp.SzcpApplicationTests - The following profiles are active: dev
+[INFO ] 15:42:38.708 [main] o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+[INFO ] 15:42:38.723 [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+[INFO ] 15:42:38.843 [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 48ms. Found 0 Redis repository interfaces.
+[INFO ] 15:42:40.549 [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] 15:42:43.194 [main] c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+[INFO ] 15:42:47.136 [main] s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+[INFO ] 15:42:50.344 [main] o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+[INFO ] 15:42:52.646 [main] o.s.s.c.ThreadPoolTaskScheduler - Initializing ExecutorService 'taskScheduler'
+[INFO ] 15:42:52.965 [main] s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+[INFO ] 15:42:53.064 [main] s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+[INFO ] 15:42:53.211 [main] s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+[INFO ] 15:42:55.367 [main] com.yys.szcp.SzcpApplicationTests - Started SzcpApplicationTests in 21.066 seconds (JVM running for 24.453)
+[INFO ] 15:42:56.190 [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler - Shutting down ExecutorService 'taskScheduler'
+[INFO ] 15:42:56.191 [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+[INFO ] 15:42:56.257 [SpringContextShutdownHook] c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed

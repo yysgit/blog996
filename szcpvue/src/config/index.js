@@ -2,7 +2,7 @@ export default {
   /**
    * @description 配置显示在浏览器标签的title
    */
-  title: '全栈技术',
+  title: '全栈九九六',
   /**
    * @description token在Cookie中存储的天数，默认1天
    */
@@ -19,12 +19,12 @@ export default {
   baseUrl: {
     // dev: 'http://47.107.227.121:7071',
     // pro: 'http://47.107.227.121:7071'
-    // dev: 'http://localhost:7071',
-    // pro: 'http://localhost:7071',
+    dev: 'http://localhost:7071',
+    pro: 'http://localhost:7071',
 
 
-    dev: 'https://api.blog996.com',
-    pro: 'https://api.blog996.com'
+    // dev: 'https://api.blog996.com',
+    // pro: 'https://api.blog996.com'
   },
   /**
    * @description 默认打开的首页的路由name值，默认为hSome
