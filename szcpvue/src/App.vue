@@ -72,7 +72,12 @@ textarea{
   color:#fec41b!important;
 }
 
-
+.ivu-select-selected-value{
+    color:#fec41b!important;
+}
+.ivu-select-placeholder{
+    color:#fec41b!important;
+}
 
 #app {
   .size;
