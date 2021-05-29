@@ -52,6 +52,7 @@
           console.log("login请求:" + res);
           if(res.code==200){
             this.getUserInfo().then(res => {
+              console.log(this.$config.homeName)
               this.$router.push({
                 name: this.$config.homeName
               })

@@ -8,7 +8,7 @@ server:
 
 spring:
   datasource:
-    url: jdbc:mysql://118.31.187.222:3306/fullstackdevelopment?allowMultiQueries=true
+    url: jdbc:mysql://localhost:3306/fullstackdevelopment?allowMultiQueries=true&serverTimezone=GMT-8
     username: root
     password: 123456
     driver-class-name:  com.mysql.cj.jdbc.Driver

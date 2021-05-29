@@ -57,6 +57,10 @@ public class DbMenu {
      * 是否删除
      */
 	private Integer deleteStatus;
+    /**
+     * 排序号
+     */
+	private Integer sortNo;
 
 
 	public Integer getId() {
@@ -147,5 +151,11 @@ public class DbMenu {
 		this.deleteStatus = deleteStatus;
 	}
 
+    public Integer getSortNo() {
+        return sortNo;
+    }
 
+    public void setSortNo(Integer sortNo) {
+        this.sortNo = sortNo;
+    }
 }

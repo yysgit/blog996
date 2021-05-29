@@ -7,7 +7,7 @@ import sysicon from './module/sysicon'
 import sysmenu from './module/sysmenu'
 import sysorgan from './module/sysorgan'
 import sysrole from './module/sysrole'
-import sysmarkdown from './module/sysmarkdown'
+// import sysmarkdown from './module/sysmarkdown'
 import sysarticlemenu  from './module/sysarticlemenu'
 import sysfundtype  from './module/sysfundtype'
 import sysfundinfo  from './module/sysfundinfo'
@@ -33,7 +33,7 @@ export default new Vuex.Store({
     sysmenu,
     sysorgan,
     sysrole,
-    sysmarkdown,
+    // sysmarkdown,
     sysarticlemenu,
     sysfundtype,
     sysfundinfo,

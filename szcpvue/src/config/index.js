@@ -19,8 +19,8 @@ export default {
   baseUrl: {
     // dev: 'http://47.107.227.121:7071',
     // pro: 'http://47.107.227.121:7071'
-    dev: 'http://localhost:7071',
-    pro: 'http://localhost:7071',
+    dev: 'http://127.0.0.1:7071',
+    pro: 'http://127.0.0.1:7071',
 
 
     // dev: 'https://api.blog996.com',

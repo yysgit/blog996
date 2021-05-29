@@ -534,7 +534,7 @@ export default {
                 { style: { color: "red" } },
                 params.row.holdingYield * 100 + "%"
               );
-            } else {
+            } else if (params.row.holdingYield < 0) {
               return h(
                 "div",
                 { style: { color: "green" } },

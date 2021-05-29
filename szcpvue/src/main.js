@@ -4,7 +4,7 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import store from './store'
-import VueAMap from 'vue-amap';
+// import VueAMap from 'vue-amap';
 import iView from 'iview'
 import config from '@/config'
 import importDirective from '@/directive'
@@ -26,24 +26,24 @@ Vue.use(iView, {
 Vue.use(TreeTable)
 Vue.use(VOrgTree)
 
-Vue.use(VueAMap);
-VueAMap.initAMapApiLoader({
-  key: 'e1dedc6bdd765d46693986ff7ff969f4',
-  plugin: [
-    // 插件
-    'AMap.Autocomplete',
-    'AMap.PlaceSearch',
-    'AMap.Scale',
-    'AMap.OverView',
-    'AMap.ToolBar',
-    'AMap.MapType',
-    'AMap.PolyEditor',
-    'AMap.CircleEditor',
-    "AMap.Geolocation" //定位控件，用来获取和展示用户主机所在的经纬度位置
-  ],
-  // 默认高德 sdk 版本为 1.4.4
-  v: '1.4.4'
-});
+// Vue.use(VueAMap);
+// VueAMap.initAMapApiLoader({
+//   key: 'e1dedc6bdd765d46693986ff7ff969f4',
+//   plugin: [
+//     // 插件
+//     'AMap.Autocomplete',
+//     'AMap.PlaceSearch',
+//     'AMap.Scale',
+//     'AMap.OverView',
+//     'AMap.ToolBar',
+//     'AMap.MapType',
+//     'AMap.PolyEditor',
+//     'AMap.CircleEditor',
+//     "AMap.Geolocation" //定位控件，用来获取和展示用户主机所在的经纬度位置
+//   ],
+//   // 默认高德 sdk 版本为 1.4.4
+//   v: '1.4.4'
+// });
 
 
 /**
