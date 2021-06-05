@@ -258,7 +258,7 @@ public class ArticleMenuController {
         List<ArticleMenuToArticleTree> articleMenuToArticleTreeList=new ArrayList<>();
 
         //查询下级
-        List<TArticle> articleList= articleMenuService.findArticleByArticleMenuId(articleMenuId);
+        List<TArticle> articleList= articleMenuService.findArticleByArticleMenuIdForHome(articleMenuId);
         if(articleList!=null &&articleList.size()>0){
             //封装数据
             for(TArticle article:articleList){

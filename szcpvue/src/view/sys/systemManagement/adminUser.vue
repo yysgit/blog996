@@ -402,7 +402,7 @@
       handleSubmit(name) {
         //console.log(this.$refs);
         this.$refs[name].validate((valid) => {
-          console.log(valid);
+          // console.log(valid);
           if (valid) {
             //表单提交
             //console.log(this.formValidate);

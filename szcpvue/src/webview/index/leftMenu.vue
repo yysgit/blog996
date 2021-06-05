@@ -27,7 +27,7 @@
 
 <script>
 import { mapActions } from "vuex";
-
+import { localSave, localRead } from "@/libs/util";
 export default {
   name: "index_page",
   data() {
@@ -41,18 +41,47 @@ export default {
   },
   mounted() {},
   methods: {
-    ...mapActions(["getArticleMenuToArticleListForHome", "setArticleUrl"]),
+    ...mapActions([
+      "getArticleMenuToArticleListForHome",
+      "setArticleUrl",
+      "setArticleMenuList"
+    ]),
     getArticleMenuList() {
       this.getArticleMenuToArticleListForHome().then(res => {
         this.data1 = res.data;
-        this.getMarkdownContent(this.data1[0].children[0].url);
+        var articleMenuList=res.data;
+        var url = this.data1[0].children[0].url;
+        // console.log(url);
         this.loadingTable = false;
+        this.setArticleMenuListByQuery(articleMenuList); //设置全局的文章菜单
+        var localUrl = localRead("localUrl");
+        if (localUrl != null && "" != localUrl && localUrl != undefined) {
+          this.getMarkdownContentInit(localUrl);
+        } else {
+          this.getMarkdownContentInit(url);
+        }
       });
     },
 
-    getMarkdownContent(articleUrl) {
-      console.log(articleUrl);
+    setArticleMenuListByQuery(articleMenuList) {
+      this.setArticleMenuList({ articleMenuList }).then(res => {});
+    },
+    getMarkdownContentInit(articleUrl) {
       this.setArticleUrl({ articleUrl }).then(res => {});
+    },
+
+    getMarkdownContent(articleUrl) {
+      // console.log(articleUrl);
+      // console.log(this.$route); //可以获取路由后面参数
+      // console.log(this.$router); //可以获取路由后面参数
+      // console.log(this.$route.name); //可以获取路由后面参数
+      localSave("localUrl", articleUrl);
+      this.setArticleUrl({ articleUrl }).then(res => {});
+      if (this.$route.name != "md") {
+        this.$router.push({
+          name: "md"
+        });
+      }
     }
   }
 };
@@ -73,7 +102,7 @@ export default {
   box-sizing: border-box;
   border-right: 1px solid #eaecef;
   overflow-y: auto;
-  z-index: 11000;
+
   .ivu-menu-light.ivu-menu-vertical
     .ivu-menu-item-active:not(.ivu-menu-submenu) {
     background: #ffffff;
@@ -88,6 +117,7 @@ export default {
 @media (max-width: 719px) {
   .left_menu {
     top: 0;
+    z-index: 11000;
     padding-top: 3.6rem;
     transform: translateX(-100%);
     transition: transform 0.2s ease;
@@ -95,6 +125,7 @@ export default {
 }
 @media (max-width: 959px) {
   .left_menu {
+    z-index: 11000;
     font-size: 15px;
     padding-top: 3.6rem;
     width: 16.4rem;

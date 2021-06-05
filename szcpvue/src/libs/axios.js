@@ -55,22 +55,22 @@ class HttpRequest {
     })
     // 响应拦截
     instance.interceptors.response.use(res => {
-      console.log('响应拦截123:', res);
+      // console.log('响应拦截123:', res);
 
       //必须实例化 Vue
       var that = store.state.user.that;
-      console.log('this:', that);
+      // console.log('this:', that);
       if (that != null && that != '' && res.data!=null && res.data!="") {
 
-        console.log('res.data.code',  res.data.code);
+        // console.log('res.data.code',  res.data.code);
 
         if (res.data.code == 501) {
-          console.log('res.data.msg', res.data.msg);
+          // console.log('res.data.msg', res.data.msg);
           that.$Modal.error({
             title: '信息',
             content: res.data.msg,
             onOk: () => {
-              console.log("跳转到:" + that.$config.login);
+              // console.log("跳转到:" + that.$config.login);
               store.commit('setToken', '');
               that.$router.push({
                 name: that.$config['login']
@@ -79,7 +79,7 @@ class HttpRequest {
           })
         }
         if (res.data.code == 500 || res.data.code == 502) {
-          console.log('res.data.msg', res.data.msg);
+          // console.log('res.data.msg', res.data.msg);
           that.$Message.error(res.data.msg);
         }
       }

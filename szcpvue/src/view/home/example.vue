@@ -153,12 +153,12 @@ export default {
         let xAxisData = Object.keys(this.value);
         let seriesData = Object.values(this.value);
 
-        console.log(xAxisData);
-        console.log(seriesData);
+        // console.log(xAxisData);
+        // console.log(seriesData);
 
         for(var i=0;i<seriesData.length;i++){
-          console.log(seriesData);
-          console.log(seriesData[i]==null);
+          // console.log(seriesData);
+          // console.log(seriesData[i]==null);
           if(seriesData[i]==null){
             seriesData[i]=0;
           }

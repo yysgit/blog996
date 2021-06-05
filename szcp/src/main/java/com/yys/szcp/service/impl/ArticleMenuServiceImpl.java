@@ -60,4 +60,9 @@ public class ArticleMenuServiceImpl implements TArticleMenuService {
     public List<TArticle> findArticleByArticleMenuId(Integer articleMenuId) {
         return articleMenuMapper.findArticleByArticleMenuId(articleMenuId);
     }
+
+    @Override
+    public List<TArticle> findArticleByArticleMenuIdForHome(Integer articleMenuId) {
+        return articleMenuMapper.findArticleByArticleMenuIdForHome(articleMenuId);
+    }
 }

@@ -13,8 +13,8 @@
         <div class="search-box">
           <Input search placeholder="Enter something..." />
         </div>
-        <!-- <div class="menu">
-          <Dropdown>
+        <div class="menu">
+          <!--   <Dropdown>
             <a href="javascript:void(0)">
               hover 触发
               <Icon type="md-arrow-dropdown" />
@@ -40,10 +40,10 @@
               <DropdownItem>冰糖葫芦</DropdownItem>
               <DropdownItem>北京烤鸭</DropdownItem>
             </DropdownMenu>
-          </Dropdown>
+          </Dropdown>-->
 
-          <a href="/" style="margin-left:1.1rem;">关于</a>
-        </div> -->
+          <a href="javascript:void(0);" @click="aClick('about')" style="margin-left:1.1rem;">关于</a>
+        </div>
       </div>
     </div>
 
@@ -81,6 +81,12 @@ export default {
       this.menuIsShow = !this.$store.state.user.menuIsShow;
       var menuIsShow = this.menuIsShow;
       this.setMenuIsShow({ menuIsShow }).then(res => {});
+    },
+
+    aClick(about) {
+      this.$router.push({
+        name: about
+      });
     }
   }
 };

@@ -13,6 +13,32 @@
           :scrollStyle="true"
           :ishljs="true"
         />
+        <Row>
+          <Col span="12">
+            <div  class="menuButton"  >
+              <Button type="warning"   v-show="mapUrlDataList.topUrl.topShow">
+                <a
+                
+                  href="javascript:void(0);"
+                  @click="aClick(mapUrlDataList.topUrl.url)"
+                  style="margin-left:1.1rem;"
+                >上一篇:{{mapUrlDataList.topUrl.title}}</a>
+              </Button>
+            </div>
+          </Col>
+          <Col span="12">
+            <div class="menuButton" >
+              <Button type="warning"   v-show="mapUrlDataList.bottomUrl.bottomShow">
+                <a
+                
+                  href="javascript:void(0);"
+                  @click="aClick(mapUrlDataList.bottomUrl.url)"
+                  style="margin-left:1.1rem;"
+                >下一篇: {{mapUrlDataList.bottomUrl.title}}</a>
+              </Button>
+            </div>
+          </Col>
+        </Row>
       </div>
     </article>
   </div>
@@ -22,6 +48,7 @@
 import { mavonEditor } from "mavon-editor";
 import "mavon-editor/dist/css/index.css";
 import { mapActions } from "vuex";
+import { localSave, localRead } from "@/libs/util";
 export default {
   name: "markdown",
   // 注册
@@ -39,23 +66,38 @@ export default {
       loading: false, //表格加载转圈
       loadingModel: false, //按钮加载转圈
       articleUrl: "",
-      editorShow: false
+      articleMenuList: [],
+      editorShow: false,
+      mapUrlDataList: {
+        topUrl: {
+          title: "",
+          url: "",
+          topShow: false
+        },
+        bottomUrl: {
+          title: "",
+          url: "",
+          bottomShow: false
+        }
+      }
     };
   },
   created() {
-    // this.getArticleContent();
+    this.getArticleContent();
     // this.findList();
   },
   computed: {
     isFollow() {
+      // console.log(this.$store.state.user.articleUrl);
       return this.$store.state.user.articleUrl;
     }
   },
   watch: {
     //监听url变化
     isFollow(newVal, oldVal) {
-      console.log(newVal);
-      console.log(oldVal);
+      // console.log(newVal);
+      // console.log(oldVal);
+      // console.log(this.$store.state.user.articleUrl);
       //do something
       this.articleUrl = this.$store.state.user.articleUrl;
       this.getArticleContent();
@@ -66,6 +108,7 @@ export default {
       "markdownTest",
       "findMarkdownList",
       "setMenuIsShow",
+      "setArticleUrl",
       "getMarkdownContent"
     ]),
 
@@ -76,18 +119,84 @@ export default {
 
     getArticleContent() {
       this.articleUrl = this.$store.state.user.articleUrl;
-      console.log(this.articleUrl);
+
+      // console.log(this.articleUrl);
       let url = this.articleUrl;
-      console.log(document.getElementById("article_top"));
-      if (document.getElementById("article_top") != null) {
-        document.getElementById("article_top").scrollIntoView();
+      if (url != null && url != "" && url != undefined) {
+        // console.log(document.getElementById("article_top"));
+        if (document.getElementById("article_top") != null) {
+          document.getElementById("article_top").scrollIntoView();
+        }
+
+        this.getMarkdownContent({ url }).then(res => {
+          this.blogContent = res.data;
+        });
+        var menuIsShow = false;
+        this.setMenuIsShow({ menuIsShow }).then(res => {});
+
+        this.articleMenuList = this.$store.state.user.articleMenuList;
+
+        console.log(this.articleUrl);
+        console.log(this.articleMenuList);
+        this.mapUrlDataList = this.getMapDataList(
+          this.articleUrl,
+          this.articleMenuList
+        );
+      }
+    },
+    getMapDataList(url, urlList) {
+      var mapDataList = {
+        topUrl: {
+          title: "",
+          url: "",
+          topShow: false
+        },
+        bottomUrl: {
+          title: "",
+          url: "",
+          bottomShow: false
+        }
+      };
+      for (var i = 0; i < urlList.length; i++) {
+        for (var j = 0; j < urlList[i].children.length; j++) {
+          if (urlList[i].children[j].url == url) {
+            if (j !== 0) {
+              mapDataList.topUrl.title = urlList[i].children[j - 1].title;
+              mapDataList.topUrl.url = urlList[i].children[j - 1].url;
+              mapDataList.topUrl.topShow = true;
+            } else if (i != 0) {
+              mapDataList.topUrl.title =
+                urlList[i - 1].children[
+                  urlList[i - 1].children.length - 1
+                ].title;
+              mapDataList.topUrl.url =
+                urlList[i - 1].children[urlList[i - 1].children.length - 1].url;
+              mapDataList.topUrl.topShow = true;
+            }
+            if (j !== urlList[i].children.length - 1) {
+              mapDataList.bottomUrl.title = urlList[i].children[j + 1].title;
+              mapDataList.bottomUrl.url = urlList[i].children[j + 1].url;
+              mapDataList.bottomUrl.bottomShow = true;
+            } else if (i != urlList.length - 1) {
+              mapDataList.bottomUrl.title = urlList[i + 1].children[0].title;
+              mapDataList.bottomUrl.url = urlList[i + 1].children[0].url;
+              mapDataList.bottomUrl.bottomShow = true;
+            }
+          }
+        }
       }
 
-      this.getMarkdownContent({ url }).then(res => {
-        this.blogContent = res.data;
-      });
-      var menuIsShow = false;
-      this.setMenuIsShow({ menuIsShow }).then(res => {});
+      return mapDataList;
+    },
+
+    aClick(articleUrl) {
+      localSave("localUrl", articleUrl);
+      this.setArticleUrl({ articleUrl }).then(res => {});
+      if (this.$route.name != "md") {
+        this.$router.push({
+          name: "md"
+        });
+      }
     }
   }
 };
@@ -112,5 +221,13 @@ export default {
     padding-right: 0;
     padding-left: 0;
   }
+}
+
+.menuButton{
+  a{
+   color: #ffffff!important;
+  }
+    margin: auto;
+    text-align: center;
 }
 </style>

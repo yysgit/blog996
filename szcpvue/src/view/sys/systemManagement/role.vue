@@ -22,11 +22,11 @@
       >
         <Form ref="formValidate" :model="formValidate" :rules="ruleValidate" :label-width="80">
           <FormItem label="角色名" prop="roleName">
-            <Input v-model.trim="formValidate.roleName" placeholder="请输入菜单名"></Input>
+            <Input v-model.trim="formValidate.roleName" placeholder="请输入菜单名"/>
           </FormItem>
           <FormItem label="备注" prop="roleRemark">
             <Input type="textarea" :autosize="{minRows: 2,maxRows: 5}" v-model="formValidate.roleRemark"
-                   placeholder="备注"></Input>
+                   placeholder="备注"/>
           </FormItem>
         </Form>
         <div slot="footer">
@@ -43,11 +43,11 @@
       >
         <Form ref="formValidate" :model="formValidate" :rules="ruleValidate" :label-width="80">
           <FormItem label="角色名" prop="roleName">
-            <Input v-model.trim="formValidate.roleName" placeholder="请输入菜单名"></Input>
+            <Input v-model.trim="formValidate.roleName" placeholder="请输入菜单名"/>
           </FormItem>
           <FormItem label="备注" prop="roleRemark">
             <Input type="textarea" :autosize="{minRows: 2,maxRows: 5}" v-model="formValidate.roleRemark"
-                   placeholder="备注"></Input>
+                   placeholder="备注"/>
           </FormItem>
         </Form>
         <div slot="footer">

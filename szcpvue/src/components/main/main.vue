@@ -95,10 +95,10 @@ export default {
       return list
     },
     menuList () {
-      /*console.log(JSON.stringify(this.$store.getters.menuList));
-      console.log(JSON.stringify(this.$store.state.user.meunList));
-      console.log(JSON.stringify(this.$store.state.user.meunList.concat(this.$store.getters.menuList)));
-*/
+      // console.log(JSON.stringify(this.$store.getters.menuList));
+      // console.log(JSON.stringify(this.$store.state.user.meunList));
+      // console.log(JSON.stringify(this.$store.state.user.meunList.concat(this.$store.getters.menuList)));
+
       // return this.$store.state.user.meunList.concat(this.$store.getters.menuList);
       return this.$store.state.user.meunList;
 
@@ -131,7 +131,7 @@ export default {
     setThat(){
       var that=this;
       this.setThatVue({that}).then(res => {
-        console.log("设置that:"+res);
+        // console.log("设置that:"+res);
       })
     },
 

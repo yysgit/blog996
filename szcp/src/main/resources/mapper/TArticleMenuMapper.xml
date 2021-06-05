@@ -114,5 +114,21 @@
         order by ta.sorting DESC ;
     </select>
 
+    <select id="findArticleByArticleMenuIdForHome" resultType="com.yys.szcp.entity.TArticle">
+        select
+            ta.id,
+            ta.article_menu_id AS articleMenuId,
+            ta.title AS title,
+            ta.sorting AS sorting,
+            ta.url AS url,
+            ta.remark AS remark,
+            ta.create_time AS createTime,
+            ta.update_time AS updateTime
+        from t_article ta
+        where ta.article_menu_id =#{articleMenuId}
+          and ta.delete_status=0
+        order by ta.sorting ;
+    </select>
+
 
 </mapper>

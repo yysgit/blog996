@@ -96,16 +96,16 @@ export default {
       'updatePasswordAdminUser'
     ]),
     logout () {
-      console.log("退出系统logout");
+      // console.log("退出系统logout");
       this.handleLogOut().then(() => {
-        console.log("退出系统handleLogOut");
+        // console.log("退出系统handleLogOut");
         this.$router.push({
           name: 'sys/login'
         })
       })
     },
     setMyPassword(){
-      console.log(this.userAdminId);
+      // console.log(this.userAdminId);
       this.modalSetPassword=true;
     },
 

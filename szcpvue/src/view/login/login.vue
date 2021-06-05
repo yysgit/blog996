@@ -42,17 +42,17 @@
       setThat(){
         var that=this;
         this.setThatVue({that}).then(res => {
-          console.log("设置that:"+res);
+          // console.log("设置that:"+res);
         })
 
       },
       handleSubmit({username, password, vcode}) {
 
         this.handleLogin({username, password, vcode}).then(res => {
-          console.log("login请求:" + res);
+          // console.log("login请求:" + res);
           if(res.code==200){
             this.getUserInfo().then(res => {
-              console.log(this.$config.homeName)
+              // console.log(this.$config.homeName)
               this.$router.push({
                 name: this.$config.homeName
               })

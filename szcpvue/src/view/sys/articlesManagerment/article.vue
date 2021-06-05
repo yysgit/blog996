@@ -436,7 +436,7 @@ export default {
     },
 
     editArticleContentButton() {
-      console.log(this.formValidateArticleContentEdit.articleContent.length);
+      // console.log(this.formValidateArticleContentEdit.articleContent.length);
 
       this.formValidateArticleContentEdit.articleContent = this.formValidateArticleContentEdit.articleContent
         .split("[")
@@ -444,10 +444,10 @@ export default {
         .split("]")
         .join("#2#");
 
-      console.log(this.formValidateArticleContentEdit.articleContent.length);
+      // console.log(this.formValidateArticleContentEdit.articleContent.length);
       let articleContentALL = this.formValidateArticleContentEdit
         .articleContent;
-      console.log(articleContentALL.length);
+      // console.log(articleContentALL.length);
 
       var contentList = [];
       var n = 5000;
@@ -456,7 +456,7 @@ export default {
         contentList.push(a);
       }
 
-      console.log(contentList);
+      // console.log(contentList);
       this.loadingModel = true;
       this.addContent(contentList, 0, this.formValidateArticleContentEdit.url);
       this.loadingModel = false;
@@ -508,7 +508,7 @@ export default {
     },
 
     addContent(contentList, i, url) {
-      console.log("第" + i + "次请求----");
+      // console.log("第" + i + "次请求----");
       var sss = window.setTimeout(() => {
         let instance = this.$axios.create({
           withCredentials: true,
@@ -570,7 +570,7 @@ export default {
     handleSubmit(name) {
       //console.log(this.$refs);
       this.$refs[name].validate(valid => {
-        console.log(valid);
+        // console.log(valid);
         if (valid) {
           //表单提交
           //console.log(this.formValidate);

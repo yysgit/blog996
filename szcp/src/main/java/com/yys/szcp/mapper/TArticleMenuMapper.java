@@ -65,4 +65,12 @@ public interface TArticleMenuMapper {
      */
     List<TArticle> findArticleByArticleMenuId(Integer articleMenuId);
 
+    /**
+     * home页面查询列表
+     * @param articleMenuId
+     * @return
+     */
+    List<TArticle> findArticleByArticleMenuIdForHome(Integer articleMenuId);
+
+
 }

@@ -93,7 +93,7 @@ export default {
     setThat(){
       var that=this;
       this.setThatVue({that}).then(res => {
-        console.log("设置that:"+res);
+        // console.log("设置that:"+res);
       })
 
     },

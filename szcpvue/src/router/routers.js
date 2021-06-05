@@ -51,8 +51,23 @@ export default [
             component: () => import('@/webview/index/index.vue'),
 
           },
+
+          {
+            path: '/about',
+            name: 'about',
+            meta: {
+              title: '关于',
+              hideInMenu: true
+            },
+            component: () => import('@/webview/about/about.vue'),
+          },
+
+
         ]
       },
+
+      
+
     ]
   },
 

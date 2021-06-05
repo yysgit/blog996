@@ -40,6 +40,7 @@ export default {
     adminUser: {},
     menuIsShow: false,
     articleUrl: '',
+    articleMenuList: [],
   },
   mutations: {
     setThat(state, that) {
@@ -103,7 +104,10 @@ export default {
     setArticleUrl(state, articleUrl) {
       state.articleUrl = articleUrl
     },
-    
+    setArticleMenuList(state, articleMenuList) {
+      state.articleMenuList = articleMenuList
+    },
+
 
 
     updateMessageContentStore(state, { msg_id, content }) {
@@ -132,13 +136,23 @@ export default {
       })
     },
 
-//设置参数是否显示
-setArticleUrl({ commit }, { articleUrl }) {
-  return new Promise((resolve, reject) => {
-    commit('setArticleUrl', articleUrl);
-    resolve("success");
-  })
-},
+    //设置参数是否显示
+    setArticleUrl({ commit }, { articleUrl }) {
+      console.log(articleUrl);
+      return new Promise((resolve, reject) => {
+        commit('setArticleUrl', articleUrl);
+        resolve("success");
+      })
+    },
+    //设置全局的菜单
+    setArticleMenuList({ commit }, { articleMenuList }) {
+      console.log(articleMenuList);
+      return new Promise((resolve, reject) => {
+        commit('setArticleMenuList', articleMenuList);
+        resolve("success");
+      })
+    },
+
 
 
     //设置that
@@ -153,7 +167,7 @@ setArticleUrl({ commit }, { articleUrl }) {
     handleLogin({ commit }, { username, password, vcode }) {
       username = username.trim()
       return new Promise((resolve, reject) => {
-        console.log(username, password);
+        // console.log(username, password);
         login({
           username,
           password,
