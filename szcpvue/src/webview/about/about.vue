@@ -39,6 +39,7 @@
                     <p slot="title">系统优化</p>
                     <p>1.更新百度统计方式</p>
                     <p>2.加入百度SEO</p>
+                    <p>3.nginx支持输入blog996.com访问网站</p>
                   </Card>
                 </p>
               </TimelineItem>
