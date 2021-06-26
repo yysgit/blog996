@@ -42,7 +42,7 @@ export default [
         component: () => import('@/webview/index/leftMenu.vue'),
         children: [
           {
-            path: '/md',
+            path: '/md/:id?',
             name: 'md',
             meta: {
               title: 'java全栈知识点',

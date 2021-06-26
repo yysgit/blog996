@@ -77,9 +77,13 @@ export default {
       // console.log(this.$route.name); //可以获取路由后面参数
       localSave("localUrl", articleUrl);
       this.setArticleUrl({ articleUrl }).then(res => {});
-      if (this.$route.name != "md") {
+      // if (this.$route.name != "md") {
+        let urlId=articleUrl.replace("md","html");
+      if (true) {
         this.$router.push({
-          name: "md"
+          name: "md",
+          params:{id:urlId}
+
         });
       }
     }

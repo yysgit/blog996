@@ -19,7 +19,7 @@
           <br />
           <br />
           <List border size="small">
-            <ListItem>GitHub(Star): https://github.com/yysgit/blog996/</ListItem>
+            <ListItem>GitHub(Star): https://github.com/yysgit/blog996/ </ListItem>
             <ListItem>说明: 本站是为了搭建国际一流博客网站,给中高级编程人员提供相关知识要点!</ListItem>
           </List>
           <br />
@@ -28,6 +28,20 @@
           <br />
           <List border size="large" style="padding:50px">
             <Timeline>
+              <TimelineItem>
+                <p class="time">2021年6月26号</p>
+                <p class="content" style="padding-top:20px">
+                  <Card :bordered="true">
+                    <p slot="title">文章功能优化</p>
+                    <p>1.路径访问优化,可以指定路径访问指定页面</p>
+                  </Card>
+                  <Card :bordered="true" style="margin-top:20px">
+                    <p slot="title">系统优化</p>
+                    <p>1.更新百度统计方式</p>
+                    <p>2.加入百度SEO</p>
+                  </Card>
+                </p>
+              </TimelineItem>
               <TimelineItem>
                 <p class="time">2021年6月5号</p>
                 <p class="content" style="padding-top:20px">

@@ -13,34 +13,34 @@
           :scrollStyle="true"
           :ishljs="true"
         />
-        <Row>
-          <Col span="12">
-            <div  class="menuButton"  >
-              <Button type="warning"   v-show="mapUrlDataList.topUrl.topShow">
-                <a
-                
-                  href="javascript:void(0);"
-                  @click="aClick(mapUrlDataList.topUrl.url)"
-                  style="margin-left:1.1rem;"
-                >上一篇:{{mapUrlDataList.topUrl.title}}</a>
-              </Button>
-            </div>
-          </Col>
-          <Col span="12">
-            <div class="menuButton" >
-              <Button type="warning"   v-show="mapUrlDataList.bottomUrl.bottomShow">
-                <a
-                
-                  href="javascript:void(0);"
-                  @click="aClick(mapUrlDataList.bottomUrl.url)"
-                  style="margin-left:1.1rem;"
-                >下一篇: {{mapUrlDataList.bottomUrl.title}}</a>
-              </Button>
-            </div>
-          </Col>
-        </Row>
       </div>
     </article>
+    <div>
+      <Row>
+        <Col>
+          <div class="menuButtonLeft">
+            <Button type="warning" v-show="mapUrlDataList.topUrl.topShow">
+              <a
+                href="javascript:void(0);"
+                @click="aClick(mapUrlDataList.topUrl.url)"
+                style="margin-left:1.1rem;"
+              >上一篇:{{mapUrlDataList.topUrl.title}}</a>
+            </Button>
+          </div>
+        </Col>
+        <Col>
+          <div class="menuButtonRight">
+            <Button type="warning" v-show="mapUrlDataList.bottomUrl.bottomShow">
+              <a
+                href="javascript:void(0);"
+                @click="aClick(mapUrlDataList.bottomUrl.url)"
+                style="margin-left:1.1rem;"
+              >下一篇: {{mapUrlDataList.bottomUrl.title}}</a>
+            </Button>
+          </div>
+        </Col>
+      </Row>
+    </div>
   </div>
 </template>
 
@@ -122,6 +122,18 @@ export default {
 
       // console.log(this.articleUrl);
       let url = this.articleUrl;
+      let urlId = this.$route.params.id;
+
+      if (
+        urlId != null &&
+        urlId != "" &&
+        urlId != undefined &&
+        urlId.indexOf("html") != -1
+      ) {
+        url = urlId.replace("html", "md");
+      }
+      console.log(urlId);
+
       if (url != null && url != "" && url != undefined) {
         // console.log(document.getElementById("article_top"));
         if (document.getElementById("article_top") != null) {
@@ -138,6 +150,18 @@ export default {
 
         console.log(this.articleUrl);
         console.log(this.articleMenuList);
+        this.mapUrlDataList = {
+          topUrl: {
+            title: "",
+            url: "",
+            topShow: false
+          },
+          bottomUrl: {
+            title: "",
+            url: "",
+            bottomShow: false
+          }
+        };
         this.mapUrlDataList = this.getMapDataList(
           this.articleUrl,
           this.articleMenuList
@@ -192,11 +216,12 @@ export default {
     aClick(articleUrl) {
       localSave("localUrl", articleUrl);
       this.setArticleUrl({ articleUrl }).then(res => {});
-      if (this.$route.name != "md") {
-        this.$router.push({
-          name: "md"
-        });
-      }
+      let urlId = articleUrl.replace("md", "html");
+      console.log(urlId);
+      this.$router.push({
+        name: "md",
+        params: { id: urlId }
+      });
     }
   }
 };
@@ -223,11 +248,25 @@ export default {
   }
 }
 
-.menuButton{
-  a{
-   color: #ffffff!important;
+.menuButtonLeft {
+  a {
+    color: #ffffff !important;
   }
-    margin: auto;
-    text-align: center;
+  margin: auto;
+  text-align: left;
+  display: block;
+  float: left;
+  margin-top: 10px;
+}
+
+.menuButtonRight {
+  a {
+    color: #ffffff !important;
+  }
+  margin: auto;
+  text-align: right;
+  display: block;
+  float: right;
+  margin-top: 10px;
 }
 </style>

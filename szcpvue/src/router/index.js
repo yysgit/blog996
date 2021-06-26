@@ -96,19 +96,19 @@ router.afterEach(to => {
   setTitle(to, router.app);
   iView.LoadingBar.finish();
   window.scrollTo(0, 0);
-  setTimeout(()=>{
+//   setTimeout(()=>{
 
-  //百度统计
-  var _hmt = _hmt || [];
-  (function() {
-    document.getElementById('baidu_yys') && document.getElementById('baidu_yys').remove();
-    var hm = document.createElement("script");
-    hm.src = "https://hm.baidu.com/hm.js?de9810704a72572716d463050072f9da";
-    hm.id = "baidu_yys"
-    var s = document.getElementsByTagName("script")[0]; 
-    s.parentNode.insertBefore(hm, s);
-  })();
-},0);
+//   //百度统计
+//   var _hmt = _hmt || [];
+//   (function() {
+//     document.getElementById('baidu_yys') && document.getElementById('baidu_yys').remove();
+//     var hm = document.createElement("script");
+//     hm.src = "https://hm.baidu.com/hm.js?de9810704a72572716d463050072f9da";
+//     hm.id = "baidu_yys"
+//     var s = document.getElementsByTagName("script")[0]; 
+//     s.parentNode.insertBefore(hm, s);
+//   })();
+// },0);
 
 })
 

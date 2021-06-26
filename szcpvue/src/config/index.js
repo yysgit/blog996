@@ -18,12 +18,12 @@ export default {
    */
   baseUrl: {
 
-    dev: 'http://127.0.0.1:7071',
-    pro: 'http://127.0.0.1:7071',
+    // dev: 'http://127.0.0.1:7071',
+    // pro: 'http://127.0.0.1:7071',
 
 
-    // dev: 'https://api.blog996.com',
-    // pro: 'https://api.blog996.com'
+    dev: 'https://api.blog996.com',
+    pro: 'https://api.blog996.com'
   },
   /**
    * @description 默认打开的首页的路由name值，默认为hSome
