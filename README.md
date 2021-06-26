@@ -23,6 +23,10 @@ blog996-博客网站
 1. 安装VSCode和node后，先在szcpvue目录下执行模块安装： npm instal
 2. 运行程序： npm run dev 
 
+### 技术支持
+1. QQ群： 444167239
+2. QQ：1095737364
+3. 付费群：123300273 
 
 ## 预览网址：
 www.blog996.com
