@@ -429,7 +429,7 @@ export default {
     editArticleContentClick(params) {
       let url = params.row.url;
       this.getMarkdownContent({ url }).then(res => {
-        this.formValidateArticleContentEdit.articleContent = res.data;
+        this.formValidateArticleContentEdit.articleContent = res.data.markdownData;
       });
       this.formValidateArticleContentEdit.url = url;
       this.modalArticleContentEdit = true;

@@ -147,7 +147,7 @@ export default {
       }
 
       this.getMarkdownContent({ url }).then(res => {
-        this.blogContent = res.data;
+        this.blogContent = res.data.markdownData;
       });
       var menuIsShow = false;
       this.setMenuIsShow({ menuIsShow }).then(res => {});
