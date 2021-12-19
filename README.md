@@ -26,8 +26,8 @@ blog996-博客网站
 2. 运行程序： npm run dev 
 
 ### 访问
-后端登录: http://localhost:9000/sys/home  登录用户名和密码(请自行查找与定义)
-前端访问: http://localhost:9000/md  
+1. 后端登录: http://localhost:9000/sys/login  登录用户名和密码(请自行查找与定义)
+2. 前端访问: http://localhost:9000/md  
 
 ### 页面浏览
 ![1.png](https://api.blog996.com/sys/image/downLoadImage/20211219221044896_196602.png)
@@ -46,4 +46,4 @@ blog996-博客网站
 3. 付费群：123300273 
 
 ## 预览网址：
-www.blog996.com
+https://www.blog996.com/md
