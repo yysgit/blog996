@@ -55,9 +55,20 @@ public class ArticleServiceImpl implements TArticleService {
     }
 
     @Override
+    public int updateArticleViewsNumber(String url) {
+        return articleMapper.updateArticleViewsNumber(url);
+    }
+
+    @Override
     public List<TArticle> findArticleByTitle(Integer articleId, String title) {
         return articleMapper.findArticleByTitle(articleId,title);
     }
+
+    @Override
+    public TArticle findArticleByUrl(String url) {
+        return articleMapper.findArticleByUrl(url);
+    }
+
     @Override
     public String getMarkdown(String path) {
         path = path.replaceAll("-","/");

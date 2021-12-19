@@ -1,5 +1,9 @@
 package com.yys.szcp.utils;
 
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONArray;
+import com.alibaba.fastjson.JSONObject;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -41,7 +45,7 @@ public class SendRequest {
             Map<String, List<String>> map = connection.getHeaderFields();
             // 遍历所有的响应头字段
             for (String key : map.keySet()) {
-                System.out.println(key + "--->" + map.get(key));
+              //  System.out.println(key + "--->" + map.get(key));
             }
             // 定义 BufferedReader输入流来读取URL的响应
             in = new BufferedReader(new InputStreamReader(
@@ -50,6 +54,7 @@ public class SendRequest {
             while ((line = in.readLine()) != null) {
                 result += line;
             }
+          //  System.out.println(result);
         } catch (Exception e) {
             System.out.println("发送GET请求出现异常！" + e);
             e.printStackTrace();
@@ -124,5 +129,35 @@ public class SendRequest {
             }
         }
         return result;
+    }
+
+    public static String getFundDataListOne(String id,long timestamp) {
+      //  https://fund.eastmoney.com/pingzhongdata/180012.js?v=20211218011325
+       String result =  sendGet("https://fund.eastmoney.com/pingzhongdata/"+id+".js?v="+timestamp,"");
+
+      String[] resultList=  result.split(";");
+        String fundDataStr=null;
+        for(String resultStr: resultList){
+           if(resultStr.indexOf("Data_ACWorthTrend")!=-1){
+               String[] fundDataList=resultStr.split("=");
+               fundDataStr = fundDataList[1];
+           };
+        }
+        return fundDataStr;
+    }
+
+    public static JSONArray getFundDataListTwo(String id,long timestamp) {
+        //  https://fund.eastmoney.com/pingzhongdata/180012.js?v=20211218011325
+        String result =  sendGet("https://fund.eastmoney.com/pingzhongdata/"+id+".js?v="+timestamp,"");
+
+        String[] resultList=  result.split(";");
+        JSONArray jsonArray=null;
+        for(String resultStr: resultList){
+            if(resultStr.indexOf("Data_ACWorthTrend")!=-1){
+                String[] fundDataList=resultStr.split("=");
+                jsonArray = JSON.parseArray(fundDataList[1]);
+            };
+        }
+        return jsonArray;
     }
 }

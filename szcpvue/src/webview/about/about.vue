@@ -12,7 +12,8 @@
             <ListItem>网名: 简单点</ListItem>
             <ListItem>爱好: 捣鼓新技术,专研新知识!</ListItem>
             <ListItem>邮箱: 1095737364@qq.com</ListItem>
-            <ListItem>QQ群交流: 444167239</ListItem>
+            <ListItem>QQ群交流: 647474923</ListItem>
+            <ListItem>QQ群交流(收费): 123300273</ListItem>
           </List>
           <br />
           <strong>关于本网站</strong>
@@ -28,6 +29,18 @@
           <br />
           <List border size="large" style="padding:50px">
             <Timeline>
+              <TimelineItem>
+                <p class="time">2021年12月19号</p>
+                <p class="content" style="padding-top:20px">
+                  <Card :bordered="true">
+                    <p slot="title">文章功能优化</p>
+                    <p>1.文章加入了标题</p>
+                    <p>2.文章加入了修改时间</p>
+                    <p>3.文章加入了访问次数</p>
+                  </Card>
+                  
+                </p>
+              </TimelineItem>
               <TimelineItem>
                 <p class="time">2021年6月26号</p>
                 <p class="content" style="padding-top:20px">

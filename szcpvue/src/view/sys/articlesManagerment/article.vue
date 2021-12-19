@@ -738,14 +738,14 @@ export default {
   .pane {
     width: 100%;
     height: 100%;
-
+    overflow-y: auto;
     &.left-pane {
       background: white !important;
     }
 
     &.right-pane {
       background: white !important;
-      margin-left: 22px;
+      margin-left: 12px;
     }
 
     &.top-pane {

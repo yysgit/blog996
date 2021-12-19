@@ -43,7 +43,12 @@ public class ArticleController {
     public ResultUtil getMarkdown(HttpServletRequest request, String url) {
         ResultUtil result = new ResultUtil();
         result.setCode(ExceptionConstant.SUCCESS_HTTPREUQEST);
-        result.setData(articleService.getMarkdown(url));
+        Map map=new HashMap();
+        map.put("markdownData",articleService.getMarkdown(url));
+        articleService.updateArticleViewsNumber(url);
+        map.put("article",articleService.findArticleByUrl(url));
+        result.setData(map);
+
         return result;
     }
 

@@ -4,7 +4,7 @@ import java.util.Date;
 
 /**
  * <p>
- * 
+ *
  * </p>
  *
  * @author yys
@@ -28,6 +28,10 @@ public class TArticle  {
      * url链接
      */
 	private String url;
+	/**
+	 * 浏览次数
+	 */
+	private String viewsNumber;
     /**
      * 备注
      */
@@ -88,6 +92,14 @@ public class TArticle  {
 
 	public void setUrl(String url) {
 		this.url = url;
+	}
+
+	public String getViewsNumber() {
+		return viewsNumber;
+	}
+
+	public void setViewsNumber(String viewsNumber) {
+		this.viewsNumber = viewsNumber;
 	}
 
 	public String getRemark() {

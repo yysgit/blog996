@@ -20,6 +20,7 @@ export default [
   {
     path: '/',
     name: '首页',
+   // component: () => import('@/webview/index/home.vue'),
     redirect: '/md'
   },
 

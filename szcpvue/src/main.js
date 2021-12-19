@@ -16,7 +16,18 @@ import TreeTable from 'tree-table-vue'
 import VOrgTree from 'v-org-tree'
 import 'v-org-tree/dist/v-org-tree.css'
 import axios from 'axios'
+
+import 'babel-polyfill'
+import Es6Promise from 'es6-promise'
+require('es6-promise').polyfill()
+Es6Promise.polyfill()
+
+
+
 Vue.prototype.$axios = axios
+
+ 
+
 // 实际打包时应该不引入mock
 /* eslint-disable */
 require('@/mock')

@@ -1,0 +1,309 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="icon" href="https://jscdn.com.cn/highcharts/images/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        /* css 代码  */
+        .fundTitle {
+            display: block;
+            float: left;
+            width: 250px;
+        }
+    </style>
+    <script src="https://code.highcharts.com.cn/jquery/jquery-1.8.3.min.js"></script>
+    <script src="https://cdn.highcharts.com.cn/highstock/highstock.js"></script>
+    <script src="https://cdn.highcharts.com.cn/highcharts/modules/exporting.js"></script>
+    <script src="https://cdn.highcharts.com.cn/highcharts/modules/oldie.js"></script>
+    <script src="https://code.highcharts.com.cn/highcharts-plugins/highcharts-zh_CN.js"></script>
+    <script src="https://cdn.highcharts.com.cn/highcharts/themes/grid-light.js"></script>
+
+</head>
+
+<body>
+<div>
+    <div class="fundTitle">
+        <ul>
+            <li onclick="getFundData('180012','180012(银华富裕)')">180012(银华富裕)</li>
+            <li onclick="getFundData('006269','006269(永赢智能领先)')">006269(永赢智能领先)</li>
+            <li onclick="getFundData('006253','006253(永赢消费主题)')">006253(永赢消费主题)</li>
+            <li onclick="getFundData('001740','001740(光大中国制造)')">001740(光大中国制造)</li>
+            <li onclick="getFundData('004235','004235(中欧价值)')">004235(中欧价值)</li>
+            <li onclick="getFundData('002943','002943(广发多因子)')">002943(广发多因子)</li>
+            <li onclick="getFundData('013116','013116(华安文体健康)')">013116(华安文体健康)</li>
+            <li onclick="getFundData('005969','005969(创金工业周期)')">005969(创金工业周期)</li>
+            <li onclick="getFundData('007594','007594(鹏扬中证500)')">007594(鹏扬中证500)</li>
+        </ul>
+    </div>
+
+    <div class="fundTitle">
+        <ul>
+            <li onclick="getFundData('011103','011103(天弘中证光伏)')">011103(天弘中证光伏)</li>
+            <li onclick="getFundData('008591','008591(天弘中证证券)')">008591(天弘中证证券)</li>
+            <li onclick="getFundData('011036','011036(嘉实中证稀土)')">011036(嘉实中证稀土)</li>
+            <li onclick="getFundData('005693','005693(广发中证军工)')">005693(广发中证军工)</li>
+            <li onclick="getFundData('011592','011592(博时军工主题)')">011592(博时军工主题)</li>
+            <li onclick="getFundData('011513','011513(天弘中证能源)')">011513(天弘中证能源)</li>
+            <li onclick="getFundData('009147','009147(建信能源行业)')">009147(建信能源行业)</li>
+            <li onclick="getFundData('008888','008888(华夏中证芯片)')">008888(华夏中证芯片)</li>
+            <li onclick="getFundData('012414','012414(招商中证白酒)')">012414(招商中证白酒)</li>
+            <li onclick="getFundData('000248','000248(汇添中证消费)')">000248(汇添中证消费)</li>
+        </ul>
+    </div>
+
+    <div class="fundTitle">
+        <ul>
+            <li onclick="getFundData('009180','009180(嘉实中证消费)')">009180(嘉实中证消费)</li>
+            <li onclick="getFundData('004433','004433(南方有色金属C)')">004433(南方有色金属C)</li>
+            <li onclick="getFundData('012323','012323(华宝医疗指数)')">012323(华宝医疗指数)</li>
+            <li onclick="getFundData('006614','006614(嘉实港股指数)')">006614(嘉实港股指数)</li>
+            <li onclick="getFundData('003096','003096(中欧医疗健康)')">003096(中欧医疗健康)</li>
+            <li onclick="getFundData('010990','010990(南方有色金属E)')">010990(南方有色金属E)</li>
+        </ul>
+    </div>
+
+
+</div>
+<div style=" display: block;width: 100%; float: left;">
+    <div id="container" style="min-width:400px;height:400px"></div>
+</div>
+<script>
+    // JS 代码
+    var chart = null;
+    var fundName = '';
+
+
+    var mapData = {
+        '180012': '',
+        '006269': '',
+        '006253': '',
+        '001740': '',
+        '004235': '',
+        '002943': '',
+        '013116': '',
+        '005969': '',
+        '007594': '',
+        '011103': '',
+        '008591': '',
+        '011036': '',
+        '005693': '',
+        '011592': '',
+        '011513': '',
+        '009147': '',
+        '008888': '',
+        '012414': '',
+        '000248': '',
+        '009180': '',
+        '004433': '',
+        '012323': '',
+        '006614': '',
+        '003096': '',
+        '010990': '',
+    }
+
+    function getFundData(id, name) {
+        console.log(id);
+        fundName = name;
+        $.get('/fund/getFundDataListOne?fundId='+id, fundListData => {
+         let fundData=   eval("("+fundListData+")");
+            var timestamp = new Date().getTime();
+
+            $.ajax({
+                type: "get",
+                url: "https://fundgz.1234567.com.cn/js/"+id+".js?rt="+timestamp,
+                dataType: "jsonp",		//这个设置可以允许跨域调用js
+                jsonpCallback: "jsonpgz",	//这个很重要,是根据跨域目标服务器上返回的json数据中的函数起名
+                success: function(data) {
+                    console.log(data.gsz);	//这里就可以将data当作是JSON对象来直接调用属性来使用了
+                    console.log(data.gztime.substring(0,10));
+                    var time1 = convertDateFromString(data.gztime.substring(0,10)).getTime();
+                    console.log(time1);
+                    console.log(fundData[fundData.length-1][0]);
+                    if(time1!=fundData[fundData.length-1][0]){
+                        fundData.push([data.gztime.substring(0,10),parseFloat(data.gsz)])
+                    };
+                    chartImage(fundData);
+                }
+            });
+        })
+    }
+    function convertDateFromString(dateString) {
+        if (dateString) {
+            var date  = new Date(dateString.replace(/-/,"/"))
+            return date;
+        }
+    }
+
+
+    function chartImage(chartData) {
+        let maxData = getChartDataMax(chartData);
+        console.log(maxData);
+        var charOptions = {
+            global: {useUTC: false},
+            rangeSelector: {
+                buttons: [{ // 时间范围按钮数组
+                    type: 'month',
+                    count: 1,
+                    text: '1月'
+                }, { // 时间范围按钮数组
+                    type: 'month',
+                    count: 2,
+                    text: '2月'
+                }, {
+                    type: 'month',
+                    count: 3,
+                    text: '3月'
+                }, {
+                    type: 'month',
+                    count: 6,
+                    text: '6月'
+                }, {
+                    type: 'ytd',
+                    text: '近一年'
+                }, {
+                    type: 'year',
+                    count: 1,
+                    text: '1年'
+                }, {
+                    type: 'year',
+                    count: 2,
+                    text: '2年'
+                }, {
+                    type: 'year',
+                    count: 3,
+                    text: '3年'
+                }, {
+                    type: 'all',
+                    text: '所有'
+                }]
+                ,
+                selected: 1  // 默认选中的范围，值为上面 buttons 数组的下标（从 0 开始）
+            },
+            chart: {
+                zoomType: 'x'
+            },
+            title: {
+                text: fundName + '净值走势图'
+            },
+            subtitle: {
+                text: document.ontouchstart === undefined ?
+                    '鼠标拖动可以进行缩放' : '手势操作进行缩放'
+            },
+            xAxis: {
+                type: 'datetime',
+                dateTimeLabelFormats: {
+                    millisecond: '%H:%M:%S.%L',
+                    second: '%H:%M:%S',
+                    minute: '%H:%M',
+                    hour: '%H:%M',
+                    day: '%m-%d',
+                    week: '%m-%d',
+                    month: '%Y-%m',
+                    year: '%Y'
+                }
+            },
+            tooltip: {
+                backgroundColor: '#eae4e4',   // 背景颜色
+                borderColor: '#ef0707',         // 边框颜色
+                borderRadius: 3,             // 边框圆角
+                borderWidth: 1,               // 边框宽度
+                shadow: true,                 // 是否显示阴影
+                animation: true,             // 是否启用动画效果
+                style: {                      // 文字内容相关样式
+                    color: "#ef0707",
+                    fontSize: "12px",
+                    fontWeight: "blod",
+                    fontFamily: "Courir new"
+                },
+                dateTimeLabelFormats: {
+                    millisecond: '%H:%M:%S.%L',
+                    second: '%H:%M:%S',
+                    minute: '%H:%M',
+                    hour: '%H:%M',
+                    day: '%Y-%m-%d',
+                    week: '%m-%d',
+                    month: '%Y-%m',
+                    year: '%Y'
+                },
+                pointFormat: '<span style="color:{series.color}">\u25CF</span> {series.name}: <b>{point.y}</b><br/>'
+            },
+            yAxis: {
+                alternateGridColor: '#FDFFD5',
+                gridLineColor: '#d7f5eb',
+                plotLines: [],
+                title: {
+                    text: '净值'
+                }
+            },
+            legend: {
+                enabled: false
+            },
+            plotOptions: {
+                area: {
+                    fillColor: {
+                        linearGradient: {
+                            x1: 0,
+                            y1: 0,
+                            x2: 0,
+                            y2: 1
+                        },
+                        stops: [
+                            [0, new Highcharts.getOptions().colors[0]],
+                            [1, new Highcharts.Color(Highcharts.getOptions().colors[0]).setOpacity(0).get('rgba')]
+                        ]
+                    },
+                    marker: {
+                        radius: 2
+                    },
+                    lineWidth: 1,
+                    states: {
+                        hover: {
+                            lineWidth: 1
+                        }
+                    },
+                    threshold: null
+                }
+            },
+            series: [{
+                type: 'area',
+                name: fundName + '净值',
+                data: chartData
+            }],
+
+        }
+
+        let plotLines = [];
+        for (let i = 0; i < 10; i++) {
+            plotLines.push({
+                color: 'red',            //线的颜色，定义为红色
+                dashStyle: 'solid',//标示线的样式，默认是solid（实线），这里定义为长虚线
+                value: maxData,                //定义在哪个值上显示标示线，这里是在x轴上刻度为3的值处垂直化一条线
+                width: 1                 //标示线的宽度，2px
+            })
+
+            maxData = maxData * 0.955
+        }
+        charOptions.yAxis.plotLines = plotLines;
+
+
+        Highcharts.setOptions({global: {useUTC: false}});
+        chart = Highcharts.stockChart('container', charOptions);
+    }
+
+    function getChartDataMax(chartData) {
+        let maxDataMy = 0;
+        for (let i = 0; i < chartData.length; i++) {
+            if (maxDataMy < chartData[i][1]) {
+                maxDataMy = chartData[i][1];
+            }
+        }
+        return maxDataMy;
+    };
+
+
+</script>
+</body>
+
+</html>

@@ -3,6 +3,12 @@
   <div class="page" @click="setMenuIsShowClick" style="   padding-top: 3.6rem;" id="article_top">
     <article>
       <div style="padding:20px;">
+        <div style=" margin-bottom: 40px; ">
+          <div style=" text-align: center;">{{article.title}}</div>
+          <div style="float:left;">{{article.updateTime}}</div>
+          <div style="float:right;" v-show="article!=''">访问次数:{{article.viewsNumber}}</div>
+        </div>
+
         <mavon-editor
           class="md"
           :value="blogContent"
@@ -60,6 +66,7 @@ export default {
       content: "", // 输入的markdown
       html: "", // 及时转的html
       blogContent: "",
+      article: "",
       currentPage: 1,
       fetchNum: 10,
       totalPage: 0,
@@ -141,7 +148,8 @@ export default {
         }
 
         this.getMarkdownContent({ url }).then(res => {
-          this.blogContent = res.data;
+          this.blogContent = res.data.markdownData;
+          this.article = res.data.article;
         });
         var menuIsShow = false;
         this.setMenuIsShow({ menuIsShow }).then(res => {});
@@ -257,6 +265,7 @@ export default {
   display: block;
   float: left;
   margin-top: 10px;
+  margin-left: 20px;
 }
 
 .menuButtonRight {
@@ -268,5 +277,6 @@ export default {
   display: block;
   float: right;
   margin-top: 10px;
+  margin-left: 20px;
 }
 </style>

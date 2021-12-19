@@ -105,6 +105,7 @@
             ta.title AS title,
             ta.sorting AS sorting,
             ta.url AS url,
+            ta.views_number AS viewsNumber,
             ta.remark AS remark,
             ta.create_time AS createTime,
             ta.update_time AS updateTime
@@ -121,6 +122,7 @@
             ta.title AS title,
             ta.sorting AS sorting,
             ta.url AS url,
+            ta.views_number AS viewsNumber,
             ta.remark AS remark,
             ta.create_time AS createTime,
             ta.update_time AS updateTime

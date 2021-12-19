@@ -190,7 +190,7 @@ export default {
         {
           title: "文章菜单名",
           key: "title",
-          width: "250"
+          width: "400"
         },
         {
           title: "备注",

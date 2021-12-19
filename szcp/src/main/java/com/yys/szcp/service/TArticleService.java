@@ -1,6 +1,7 @@
 package com.yys.szcp.service;
 
 import com.yys.szcp.entity.TArticle;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 import java.util.Map;
@@ -38,6 +39,13 @@ public interface TArticleService {
     int deleteArticle(TArticle Article);
 
 
+    /**
+     * 更新文章访问次数
+     *
+     * @param url
+     * @return
+     */
+    int updateArticleViewsNumber(String url);
 
 
     /**
@@ -48,7 +56,13 @@ public interface TArticleService {
      */
     List<TArticle> findArticleByTitle(Integer articleId, String title);
 
-
+    /**
+     * 通过url查询单个文章
+     *
+     * @param url
+     * @return
+     */
+    TArticle findArticleByUrl(String url);
 
 
 
