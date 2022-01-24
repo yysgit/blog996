@@ -2,6 +2,18 @@ import axios from '@/libs/api.request'
 import qs from 'qs'
 
 
+
+
+export const getArticleListByName= (token,searchPream) => {
+  return axios.request({
+    url: '/sys/article/findArticleListByName',
+    params: {
+      token,searchPream
+    },
+    method: 'post'
+  })
+}
+
 export const getArticleList= (token,searchPream) => {
   return axios.request({
     url: '/sys/article/findArticleList',

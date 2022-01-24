@@ -7,7 +7,7 @@
     <insert id="addArticle" parameterType="com.yys.szcp.entity.TArticle">
         insert into t_article (article_menu_id, title, url,views_number, remark,sorting, create_user_id, update_user_id, create_time,
                                update_time)
-        values (#{articleMenuId}, #{title}, #{url}, #{viewsNumber},#{remark}, #{sorting},#{createUserId}, #{updateUserId}, now(),
+        values (#{articleMenuId}, #{title}, #{url}, 0,#{remark}, #{sorting},#{createUserId}, #{updateUserId}, now(),
                 now());
     </insert>
 
@@ -35,7 +35,21 @@
         and delete_status=0
     </select>
 
-
+    <!--搜索文章-->
+    <select id="findArticleListByArticleNameSearch" resultType="java.util.Map" parameterType="java.util.Map">
+        select
+            ta.id,
+            ta.article_menu_id AS articleMenuId,
+            ta.title AS title,
+            ta.sorting AS sorting,
+            ta.url AS url,
+            ta.views_number AS viewsNumber,
+            ta.remark AS remark,
+            ta.create_time AS createTime,
+            ta.update_time AS updateTime
+        from t_article ta
+        where (ta.title LIKE concat(concat("%",#{articleNameSearch}),"%"))
+    </select>
     <!--更新文章-->
     <update id="updateArticle" parameterType="com.yys.szcp.entity.TArticle">
         update t_article

@@ -5,6 +5,7 @@ import {
   getArticleList,
   deleteArticleById,
   getMarkdownContent,
+  getArticleListByName,
 } from '@/api/sysarticle'
 import { setToken, getToken } from '@/libs/util'
 
@@ -96,6 +97,20 @@ export default {
       })
     },
     
+    getArticleListByName({ state, commit },{searchPream}){
+      return new Promise((resolve, reject) => {
+        try {
+          getArticleListByName(state.token,searchPream).then(res => {
+            const data = res.data;
+            resolve(data)
+          }).catch(err => {
+            reject(err)
+          })
+        } catch (error) {
+          reject(error)
+        }
+      })
+    },
     editArticleContent({ state, commit },{articleContent}){
       return new Promise((resolve, reject) => {
         try {

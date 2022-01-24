@@ -40,6 +40,11 @@ public class ArticleServiceImpl implements TArticleService {
     }
 
     @Override
+    public List<Map> findArticleListByArticleNameSearch(Map map) {
+        return articleMapper.findArticleListByArticleNameSearch(map);
+    }
+
+    @Override
     public int findArticleListByArticleMenuIdCount(Map map) {
         return articleMapper.findArticleListByArticleMenuIdCount(map);
     }

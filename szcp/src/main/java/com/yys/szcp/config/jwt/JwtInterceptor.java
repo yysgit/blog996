@@ -73,6 +73,7 @@ public class JwtInterceptor implements HandlerInterceptor {
         }
         if (myUrl.contains("findArticleMenuToArticleListForHome")
                 || myUrl.contains("markdown")
+                || myUrl.contains("sys/article/findArticleListByName")
                 || myUrl.contains("sys/uploadImg/downLoadBanner")
         ) {
             return true;

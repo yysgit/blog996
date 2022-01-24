@@ -11,7 +11,23 @@
       </div>
       <div class="link" style="max-width: 1130px;">
         <div class="search-box">
-          <Input search placeholder="Enter something..." />
+          <!-- <Input search placeholder="Enter something..." /> -->
+          <Select
+            v-model="articleNameSearch"
+            prefix="ios-search"
+            filterable
+            placeholder="Enter something..."
+            :remote-method="getArticleList"
+            :loading="articleSearchLoading"
+            clearable
+            @on-change="gotoUrl"
+          >
+            <Option
+              v-for="(option, index) in articleList"
+              :value="option.url"
+              :key="index"
+            >{{option.title}}</Option>
+          </Select>
         </div>
         <div class="menu">
           <!--   <Dropdown>
@@ -58,7 +74,10 @@ export default {
   name: "index_page",
   data() {
     return {
-      menuIsShow: false
+      menuIsShow: false,
+      articleSearchLoading: false,
+      articleNameSearch: "",
+      articleList: []
     };
   },
   created() {},
@@ -75,8 +94,36 @@ export default {
   },
   mounted() {},
   methods: {
-    ...mapActions(["setMenuIsShow"]),
-
+    ...mapActions(["setMenuIsShow", "getArticleListByName"]),
+    getArticleList(query) {
+      console.log(query);
+      if (query !== "") {
+        this.articleSearchLoading = true;
+        setTimeout(() => {
+          let searchPream = {
+            articleNameSearch: query
+          };
+          this.getArticleListByName({ searchPream }).then(res => {
+            this.articleList = res.data;
+            this.articleSearchLoading = false;
+          });
+        }, 200);
+      } else {
+        this.articleList = [];
+      }
+    },
+    gotoUrl() {
+      console.log();
+      if (this.articleNameSearch) {
+        if (true) {
+          const { href } = this.$router.resolve({
+            name: "md",
+            params: { id: this.articleNameSearch.replace("md", "html") }
+          });
+          window.open(href, "_blank");
+        }
+      }
+    },
     menuIsShowClick() {
       this.menuIsShow = !this.$store.state.user.menuIsShow;
       var menuIsShow = this.menuIsShow;
@@ -177,14 +224,15 @@ export default {
 @media (max-width: 959px) {
   .search-box input {
     cursor: pointer;
-    width: 0;
+    width: 7px!important;
     border-color: transparent;
     position: relative;
+    padding: 0;
   }
   .search-box input:focus {
     cursor: text;
     left: 0;
-    width: 10rem;
+    width: 10rem !important;
   }
 }
 </style>

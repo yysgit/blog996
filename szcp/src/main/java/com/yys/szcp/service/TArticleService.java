@@ -22,6 +22,12 @@ public interface TArticleService {
     List<Map> findArticleListByArticleMenuId(Map map);
     int findArticleListByArticleMenuIdCount(Map map);
 
+    /**
+     * 搜索
+     * @param map
+     * @return
+     */
+    List<Map> findArticleListByArticleNameSearch(Map map);
 
 
     /**

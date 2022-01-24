@@ -76,32 +76,62 @@
 
 
     var mapData = {
-        '180012': '',
-        '006269': '',
-        '006253': '',
-        '001740': '',
-        '004235': '',
-        '002943': '',
-        '013116': '',
-        '005969': '',
-        '007594': '',
-        '011103': '',
-        '008591': '',
-        '011036': '',
-        '005693': '',
-        '011592': '',
-        '011513': '',
-        '009147': '',
-        '008888': '',
-        '012414': '',
-        '000248': '',
-        '009180': '',
-        '004433': '',
-        '012323': '',
-        '006614': '',
-        '003096': '',
-        '010990': '',
+        '180012': '0.953',
+        '006269': '0',
+        '006253': '0',
+        '001740': '0.147',
+        '004235': '0',
+        '002943': '0.2403',
+        '013116': '0',
+        '005969': '0',
+        '007594': '0',
+        '011103': '0',
+        '008591': '0',
+        '011036': '0',
+        '005693': '0',
+        '011592': '0',
+        '011513': '0',
+        '009147': '0',
+        '008888': '0',
+        '012414': '0.04',
+        '000248': '0',
+        '009180': '0',
+        '004433': '0',
+        '012323': '0',
+        '006614': '0',
+        '003096': '0.232',
+        '010990': '0',
     }
+
+
+    var mapDataRate= {
+        '180012': 0.955,
+        '006269': 0.96,
+        '006253': 0.972,
+        '001740': 0.972,
+        '004235': 0.99,
+        '002943': 0.987,
+        '013116': 0.987,
+        '005969': 0.955,
+        '007594': 0.978,
+        '011103': 0.955,
+        '008591': 0.955,
+        '011036': 0.955,
+        '005693': 0.955,
+        '011592': 0.955,
+        '011513': 0.955,
+        '009147': 0.955,
+        '008888': 0.955,
+        '012414': 0.955,
+        '000248': 0.955,
+        '009180': 0.955,
+        '004433': 0.955,
+        '012323': 0.955,
+        '006614': 0.955,
+        '003096': 0.955,
+        '010990': 0.955,
+    }
+
 
     function getFundData(id, name) {
         console.log(id);
@@ -121,10 +151,17 @@
                     var time1 = convertDateFromString(data.gztime.substring(0,10)).getTime();
                     console.log(time1);
                     console.log(fundData[fundData.length-1][0]);
+                    if(mapData[id]!='0' || mapData[id]!=0){
+                        for(let i=0;i<fundData.length;i++){
+                            fundData[i][1]=parseFloat((fundData[i][1]-parseFloat(mapData[id])).toFixed(4));
+                        }
+                    }
                     if(time1!=fundData[fundData.length-1][0]){
-                        fundData.push([data.gztime.substring(0,10),parseFloat(data.gsz)])
+                        fundData.push([timestamp,parseFloat(data.gsz)]);
+                    }else if(fundData[fundData.length-1][1]==null){
+                        fundData[fundData.length-1][1]=parseFloat(data.gsz);
                     };
-                    chartImage(fundData);
+                    chartImage(fundData,id);
                 }
             });
         })
@@ -137,7 +174,7 @@
     }
 
 
-    function chartImage(chartData) {
+    function chartImage(chartData,fundId) {
         let maxData = getChartDataMax(chartData);
         console.log(maxData);
         var charOptions = {
@@ -283,7 +320,7 @@
                 width: 1                 //标示线的宽度，2px
             })
 
-            maxData = maxData * 0.955
+            maxData = maxData * mapDataRate[fundId];
         }
         charOptions.yAxis.plotLines = plotLines;
 

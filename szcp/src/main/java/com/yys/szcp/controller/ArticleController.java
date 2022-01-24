@@ -134,6 +134,33 @@ public class ArticleController {
         }
     }
 
+    /**
+     * 搜索文章标题
+     *
+     * @param request
+     * @return
+     */
+    @RequestMapping("/findArticleListByName")
+    @ResponseBody
+    public ResultUtil findArticleListByName(HttpServletRequest request, String searchPream) {
+        try {
+            ResultUtil resultUtil = new ResultUtil();
+            //封装数据
+            Map search = (Map) JSONUtils.parse(searchPream);
+            DbAdminUser adminUser = (DbAdminUser) request.getAttribute("adminUser");
+            Map map = new HashMap();
+
+            map.put("articleNameSearch", StringISNULLUtil.mapToString(search.get("articleNameSearch")));
+           List<Map> articleList= articleService.findArticleListByArticleNameSearch(map);
+
+            return ResultUtil.success(articleList);
+        } catch (Exception e) {
+
+            logger.error("查询管理用户列表错误: " + e);
+            return ResultUtil.error("查询失败!");
+        }
+    }
+
 
     /**
      * 更新文章信息

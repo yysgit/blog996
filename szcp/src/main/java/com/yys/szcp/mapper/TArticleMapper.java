@@ -25,8 +25,15 @@ public interface TArticleMapper {
      */
     List<Map> findArticleListByArticleMenuId(Map map);
 
+
     int findArticleListByArticleMenuIdCount(Map map);
 
+    /**
+     * 搜索文章
+     * @param map
+     * @return
+     */
+    List<Map> findArticleListByArticleNameSearch(Map map);
 
     /**
      * 更新文章
