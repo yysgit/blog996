@@ -1,0 +1,4 @@
+[WARN ] 00:06:51.241 [main] o.t.templatemode.TemplateMode - [THYMELEAF][main] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+[WARN ] 00:08:30.456 [main] o.t.templatemode.TemplateMode - [THYMELEAF][main] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+[WARN ] 00:11:35.407 [main] o.t.templatemode.TemplateMode - [THYMELEAF][main] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+[WARN ] 00:15:01.784 [http-nio-7071-exec-5] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico

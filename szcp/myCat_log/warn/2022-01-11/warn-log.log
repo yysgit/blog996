@@ -1,0 +1,15 @@
+[WARN ] 22:56:53.323 [main] o.t.templatemode.TemplateMode - [THYMELEAF][main] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+[WARN ] 23:34:08.443 [main] o.t.templatemode.TemplateMode - [THYMELEAF][main] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+[WARN ] 23:36:24.246 [main] o.t.templatemode.TemplateMode - [THYMELEAF][main] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+[WARN ] 23:39:13.506 [main] o.t.templatemode.TemplateMode - [THYMELEAF][main] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+[WARN ] 23:42:04.754 [main] o.t.templatemode.TemplateMode - [THYMELEAF][main] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+[WARN ] 23:55:27.865 [main] o.s.b.t.j.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer - 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/E:/mavenPor/org/json/json/20170516/json-20170516.jar!/org/json/JSONObject.class
+	jar:file:/E:/mavenPor/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+[WARN ] 23:55:32.035 [main] o.t.templatemode.TemplateMode - [THYMELEAF][main] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.

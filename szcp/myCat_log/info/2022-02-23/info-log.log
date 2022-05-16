@@ -1,0 +1,27 @@
+[INFO ] 21:26:41.620 [main] com.yys.szcp.SzcpApplication - Starting SzcpApplication on LAPTOP-T7DEB7H8 with PID 21680 (E:\MyGithubProject\blog996\szcp\target\classes started by yangys in E:\MyGithubProject\blog996\szcp)
+[INFO ] 21:26:41.622 [main] com.yys.szcp.SzcpApplication - The following profiles are active: dev
+[INFO ] 21:26:44.019 [main] o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+[INFO ] 21:26:44.023 [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+[INFO ] 21:26:44.134 [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 66ms. Found 0 Redis repository interfaces.
+[INFO ] 21:26:44.957 [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] 21:26:45.341 [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 7071 (http)
+[INFO ] 21:26:45.350 [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-7071"]
+[INFO ] 21:26:45.351 [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+[INFO ] 21:26:45.351 [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.30]
+[INFO ] 21:26:45.493 [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[INFO ] 21:26:45.493 [main] o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 3747 ms
+[INFO ] 21:26:45.568 [main] o.s.b.web.servlet.RegistrationBean - Servlet statViewServlet was not registered (possibly already registered?)
+[INFO ] 21:26:45.571 [main] o.s.b.web.servlet.RegistrationBean - Filter webStatFilter was not registered (possibly already registered?)
+[INFO ] 21:26:46.626 [main] c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+[INFO ] 21:26:47.233 [main] s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+[INFO ] 21:26:47.580 [main] o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+[INFO ] 21:26:47.825 [main] o.s.s.c.ThreadPoolTaskScheduler - Initializing ExecutorService 'taskScheduler'
+[INFO ] 21:26:47.900 [main] s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+[INFO ] 21:26:47.917 [main] s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+[INFO ] 21:26:47.960 [main] s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+[INFO ] 21:26:48.377 [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-7071"]
+[INFO ] 21:26:48.398 [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 7071 (http) with context path ''
+[INFO ] 21:26:48.400 [main] com.yys.szcp.SzcpApplication - Started SzcpApplication in 7.351 seconds (JVM running for 9.128)
+[INFO ] 21:27:01.627 [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler - Shutting down ExecutorService 'taskScheduler'
+[INFO ] 21:27:01.629 [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+[INFO ] 21:27:01.651 [SpringContextShutdownHook] c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed

@@ -1,0 +1,8 @@
+[WARN ] 18:15:30.655 [main] o.t.templatemode.TemplateMode - [THYMELEAF][main] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+[WARN ] 18:21:24.213 [http-nio-7071-exec-8] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+[WARN ] 18:22:39.751 [http-nio-7071-exec-1] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+[WARN ] 18:26:12.027 [http-nio-7071-exec-4] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+[WARN ] 18:26:54.482 [http-nio-7071-exec-8] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+[WARN ] 19:18:36.452 [http-nio-7071-exec-1] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+[WARN ] 19:20:26.935 [http-nio-7071-exec-7] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+[WARN ] 19:21:01.621 [http-nio-7071-exec-1] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico

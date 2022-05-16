@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <!-- import CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+</head>
+<body>
+<div id="app">
+    <el-tabs v-model="activeName">
+        <el-tab-pane label="投资整理" name="first">
+            <el-table
+                    border
+                    :data="tableData1"
+                    style="width: 100%">
+                <el-table-column
+                        prop="fund_name"
+                        label="基金名称"
+                        width="120">
+                </el-table-column>
+                <el-table-column
+                        prop="fund_code"
+                        label="代码"
+                        width="75">
+
+                </el-table-column>
+
+                <el-table-column
+                        prop="principal_amount"
+                        width="60"
+                        label="本金额">
+                    <template slot-scope="scope">
+                        <span v-if="scope.row.principal_amount > scope.row.due_amount" style="color: red" >{{scope.row.principal_amount}}</span>
+                        <span v-else="scope.row.principal_amount<=scope.row.due_amount" style="color: green" >{{scope.row.principal_amount}}</span>
+                    </template>
+                </el-table-column>
+                <el-table-column
+                        prop="due_amount"
+                        width="60"
+                        label="应有金额">
+                </el-table-column>
+                <el-table-column
+                        prop="min_holding_times"
+                        width="50"
+                        label="次数">
+                </el-table-column>
+                <el-table-column
+                        prop="front_net_worth"
+                        width="75"
+                        label="前净值">
+                </el-table-column>
+                <el-table-column
+                        prop="behind_net_worth"
+                        width="75"
+                        label="后净值">
+                </el-table-column>
+                <el-table-column
+                        prop="fund_net_worth1"
+                        width="80"
+                        :label="'净值'+tableData1[0].fund_day1">
+                    <template  slot="header"  slot-scope="{ column, $index }"   >
+                        <div>净值</div>
+                        <div>{{tableData1[0].fund_day1.substring(tableData1[0].fund_day1.length-5)}}</div>
+                    </template>
+                </el-table-column>
+                <el-table-column
+                        prop="now_holding_times1"
+                        width="80"
+                        :label="'投资次数'+tableData1[0].fund_day1">
+                    <template  slot="header"  slot-scope="{ column, $index }"   >
+                        <div>投资次数</div>
+                        <div>{{tableData1[0].fund_day1.substring(tableData1[0].fund_day1.length-5)}}</div>
+                    </template>
+                    <template slot-scope="scope">
+                        <span v-if="scope.row.now_holding_times1 > scope.row.min_holding_times" style="color: red;font-weight: 800;" >{{scope.row.now_holding_times1}}</span>
+                        <span v-else-if="scope.row.now_holding_times1<scope.row.min_holding_times" style="color: green;font-weight: 800;" >{{scope.row.now_holding_times1}}</span>
+                        <span v-else >{{scope.row.now_holding_times1}}</span>
+                    </template>
+                </el-table-column>
+                <el-table-column
+                        prop="investment_amount1"
+                        width="80"
+                        :label="'投资额'+tableData1[0].fund_day1">
+                    <template  slot="header"  slot-scope="{ column, $index }"   >
+                        <div>投资额</div>
+                        <div>{{tableData1[0].fund_day1.substring(tableData1[0].fund_day1.length-5)}}</div>
+                    </template>
+                    <template slot-scope="scope">
+                        <span v-if="scope.row.investment_amount1!=0">{{scope.row.investment_amount1}}</span>
+                        <span v-else></span>
+                    </template>
+                </el-table-column>
+                <el-table-column
+                        prop="fund_net_worth2"
+                        width="80"
+                        :label="'净值'+tableData1[0].fund_day2">
+                    <template  slot="header"  slot-scope="{ column, $index }"   >
+                        <div>净值</div>
+                        <div>{{tableData1[0].fund_day2.substring(tableData1[0].fund_day2.length-5)}}</div>
+                    </template>
+                </el-table-column>
+                <el-table-column
+                        prop="now_holding_times2"
+                        width="80"
+                        :label="'投资次数'+tableData1[0].fund_day2">
+                    <template  slot="header"  slot-scope="{ column, $index }"   >
+                        <div>投资次数</div>
+                        <div>{{tableData1[0].fund_day2.substring(tableData1[0].fund_day2.length-5)}}</div>
+                    </template>
+                </el-table-column>
+                <el-table-column
+                        prop="investment_amount2"
+                        width="80"
+                        :label="'投资额'+tableData1[0].fund_day2">
+                    <template  slot="header"  slot-scope="{ column, $index }"   >
+                        <div>投资额</div>
+                        <div>{{tableData1[0].fund_day2.substring(tableData1[0].fund_day2.length-5)}}</div>
+                    </template>
+                    <template slot-scope="scope">
+                        <span v-if="scope.row.investment_amount2!=0">{{scope.row.investment_amount2}}</span>
+                        <span v-else></span>
+                    </template>
+                </el-table-column>
+                <el-table-column
+                        prop="fund_net_worth3"
+                        width="80"
+                        :label="'净值'+tableData1[0].fund_day3">
+                    <template  slot="header"  slot-scope="{ column, $index }"   >
+                        <div>净值</div>
+                        <div>{{tableData1[0].fund_day3.substring(tableData1[0].fund_day3.length-5)}}</div>
+                    </template>
+                </el-table-column>
+                <el-table-column
+                        prop="now_holding_times3"
+                        width="80"
+                        :label="'投资次数'+tableData1[0].fund_day3">
+                    <template  slot="header"  slot-scope="{ column, $index }"   >
+                        <div>投资次数</div>
+                        <div>{{tableData1[0].fund_day3.substring(tableData1[0].fund_day3.length-5)}}</div>
+                    </template>
+                </el-table-column>
+                <el-table-column
+                        prop="investment_amount3"
+                        width="80"
+                        :label="'投资额'+tableData1[0].fund_day3">
+                    <template  slot="header"  slot-scope="{ column, $index }"   >
+                        <div>投资额</div>
+                        <div>{{tableData1[0].fund_day3.substring(tableData1[0].fund_day3.length-5)}}</div>
+                    </template>
+                    <template slot-scope="scope">
+                        <span v-if="scope.row.investment_amount3!=0">{{scope.row.investment_amount3}}</span>
+                        <span v-else></span>
+                    </template>
+                </el-table-column>
+                <el-table-column
+                        prop="fund_net_worth4"
+                        width="80"
+                        :label="'净值'+tableData1[0].fund_day4">
+                </el-table-column>
+                <el-table-column
+                        prop="now_holding_times4"
+                        width="80"
+                        :label="'投资次数'+tableData1[0].fund_day4">
+                </el-table-column>
+                <el-table-column
+                        prop="investment_amount4"
+                        width="80"
+                        :label="'投资额'+tableData1[0].fund_day4">
+                </el-table-column>
+                <el-table-column
+                        prop="yield5"
+                        width="80"
+                        :label="'收益率'+tableData1[0].fund_day5">
+                </el-table-column>
+                <el-table-column
+                        prop="fund_net_worth5"
+                        width="80"
+                        :label="'净值'+tableData1[0].fund_day5">
+                </el-table-column>
+                <el-table-column
+                        prop="now_holding_times5"
+                        width="80"
+                        :label="'投资次数'+tableData1[0].fund_day5">
+                </el-table-column>
+                <el-table-column
+                        prop="investment_amount5"
+                        width="80"
+                        :label="'投资额'+tableData1[0].fund_day5">
+                </el-table-column>
+                <el-table-column
+                        prop="yield6"
+                        width="80"
+                        :label="'收益率'+tableData1[0].fund_day6">
+                </el-table-column>
+                <el-table-column
+                        prop="fund_net_worth6"
+                        width="80"
+                        :label="'净值'+tableData1[0].fund_day6">
+                </el-table-column>
+                <el-table-column
+                        prop="now_holding_times6"
+                        width="80"
+                        :label="'投资次数'+tableData1[0].fund_day6">
+                </el-table-column>
+                <el-table-column
+                        prop="investment_amount6"
+                        width="80"
+                        :label="'投资额'+tableData1[0].fund_day6">
+
+                </el-table-column>
+                <el-table-column
+                        prop="yield7"
+                        width="80"
+                        :label="'收益率'+tableData1[0].fund_day7">
+                </el-table-column>
+                <el-table-column
+                        prop="fund_net_worth7"
+                        width="80"
+                        :label="'净值'+tableData1[0].fund_day7">
+                </el-table-column>
+                <el-table-column
+                        prop="now_holding_times7"
+                        width="80"
+                        :label="'投资次数'+tableData1[0].fund_day7">
+                </el-table-column>
+                <el-table-column
+                        prop="investment_amount7"
+                        width="80"
+                        :label="'投资额'+tableData1[0].fund_day7">
+                </el-table-column>
+                <el-table-column
+                        prop="yield8"
+                        width="80"
+                        :label="'收益率'+tableData1[0].fund_day8">
+                </el-table-column>
+                <el-table-column
+                        prop="fund_net_worth8"
+                        width="80"
+                        :label="'净值'+tableData1[0].fund_day8">
+                </el-table-column>
+                <el-table-column
+                        prop="now_holding_times8"
+                        width="80"
+                        :label="'投资次数'+tableData1[0].fund_day8">
+                </el-table-column>
+                <el-table-column
+                        prop="investment_amount8"
+                        width="80"
+                        :label="'投资额'+tableData1[0].fund_day8">
+                </el-table-column>
+                <el-table-column
+                        prop="yield9"
+                        width="80"
+                        :label="'收益率'+tableData1[0].fund_day9">
+                </el-table-column>
+                <el-table-column
+                        prop="fund_net_worth9"
+                        width="80"
+                        :label="'净值'+tableData1[0].fund_day9">
+                </el-table-column>
+                <el-table-column
+                        prop="now_holding_times9"
+                        width="80"
+                        :label="'投资次数'+tableData1[0].fund_day9">
+                </el-table-column>
+                <el-table-column
+                        prop="investment_amount9"
+                        width="80"
+                        :label="'投资额'+tableData1[0].fund_day9">
+                </el-table-column>
+                <el-table-column
+                        prop="yield10"
+                        width="80"
+                        :label="'收益率'+tableData1[0].fund_day10">
+                </el-table-column>
+                <el-table-column
+                        prop="fund_net_worth10"
+                        width="80"
+                        :label="'净值'+tableData1[0].fund_day10">
+                </el-table-column>
+                <el-table-column
+                        prop="now_holding_times10"
+                        width="80"
+                        :label="'投资次数'+tableData1[0].fund_day10">
+                </el-table-column>
+                <el-table-column
+                        prop="investment_amount10"
+                        width="80"
+                        :label="'投资额'+tableData1[0].fund_day10">
+                </el-table-column>
+                <el-table-column
+                        prop="fund_scale"
+                        label="基金规模">
+                </el-table-column>
+                <el-table-column
+                        prop="topic_type"
+                        label="主题"
+                        width="250">
+                </el-table-column>
+            </el-table>
+        </el-tab-pane>
+        <el-tab-pane label="利率划定" name="second">
+            <el-table
+                    border
+                    :data="tableData2"
+                    style="width: 100%">
+                <el-table-column
+                        prop="fund_name"
+                        label="基金名称"
+                        width="180">
+                </el-table-column>
+                <el-table-column
+                        prop="fund_code"
+                        label="代码">
+                </el-table-column>
+                <el-table-column
+                        prop="fund_scale"
+                        label="基金规模">
+                </el-table-column>
+                <el-table-column
+                        prop="max_pullback"
+                        :formatter="formatPercentage2"
+                        label="最大回撤">
+                </el-table-column>
+                <el-table-column
+                        prop="max_net_worth_date"
+                        :formatter="dateFormatter"
+                        width="150"
+                        label="最大净值日期">
+                </el-table-column>
+                <el-table-column
+                        prop="volatility_value"
+                        :formatter="formatPercentage"
+                        label="基数波动">
+                </el-table-column>
+                <el-table-column
+                        prop="max_net_worth"
+                        label="最高净值">
+                </el-table-column>
+                <el-table-column
+                        prop="level1"
+                        label="第1次">
+                </el-table-column>
+                <el-table-column
+                        prop="level2"
+                        label="第2次">
+                </el-table-column>
+                <el-table-column
+                        prop="level3"
+                        label="第3次">
+                </el-table-column>
+                <el-table-column
+                        prop="level4"
+                        label="第4次">
+                </el-table-column>
+                <el-table-column
+                        prop="level5"
+                        label="第5次">
+                </el-table-column>
+                <el-table-column
+                        prop="level6"
+                        label="第6次">
+                </el-table-column>
+                <el-table-column
+                        prop="level7"
+                        label="第7次">
+                </el-table-column>
+                <el-table-column
+                        prop="level8"
+                        label="第8次">
+                </el-table-column>
+                <el-table-column
+                        prop="level9"
+                        label="第9次">
+                </el-table-column>
+                <el-table-column
+                        prop="level10"
+                        label="第10次">
+                </el-table-column>
+                <el-table-column
+                        prop="level11"
+                        label="第11次">
+                </el-table-column>
+                <el-table-column
+                        prop="level12"
+                        label="第12次">
+                </el-table-column>
+                <el-table-column
+                        prop="level13"
+                        label="第13次">
+                </el-table-column>
+                <el-table-column
+                        prop="level14"
+                        label="第14次">
+                </el-table-column>
+                <el-table-column
+                        prop="level15"
+                        label="第15次">
+                </el-table-column>
+                <el-table-column
+                        prop="level16"
+                        label="第16次">
+                </el-table-column>
+                <el-table-column
+                        prop="level17"
+                        label="第17次">
+                </el-table-column>
+                <el-table-column
+                        prop="level18"
+                        label="第18次">
+                </el-table-column>
+                <el-table-column
+                        prop="level19"
+                        label="第19次">
+                </el-table-column>
+                <el-table-column
+                        prop="level20"
+                        label="第20次">
+                </el-table-column>
+                <el-table-column
+                        prop="topic_type"
+                        label="主题"
+                        width="250">
+                </el-table-column>
+            </el-table>
+        </el-tab-pane>
+        <el-tab-pane label="等级金额" name="third">
+            <el-table
+                    border
+                    :data="tableData3"
+                    style="width: 100%">
+                <el-table-column
+                        prop="fund_value_0"
+                        label="基础金额">
+                </el-table-column>
+                <el-table-column
+                        prop="fund_value_1"
+                        label="投资1">
+                </el-table-column>
+                <el-table-column
+                        prop="fund_value_2"
+                        label="投资2">
+                </el-table-column>
+                <el-table-column
+                        prop="fund_value_3"
+                        label="投资3">
+                </el-table-column>
+                <el-table-column
+                        prop="fund_value_4"
+                        label="投资4">
+                </el-table-column>
+                <el-table-column
+                        prop="fund_value_5"
+                        label="投资5">
+                </el-table-column>
+                <el-table-column
+                        prop="fund_value_6"
+                        label="投资6">
+                </el-table-column>
+                <el-table-column
+                        prop="fund_value_7"
+                        label="投资7">
+                </el-table-column>
+                <el-table-column
+                        prop="fund_value_8"
+                        label="投资8">
+                </el-table-column>
+                <el-table-column
+                        prop="fund_value_9"
+                        label="投资9">
+                </el-table-column>
+                <el-table-column
+                        prop="fund_value_10"
+                        label="投资10">
+                </el-table-column>
+                <el-table-column
+                        prop="fund_value_11"
+                        label="投资11">
+                </el-table-column>
+                <el-table-column
+                        prop="fund_value_12"
+                        label="投资12">
+                </el-table-column>
+                <el-table-column
+                        prop="fund_value_13"
+                        label="投资13">
+                </el-table-column>
+                <el-table-column
+                        prop="fund_value_14"
+                        label="投资14">
+                </el-table-column>
+                <el-table-column
+                        prop="fund_value_15"
+                        label="投资15">
+                </el-table-column>
+            </el-table>
+        </el-tab-pane>
+        <el-tab-pane label="添加基金" name="fourth">
+
+            <el-form ref="form" :model="fundDataForm" label-width="80px">
+                <el-form-item label="类型">
+                    <el-input v-model="fundDataForm.topic_type"></el-input>
+                </el-form-item>
+                <el-form-item label="名称">
+                    <el-input v-model="fundDataForm.fund_name"></el-input>
+                </el-form-item>
+                <el-form-item label="代码">
+                    <el-input v-model="fundDataForm.fund_code"></el-input>
+                </el-form-item>
+                <el-form-item label="规模">
+                    <el-input v-model="fundDataForm.fund_scale"></el-input>
+                </el-form-item>
+                <el-form-item label="回撤">
+                    <el-input v-model="fundDataForm.max_pullback"></el-input>
+                </el-form-item>
+                <el-form-item label="波动率">
+                    <el-input v-model="fundDataForm.volatility_value"></el-input>
+                </el-form-item>
+                <el-form-item label="最低次数">
+                    <el-input v-model="fundDataForm.min_holding_times"></el-input>
+                </el-form-item>
+                <el-form-item label="指数类型">
+                    <el-input v-model="fundDataForm.fund_type"></el-input>
+                </el-form-item>
+                <el-form-item label="分红净值">
+                    <el-input v-model="fundDataForm.bonus_net_worth"></el-input>
+                </el-form-item>
+                <el-form-item>
+                    <el-button type="primary" @click="onSubmit">立即创建</el-button>
+                    <el-button>取消</el-button>
+                </el-form-item>
+            </el-form>
+        </el-tab-pane>
+    </el-tabs>
+</div>
+</body>
+<!-- import Vue before Element -->
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<!-- import JavaScript -->
+<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+<script>
+    new Vue({
+        el: '#app',
+        data: function () {
+            return {
+                activeName: 'first',
+                tableData1: [],
+                tableData2: [],
+                tableData3:[
+                    {fund_value_0:"200",
+                    fund_value_1:"20",
+                    fund_value_2:"40",
+                    fund_value_3:"60",
+                    fund_value_4:"80",
+                    fund_value_5:"100",
+                    fund_value_6:"120",
+                    fund_value_7:"140",
+                    fund_value_8:"160",
+                    fund_value_9:"180",
+                    fund_value_10:"200",
+                    fund_value_11:"220",
+                    fund_value_12:"240",
+                    fund_value_13:"260",
+                    fund_value_14:"280",
+                    fund_value_15:"300",},
+                    {fund_value_0:"200",
+                        fund_value_1:"220",
+                        fund_value_2:"260",
+                        fund_value_3:"320",
+                        fund_value_4:"400",
+                        fund_value_5:"500",
+                        fund_value_6:"620",
+                        fund_value_7:"760",
+                        fund_value_8:"920",
+                        fund_value_9:"1100",
+                        fund_value_10:"1300",
+                        fund_value_11:"1520",
+                        fund_value_12:"1760",
+                        fund_value_13:"2020",
+                        fund_value_14:"2300",
+                        fund_value_15:"2500",},
+                    {fund_value_0:"",
+                        fund_value_1:"",
+                        fund_value_2:"",
+                        fund_value_3:"",
+                        fund_value_4:"",
+                        fund_value_5:"",
+                        fund_value_6:"",
+                        fund_value_7:"",
+                        fund_value_8:"",
+                        fund_value_9:"",
+                        fund_value_10:"",
+                        fund_value_11:"",
+                        fund_value_12:"",
+                        fund_value_13:"",
+                        fund_value_14:"",
+                        fund_value_15:"",},
+                    {fund_value_0:"2800",
+                        fund_value_1:"100",
+                        fund_value_2:"200",
+                        fund_value_3:"300",
+                        fund_value_4:"400",
+                        fund_value_5:"500",
+                        fund_value_6:"600",
+                        fund_value_7:"700",
+                        fund_value_8:"800",
+                        fund_value_9:"900",
+                        fund_value_10:"1000",
+                        fund_value_11:"1100",
+                        fund_value_12:"1200",
+                        fund_value_13:"1300",
+                        fund_value_14:"1400",
+                        fund_value_15:"1500",},
+                    {fund_value_0:"2800",
+                        fund_value_1:"2900",
+                        fund_value_2:"3100",
+                        fund_value_3:"3400",
+                        fund_value_4:"3800",
+                        fund_value_5:"4300",
+                        fund_value_6:"4900",
+                        fund_value_7:"5600",
+                        fund_value_8:"6400",
+                        fund_value_9:"7300",
+                        fund_value_10:"8300",
+                        fund_value_11:"9400",
+                        fund_value_12:"10600",
+                        fund_value_13:"11900",
+                        fund_value_14:"13300",
+                        fund_value_15:"14800",},
+                ],
+                fundDataForm:{}
+            }
+        },
+        created() {
+
+            this.getFundLevelTable();
+            this.getFundInfoInvestmentList();
+        },
+        methods: {
+
+            onSubmit(){
+                let that = this;
+                axios.post('/fund/addFundData',this.fundDataForm)
+                    .then(function (res) {
+
+                        that.$message.success(JSON.stringify(res.data.msg));
+                    })
+                    .catch(function (error) {
+                        console.log(error);
+                    });
+            },
+
+            //投资整理
+
+            getFundInfoInvestmentList() {
+                let that = this;
+                axios.get('/fund/findFundInfoInvestmentList')
+                    .then(function (res) {
+                        console.log(res);
+                        that.tableData1 = res.data.data;
+                    })
+                    .catch(function (error) {
+                        console.log(error);
+                    });
+            },
+
+            //利率划定
+            getFundLevelTable() {
+                let that = this;
+                axios.get('/fund/findFundInfoListType')
+                    .then(function (res) {
+                        console.log(res);
+                        that.tableData2 = res.data.data;
+                    })
+                    .catch(function (error) {
+                        console.log(error);
+                    });
+            },
+            //百分比
+            formatPercentage(row, column) {
+                return (row.volatility_value * 100).toFixed(2) + "%";
+            },
+            formatPercentage2(row, column) {
+                return (row.max_pullback * 100).toFixed(2) + "%";
+            },
+            // 日期格式化
+            dateFormatter(row, column) {
+                return row.max_net_worth_date.substring(0, 10);
+            },
+        }
+    })
+</script>
+</html>

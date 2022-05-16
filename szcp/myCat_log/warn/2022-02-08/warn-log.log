@@ -1,0 +1,69 @@
+[WARN ] 00:01:57.366 [http-nio-7071-exec-3] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+[WARN ] 00:02:29.812 [http-nio-7071-exec-4] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+[WARN ] 00:03:26.694 [http-nio-7071-exec-7] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+[WARN ] 00:04:37.105 [http-nio-7071-exec-8] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+[WARN ] 00:04:56.846 [http-nio-7071-exec-7] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+[WARN ] 00:05:29.951 [http-nio-7071-exec-8] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+[WARN ] 00:09:05.199 [main] o.t.templatemode.TemplateMode - [THYMELEAF][main] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+[WARN ] 00:09:13.990 [http-nio-7071-exec-4] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+[WARN ] 00:10:37.617 [main] o.s.b.t.j.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer - 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/E:/mavenPor/org/json/json/20170516/json-20170516.jar!/org/json/JSONObject.class
+	jar:file:/E:/mavenPor/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+[WARN ] 00:10:41.784 [main] o.t.templatemode.TemplateMode - [THYMELEAF][main] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+[WARN ] 11:52:52.803 [main] o.t.templatemode.TemplateMode - [THYMELEAF][main] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+[WARN ] 11:53:24.193 [http-nio-7071-exec-2] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+[WARN ] 11:53:42.774 [http-nio-7071-exec-4] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+[WARN ] 11:54:35.108 [http-nio-7071-exec-10] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+[WARN ] 11:57:35.246 [http-nio-7071-exec-2] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+[WARN ] 11:58:39.038 [http-nio-7071-exec-5] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+[WARN ] 12:01:53.814 [main] o.t.templatemode.TemplateMode - [THYMELEAF][main] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+[WARN ] 12:03:01.818 [http-nio-7071-exec-4] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+[WARN ] 12:05:34.018 [http-nio-7071-exec-1] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+[WARN ] 12:06:08.020 [http-nio-7071-exec-10] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+[WARN ] 12:16:56.467 [main] o.t.templatemode.TemplateMode - [THYMELEAF][main] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+[WARN ] 12:17:11.397 [http-nio-7071-exec-5] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+[WARN ] 12:18:10.506 [main] o.t.templatemode.TemplateMode - [THYMELEAF][main] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+[WARN ] 12:19:34.077 [main] o.t.templatemode.TemplateMode - [THYMELEAF][main] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+[WARN ] 12:21:32.160 [http-nio-7071-exec-4] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+[WARN ] 12:21:53.174 [http-nio-7071-exec-8] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+[WARN ] 12:22:28.388 [main] o.t.templatemode.TemplateMode - [THYMELEAF][main] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+[WARN ] 12:23:09.873 [http-nio-7071-exec-7] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+[WARN ] 12:26:33.131 [http-nio-7071-exec-8] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+[WARN ] 12:27:26.324 [http-nio-7071-exec-5] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+[WARN ] 12:33:21.892 [http-nio-7071-exec-5] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+[WARN ] 12:33:33.044 [main] o.t.templatemode.TemplateMode - [THYMELEAF][main] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+[WARN ] 12:34:15.567 [http-nio-7071-exec-4] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+[WARN ] 13:57:18.499 [http-nio-7071-exec-8] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+[WARN ] 13:58:03.420 [http-nio-7071-exec-3] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+[WARN ] 14:13:00.089 [http-nio-7071-exec-3] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+[WARN ] 14:59:53.273 [http-nio-7071-exec-9] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+[WARN ] 15:04:10.429 [http-nio-7071-exec-8] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+[WARN ] 15:05:55.014 [http-nio-7071-exec-6] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+[WARN ] 17:38:53.938 [main] o.s.b.t.j.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer - 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/E:/mavenPor/org/json/json/20170516/json-20170516.jar!/org/json/JSONObject.class
+	jar:file:/E:/mavenPor/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+[WARN ] 17:39:00.288 [main] o.t.templatemode.TemplateMode - [THYMELEAF][main] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+[WARN ] 18:33:02.638 [main] o.t.templatemode.TemplateMode - [THYMELEAF][main] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+[WARN ] 18:37:21.331 [main] o.t.templatemode.TemplateMode - [THYMELEAF][main] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+[WARN ] 18:38:19.084 [main] o.s.b.t.j.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer - 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/E:/mavenPor/org/json/json/20170516/json-20170516.jar!/org/json/JSONObject.class
+	jar:file:/E:/mavenPor/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+[WARN ] 18:38:25.807 [main] o.t.templatemode.TemplateMode - [THYMELEAF][main] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.

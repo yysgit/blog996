@@ -1,0 +1,20 @@
+[WARN ] 22:25:34.250 [main] o.t.templatemode.TemplateMode - [THYMELEAF][main] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+[WARN ] 22:26:48.222 [http-nio-7071-exec-2] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+[WARN ] 23:39:58.028 [main] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'adminController': Unsatisfied dependency expressed through field 'adminService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'adminUserServiceImpl': Unsatisfied dependency expressed through field 'adminUserMapper'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'dbAdminUserMapper' defined in file [E:\MyGithubProject\blog996\szcp\target\classes\com\yys\szcp\mapper\DbAdminUserMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [E:\MyGithubProject\blog996\szcp\target\classes\mapper\TFundInfoMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. Cause: java.lang.IllegalArgumentException: Mapped Statements collection already contains value for com.yys.szcp.mapper.TFundInfoMapper.findFundInfoList
+[WARN ] 23:40:36.439 [main] o.t.templatemode.TemplateMode - [THYMELEAF][main] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+[WARN ] 23:40:41.148 [http-nio-7071-exec-2] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+[WARN ] 23:40:53.497 [http-nio-7071-exec-4] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+[WARN ] 23:41:14.161 [http-nio-7071-exec-7] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+[WARN ] 23:41:23.168 [http-nio-7071-exec-3] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+[WARN ] 23:42:02.996 [http-nio-7071-exec-6] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+[WARN ] 23:42:32.035 [main] o.t.templatemode.TemplateMode - [THYMELEAF][main] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+[WARN ] 23:42:53.340 [http-nio-7071-exec-3] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+[WARN ] 23:44:30.008 [main] o.t.templatemode.TemplateMode - [THYMELEAF][main] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+[WARN ] 23:44:37.000 [http-nio-7071-exec-3] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+[WARN ] 23:45:52.604 [http-nio-7071-exec-8] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+[WARN ] 23:47:58.449 [main] o.t.templatemode.TemplateMode - [THYMELEAF][main] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+[WARN ] 23:48:44.746 [http-nio-7071-exec-3] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+[WARN ] 23:49:36.377 [main] o.t.templatemode.TemplateMode - [THYMELEAF][main] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+[WARN ] 23:50:01.265 [http-nio-7071-exec-5] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+[WARN ] 23:53:43.367 [http-nio-7071-exec-8] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+[WARN ] 23:54:05.366 [http-nio-7071-exec-1] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico

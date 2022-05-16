@@ -1,0 +1,111 @@
+[INFO ] 20:37:42.930 [main] com.yys.szcp.SzcpApplication - Starting SzcpApplication on LAPTOP-T7DEB7H8 with PID 21928 (E:\MyGithubProject\blog996\szcp\target\classes started by yangys in E:\MyGithubProject\blog996\szcp)
+[INFO ] 20:37:42.931 [main] com.yys.szcp.SzcpApplication - The following profiles are active: dev
+[INFO ] 20:37:43.831 [main] o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+[INFO ] 20:37:43.834 [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+[INFO ] 20:37:43.863 [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 10ms. Found 0 Redis repository interfaces.
+[INFO ] 20:37:44.128 [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] 20:37:44.424 [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 7071 (http)
+[INFO ] 20:37:44.432 [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-7071"]
+[INFO ] 20:37:44.434 [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+[INFO ] 20:37:44.434 [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.30]
+[INFO ] 20:37:44.560 [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[INFO ] 20:37:44.561 [main] o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1590 ms
+[INFO ] 20:37:44.706 [main] o.s.b.web.servlet.RegistrationBean - Servlet statViewServlet was not registered (possibly already registered?)
+[INFO ] 20:37:44.710 [main] o.s.b.web.servlet.RegistrationBean - Filter webStatFilter was not registered (possibly already registered?)
+[INFO ] 20:37:45.757 [main] c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+[INFO ] 20:37:46.266 [main] s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+[INFO ] 20:37:46.575 [main] o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+[INFO ] 20:37:46.806 [main] o.s.s.c.ThreadPoolTaskScheduler - Initializing ExecutorService 'taskScheduler'
+[INFO ] 20:37:46.838 [main] s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+[INFO ] 20:37:46.875 [main] s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+[INFO ] 20:37:46.907 [main] s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+[INFO ] 20:37:47.206 [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-7071"]
+[INFO ] 20:37:47.226 [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 7071 (http) with context path ''
+[INFO ] 20:37:47.228 [main] com.yys.szcp.SzcpApplication - Started SzcpApplication in 4.64 seconds (JVM running for 6.229)
+[INFO ] 20:38:06.369 [http-nio-7071-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO ] 20:38:06.369 [http-nio-7071-exec-1] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[INFO ] 20:38:06.375 [http-nio-7071-exec-1] o.s.web.servlet.DispatcherServlet - Completed initialization in 6 ms
+[INFO ] 20:38:06.393 [http-nio-7071-exec-1] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/
+[INFO ] 20:38:06.396 [http-nio-7071-exec-1] c.yys.szcp.config.jwt.JwtInterceptor - ===== 用户未登录, 请先登录:/
+[INFO ] 20:38:06.953 [http-nio-7071-exec-2] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/error
+[INFO ] 20:38:06.954 [http-nio-7071-exec-2] c.yys.szcp.config.jwt.JwtInterceptor - ===== 用户未登录, 请先登录:/error
+[INFO ] 20:38:18.651 [http-nio-7071-exec-3] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/fund/index
+[INFO ] 20:38:20.403 [http-nio-7071-exec-4] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/fund/getFundDataListOne
+[INFO ] 20:38:24.457 [http-nio-7071-exec-5] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/fund/getFundDataListOne
+[INFO ] 20:38:27.124 [http-nio-7071-exec-6] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/fund/getFundDataListOne
+[INFO ] 20:38:30.210 [http-nio-7071-exec-7] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/fund/getFundDataListOne
+[INFO ] 20:38:54.474 [http-nio-7071-exec-8] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/fund/getFundDataListOne
+[INFO ] 20:38:58.161 [http-nio-7071-exec-9] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/fund/getFundDataListOne
+[INFO ] 20:39:40.633 [http-nio-7071-exec-1] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/fund/getFundDataListOne
+[INFO ] 20:40:19.642 [http-nio-7071-exec-2] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/fund/index
+[INFO ] 20:40:21.450 [http-nio-7071-exec-3] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/fund/getFundDataListOne
+[INFO ] 20:40:26.682 [http-nio-7071-exec-4] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/fund/getFundDataListOne
+[INFO ] 20:40:31.154 [http-nio-7071-exec-5] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/fund/getFundDataListOne
+[INFO ] 20:40:34.026 [http-nio-7071-exec-6] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/fund/getFundDataListOne
+[INFO ] 20:40:58.997 [http-nio-7071-exec-7] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/fund/getFundDataListOne
+[INFO ] 20:41:02.953 [http-nio-7071-exec-8] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/fund/getFundDataListOne
+[INFO ] 20:41:11.208 [http-nio-7071-exec-9] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/fund/getFundDataListOne
+[INFO ] 20:47:40.019 [http-nio-7071-exec-2] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/fund/index
+[INFO ] 20:47:42.123 [http-nio-7071-exec-3] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/fund/getFundDataListOne
+[INFO ] 20:47:50.536 [http-nio-7071-exec-4] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/fund/getFundDataListOne
+[INFO ] 20:47:52.360 [http-nio-7071-exec-5] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/fund/getFundDataListOne
+[INFO ] 20:51:03.489 [http-nio-7071-exec-8] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/fund/index
+[INFO ] 20:51:04.427 [http-nio-7071-exec-9] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/fund/getFundDataListOne
+[INFO ] 20:52:31.179 [http-nio-7071-exec-2] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/fund/getFundDataListOne
+[INFO ] 20:52:34.008 [http-nio-7071-exec-3] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/fund/getFundDataListOne
+[INFO ] 20:52:37.729 [http-nio-7071-exec-4] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/fund/getFundDataListOne
+[INFO ] 20:52:38.856 [http-nio-7071-exec-5] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/fund/getFundDataListOne
+[INFO ] 20:52:41.127 [http-nio-7071-exec-6] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/fund/getFundDataListOne
+[INFO ] 20:52:44.497 [http-nio-7071-exec-7] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/fund/getFundDataListOne
+[INFO ] 20:52:46.768 [http-nio-7071-exec-8] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/fund/getFundDataListOne
+[INFO ] 20:52:48.311 [http-nio-7071-exec-9] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/fund/getFundDataListOne
+[INFO ] 20:52:50.759 [http-nio-7071-exec-10] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/fund/getFundDataListOne
+[INFO ] 20:52:52.897 [http-nio-7071-exec-1] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/fund/getFundDataListOne
+[INFO ] 20:52:55.415 [http-nio-7071-exec-2] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/fund/getFundDataListOne
+[INFO ] 20:53:14.576 [http-nio-7071-exec-3] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/fund/getFundDataListOne
+[INFO ] 20:53:21.701 [http-nio-7071-exec-4] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/fund/index
+[INFO ] 20:53:23.578 [http-nio-7071-exec-5] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/fund/getFundDataListOne
+[INFO ] 20:53:37.432 [http-nio-7071-exec-6] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/fund/getFundDataListOne
+[INFO ] 20:53:41.287 [http-nio-7071-exec-7] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/fund/getFundDataListOne
+[INFO ] 20:53:44.040 [http-nio-7071-exec-8] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/fund/getFundDataListOne
+[INFO ] 20:53:44.975 [http-nio-7071-exec-9] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/fund/getFundDataListOne
+[INFO ] 20:53:47.561 [http-nio-7071-exec-10] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/fund/getFundDataListOne
+[INFO ] 20:53:50.727 [http-nio-7071-exec-1] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/fund/getFundDataListOne
+[INFO ] 20:53:51.743 [http-nio-7071-exec-2] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/fund/getFundDataListOne
+[INFO ] 20:53:52.404 [http-nio-7071-exec-3] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/fund/getFundDataListOne
+[INFO ] 20:53:53.625 [http-nio-7071-exec-4] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/fund/getFundDataListOne
+[INFO ] 20:53:55.623 [http-nio-7071-exec-5] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/fund/getFundDataListOne
+[INFO ] 20:53:56.863 [http-nio-7071-exec-6] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/fund/getFundDataListOne
+[INFO ] 20:53:59.649 [http-nio-7071-exec-7] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/fund/getFundDataListOne
+[INFO ] 20:54:30.560 [http-nio-7071-exec-9] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/fund/getFundDataListOne
+[INFO ] 20:54:32.296 [http-nio-7071-exec-10] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/fund/getFundDataListOne
+[INFO ] 20:54:35.593 [http-nio-7071-exec-1] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/fund/getFundDataListOne
+[INFO ] 20:54:38.064 [http-nio-7071-exec-2] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/fund/getFundDataListOne
+[INFO ] 20:55:02.424 [http-nio-7071-exec-3] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/fund/getFundDataListOne
+[INFO ] 20:55:18.728 [http-nio-7071-exec-4] c.yys.szcp.config.jwt.JwtInterceptor - 访问路径:/fund/getFundDataListOne
+[INFO ] 20:55:48.752 [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler - Shutting down ExecutorService 'taskScheduler'
+[INFO ] 20:55:48.754 [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+[INFO ] 20:55:48.790 [SpringContextShutdownHook] c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+[INFO ] 20:56:31.446 [main] o.s.b.t.c.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.yys.szcp.SzcpApplicationTests], using SpringBootContextLoader
+[INFO ] 20:56:31.451 [main] o.s.t.c.s.AbstractContextLoader - Could not detect default resource locations for test class [com.yys.szcp.SzcpApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+[INFO ] 20:56:31.451 [main] o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.yys.szcp.SzcpApplicationTests]: SzcpApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+[INFO ] 20:56:31.539 [main] o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.yys.szcp.SzcpApplication for test class com.yys.szcp.SzcpApplicationTests
+[INFO ] 20:56:31.624 [main] o.s.b.t.c.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+[INFO ] 20:56:31.641 [main] o.s.b.t.c.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@420a85c4, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@1c39680d, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@62833051, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@1c852c0f, org.springframework.test.context.support.DirtiesContextTestExecutionListener@a37aefe, org.springframework.test.context.transaction.TransactionalTestExecutionListener@5d99c6b5, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@266374ef, org.springframework.test.context.event.EventPublishingTestExecutionListener@13b3d178, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@24c4ddae, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@37fb0bed, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@a82c5f1, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@7b7fdc8, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@51c693d]
+[INFO ] 20:56:32.009 [main] com.yys.szcp.SzcpApplicationTests - Starting SzcpApplicationTests on LAPTOP-T7DEB7H8 with PID 41604 (started by yangys in E:\MyGithubProject\blog996\szcp)
+[INFO ] 20:56:32.010 [main] com.yys.szcp.SzcpApplicationTests - The following profiles are active: dev
+[INFO ] 20:56:32.822 [main] o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+[INFO ] 20:56:32.825 [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+[INFO ] 20:56:32.852 [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 11ms. Found 0 Redis repository interfaces.
+[INFO ] 20:56:33.287 [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] 20:56:34.587 [main] c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+[INFO ] 20:56:35.574 [main] s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+[INFO ] 20:56:36.311 [main] o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+[INFO ] 20:56:36.710 [main] o.s.s.c.ThreadPoolTaskScheduler - Initializing ExecutorService 'taskScheduler'
+[INFO ] 20:56:36.770 [main] s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+[INFO ] 20:56:36.798 [main] s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+[INFO ] 20:56:36.830 [main] s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+[INFO ] 20:56:37.386 [main] com.yys.szcp.SzcpApplicationTests - Started SzcpApplicationTests in 5.706 seconds (JVM running for 6.64)
+[INFO ] 20:56:37.600 [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler - Shutting down ExecutorService 'taskScheduler'
+[INFO ] 20:56:37.601 [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+[INFO ] 20:56:37.627 [SpringContextShutdownHook] c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed

@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.yys.szcp.mapper.FFundInfoMapper">
+
+    <!--查询所有基金信息-->
+    <select id="findFundInfoList" resultType="java.util.Map" parameterType="java.util.Map">
+        select ffi.*,ffl.*
+        from f_fund_info ffi
+        left join f_fund_level ffl on ffl.fund_info_code=ffi.fund_code
+        order by ffi.sort
+
+    </select>
+
+
+    <select id="findFundInfoByCode" resultType="java.util.Map" parameterType="java.util.Map">
+        select ffi.*,ffl.*
+        from f_fund_info ffi
+                 left join f_fund_level ffl on ffl.fund_info_code=ffi.fund_code
+        where ffi.fund_code=#{fundCode}
+        order by ffi.sort
+    </select>
+
+
+    <!--更新基金信息-->
+    <update id="updateFundInfoByCode" parameterType="java.util.Map">
+        update f_fund_info
+        set update_time = now()
+        ,max_net_worth_date = #{maxNetWorthDate}
+        ,max_net_worth = #{maxNetWorth}
+        ,due_amount = #{dueAmount}
+        where fund_code = #{fundCode}
+    </update>
+    <update id="updateFundInfoNetWorthByCode" parameterType="java.util.Map">
+        update f_fund_info
+        set update_time = now()
+          ,front_net_worth = #{frontNetWorth}
+          ,behind_net_worth = #{behindNetWorth}
+        where fund_code = #{fundCode}
+    </update>
+
+    <insert id="addFundDay" parameterType="java.util.Map">
+        insert into f_fund_day (fund_info_code, fund_day, now_holding_times,investment_amount)
+        values (#{fundCode},#{fundDay},#{nowHoldingTimes},#{investmentAmount});
+    </insert>
+    <update id="updateFundDay" parameterType="java.util.Map">
+        update f_fund_day
+        set now_holding_times = #{nowHoldingTimes}
+          ,investment_amount = #{investmentAmount}
+        where fund_info_code = #{fundCode} and fund_day = #{fundDay}
+    </update>
+
+
+    <!--更新基金信息-->
+    <insert id="addFundNetWorth" parameterType="java.util.Map">
+        insert into f_fund_net_worth (fund_info_code, fund_day, fund_net_worth)
+        values (#{fundCode},#{fundDay},#{fundNetWorth});
+    </insert>
+    <!--更新基金信息-->
+    <update id="updateFundNetWorth" parameterType="java.util.Map">
+        update f_fund_net_worth
+        set fund_net_worth = #{fundNetWorth}
+        where fund_info_code = #{fundCode} and fund_day = #{fundDay}
+    </update>
+
+    <!--查询所有基金信息-->
+    <select id="findFundInfoInvestmentList" resultType="java.util.Map" parameterType="java.util.Map">
+        select ffi.*,
+               ffd1.now_holding_times as now_holding_times1,
+               ffd1.yield as yield1,
+               ffd1.investment_amount as investment_amount1,
+               #{fundday1} as fund_day1,
+               ffd2.now_holding_times as now_holding_times2,
+               ffd2.yield as yield2,
+               ffd2.investment_amount as investment_amount2,
+               #{fundday2} as fund_day2,
+               ffd3.now_holding_times as now_holding_times3,
+               ffd3.yield as yield3,
+               ffd3.investment_amount as investment_amount3,
+               #{fundday3} as fund_day3,
+               ffd4.now_holding_times as now_holding_times4,
+               ffd4.yield as yield4,
+               ffd4.investment_amount as investment_amount4,
+               #{fundday4} as fund_day4,
+               ffd5.now_holding_times as now_holding_times5,
+               ffd5.yield as yield5,
+               ffd5.investment_amount as investment_amount5,
+               #{fundday5} as fund_day5,
+               ffd6.now_holding_times as now_holding_times6,
+               ffd6.yield as yield6,
+               ffd6.investment_amount as investment_amount6,
+               #{fundday6} as fund_day6,
+               ffd7.now_holding_times as now_holding_times7,
+               ffd7.yield as yield7,
+               ffd7.investment_amount as investment_amount7,
+               #{fundday7} as fund_day7,
+               ffd8.now_holding_times as now_holding_times8,
+               ffd8.yield as yield8,
+               ffd8.investment_amount as investment_amount8,
+               #{fundday8} as fund_day8,
+               ffd9.now_holding_times as now_holding_times9,
+               ffd9.yield as yield9,
+               ffd9.investment_amount as investment_amount9,
+               #{fundday9} as fund_day9,
+               ffd10.now_holding_times as now_holding_times10,
+               ffd10.yield as yield10,
+               ffd10.investment_amount as investment_amount10,
+               #{fundday10} as fund_day10,
+               ffnw1.fund_net_worth as fund_net_worth1,
+               ffnw2.fund_net_worth as fund_net_worth2,
+               ffnw3.fund_net_worth  as fund_net_worth3,
+               ffnw4.fund_net_worth  as fund_net_worth4,
+               ffnw5.fund_net_worth  as fund_net_worth5,
+               ffnw6.fund_net_worth  as fund_net_worth6,
+               ffnw7.fund_net_worth  as fund_net_worth7,
+               ffnw8.fund_net_worth  as fund_net_worth8,
+               ffnw9.fund_net_worth  as fund_net_worth9,
+               ffnw10.fund_net_worth as fund_net_worth10
+
+        from f_fund_info ffi
+                 left join f_fund_day ffd1 on ffd1.fund_info_code=ffi.fund_code and ffd1.fund_day=#{fundday1}
+                 left join f_fund_day ffd2 on ffd2.fund_info_code=ffi.fund_code and ffd2.fund_day=#{fundday2}
+                 left join f_fund_day ffd3 on ffd3.fund_info_code=ffi.fund_code and ffd3.fund_day=#{fundday3}
+                 left join f_fund_day ffd4 on ffd4.fund_info_code=ffi.fund_code and ffd4.fund_day=#{fundday4}
+                 left join f_fund_day ffd5 on ffd5.fund_info_code=ffi.fund_code and ffd5.fund_day=#{fundday5}
+                 left join f_fund_day ffd6 on ffd6.fund_info_code=ffi.fund_code and ffd6.fund_day=#{fundday6}
+                 left join f_fund_day ffd7 on ffd7.fund_info_code=ffi.fund_code and ffd7.fund_day=#{fundday7}
+                 left join f_fund_day ffd8 on ffd8.fund_info_code=ffi.fund_code and ffd8.fund_day=#{fundday8}
+                 left join f_fund_day ffd9 on ffd9.fund_info_code=ffi.fund_code and ffd9.fund_day=#{fundday9}
+                 left join f_fund_day ffd10 on ffd10.fund_info_code=ffi.fund_code and ffd10.fund_day=#{fundday10}
+                 left join f_fund_net_worth ffnw1 on ffnw1.fund_info_code=ffi.fund_code and ffnw1.fund_day=#{fundday1}
+                 left join f_fund_net_worth ffnw2 on ffnw2.fund_info_code=ffi.fund_code and ffnw2.fund_day=#{fundday2}
+                 left join f_fund_net_worth ffnw3 on ffnw3.fund_info_code=ffi.fund_code and ffnw3.fund_day=#{fundday3}
+                 left join f_fund_net_worth ffnw4 on ffnw4.fund_info_code=ffi.fund_code and ffnw4.fund_day=#{fundday4}
+                 left join f_fund_net_worth ffnw5 on ffnw5.fund_info_code=ffi.fund_code and ffnw5.fund_day=#{fundday5}
+                 left join f_fund_net_worth ffnw6 on ffnw6.fund_info_code=ffi.fund_code and ffnw6.fund_day=#{fundday6}
+                 left join f_fund_net_worth ffnw7 on ffnw7.fund_info_code=ffi.fund_code and ffnw7.fund_day=#{fundday7}
+                 left join f_fund_net_worth ffnw8 on ffnw8.fund_info_code=ffi.fund_code and ffnw8.fund_day=#{fundday8}
+                 left join f_fund_net_worth ffnw9 on ffnw9.fund_info_code=ffi.fund_code and ffnw9.fund_day=#{fundday9}
+                 left join f_fund_net_worth ffnw10 on ffnw10.fund_info_code=ffi.fund_code and ffnw10.fund_day=#{fundday10}
+
+        order by ffi.fund_type, ffi.sort
+    </select>
+
+    <!--添加基金信息-->
+    <insert id="addFundLevel" parameterType="java.util.Map">
+        insert into f_fund_level (fund_info_code, level1, level2,
+                                  level3,
+                                  level4, level5, level6, level7,
+                                  level8, level9, level10, level11, level12,
+                                  level13,
+                                  level14, level15, level16, level17,
+                                  level18, level19, level20)
+        values (#{fundInfoCode},#{level1},#{level2}, #{level3}, #{level4}, #{level5}, #{level6},
+                #{level7}, #{level8}, #{level9}, #{level10},#{level11},#{level12}, #{level13}, #{level14}, #{level15}, #{level16},
+                #{level17}, #{level18}, #{level19}, #{level20});
+
+    </insert>
+
+    <!--更新基金信息-->
+    <update id="updateFundLevel" parameterType="java.util.Map">
+        update f_fund_level
+        set level1 = #{level1}
+        , level2 = #{level2}
+        , level3 = #{level3}
+        , level4 = #{level4}
+        , level5 = #{level5}
+        , level6 = #{level6}
+        , level7 = #{level7}
+        , level8 = #{level8}
+        , level9 = #{level9}
+        , level10 = #{level10}
+        , level11= #{level11}
+        , level12 = #{level12}
+        , level13= #{level13}
+        , level14 = #{level14}
+        , level15 = #{level15}
+        , level16 = #{level16}
+        , level17 = #{level17}
+        , level18 = #{level18}
+        , level19 = #{level19}
+        , level20 = #{level20}
+        where fund_info_code = #{fundInfoCode}
+    </update>
+
+</mapper>

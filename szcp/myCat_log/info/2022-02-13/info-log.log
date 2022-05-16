@@ -1,0 +1,50 @@
+[INFO ] 07:51:09.612 [main] o.s.b.t.c.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.yys.szcp.SzcpApplicationTests], using SpringBootContextLoader
+[INFO ] 07:51:09.616 [main] o.s.t.c.s.AbstractContextLoader - Could not detect default resource locations for test class [com.yys.szcp.SzcpApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+[INFO ] 07:51:09.617 [main] o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.yys.szcp.SzcpApplicationTests]: SzcpApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+[INFO ] 07:51:09.696 [main] o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.yys.szcp.SzcpApplication for test class com.yys.szcp.SzcpApplicationTests
+[INFO ] 07:51:09.767 [main] o.s.b.t.c.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+[INFO ] 07:51:09.781 [main] o.s.b.t.c.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@420a85c4, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@1c39680d, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@62833051, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@1c852c0f, org.springframework.test.context.support.DirtiesContextTestExecutionListener@a37aefe, org.springframework.test.context.transaction.TransactionalTestExecutionListener@5d99c6b5, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@266374ef, org.springframework.test.context.event.EventPublishingTestExecutionListener@13b3d178, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@24c4ddae, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@37fb0bed, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@a82c5f1, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@7b7fdc8, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@51c693d]
+[INFO ] 07:51:10.095 [main] com.yys.szcp.SzcpApplicationTests - Starting SzcpApplicationTests on LAPTOP-T7DEB7H8 with PID 28576 (started by yangys in E:\MyGithubProject\blog996\szcp)
+[INFO ] 07:51:10.096 [main] com.yys.szcp.SzcpApplicationTests - The following profiles are active: dev
+[INFO ] 07:51:10.894 [main] o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+[INFO ] 07:51:10.897 [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+[INFO ] 07:51:10.924 [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 11ms. Found 0 Redis repository interfaces.
+[INFO ] 07:51:11.353 [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] 07:51:12.638 [main] c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+[INFO ] 07:51:13.566 [main] s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+[INFO ] 07:51:14.356 [main] o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+[INFO ] 07:51:14.928 [main] o.s.s.c.ThreadPoolTaskScheduler - Initializing ExecutorService 'taskScheduler'
+[INFO ] 07:51:14.989 [main] s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+[INFO ] 07:51:15.016 [main] s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+[INFO ] 07:51:15.060 [main] s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+[INFO ] 07:51:15.848 [main] com.yys.szcp.SzcpApplicationTests - Started SzcpApplicationTests in 6.033 seconds (JVM running for 6.889)
+[INFO ] 07:51:16.085 [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler - Shutting down ExecutorService 'taskScheduler'
+[INFO ] 07:51:16.086 [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+[INFO ] 07:51:16.111 [SpringContextShutdownHook] c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+[INFO ] 08:39:18.443 [main] com.yys.szcp.SzcpApplication - Starting SzcpApplication on LAPTOP-T7DEB7H8 with PID 26464 (E:\MyGithubProject\blog996\szcp\target\classes started by yangys in E:\MyGithubProject\blog996\szcp)
+[INFO ] 08:39:18.444 [main] com.yys.szcp.SzcpApplication - The following profiles are active: dev
+[INFO ] 08:39:19.380 [main] o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+[INFO ] 08:39:19.382 [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+[INFO ] 08:39:19.410 [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 11ms. Found 0 Redis repository interfaces.
+[INFO ] 08:39:19.693 [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] 08:39:19.954 [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 7071 (http)
+[INFO ] 08:39:19.961 [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-7071"]
+[INFO ] 08:39:19.962 [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+[INFO ] 08:39:19.962 [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.30]
+[INFO ] 08:39:20.078 [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[INFO ] 08:39:20.078 [main] o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1596 ms
+[INFO ] 08:39:20.148 [main] o.s.b.web.servlet.RegistrationBean - Servlet statViewServlet was not registered (possibly already registered?)
+[INFO ] 08:39:20.151 [main] o.s.b.web.servlet.RegistrationBean - Filter webStatFilter was not registered (possibly already registered?)
+[INFO ] 08:39:21.119 [main] c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+[INFO ] 08:39:21.561 [main] s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+[INFO ] 08:39:21.857 [main] o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+[INFO ] 08:39:22.069 [main] o.s.s.c.ThreadPoolTaskScheduler - Initializing ExecutorService 'taskScheduler'
+[INFO ] 08:39:22.100 [main] s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+[INFO ] 08:39:22.128 [main] s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+[INFO ] 08:39:22.156 [main] s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+[INFO ] 08:39:22.454 [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-7071"]
+[INFO ] 08:39:22.473 [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 7071 (http) with context path ''
+[INFO ] 08:39:22.475 [main] com.yys.szcp.SzcpApplication - Started SzcpApplication in 4.382 seconds (JVM running for 5.796)
+[INFO ] 12:01:25.337 [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler - Shutting down ExecutorService 'taskScheduler'
+[INFO ] 12:01:25.339 [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+[INFO ] 12:01:25.370 [SpringContextShutdownHook] c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed

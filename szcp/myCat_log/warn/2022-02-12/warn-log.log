@@ -1,0 +1,40 @@
+[WARN ] 09:44:40.673 [main] o.t.templatemode.TemplateMode - [THYMELEAF][main] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+[WARN ] 09:49:56.382 [http-nio-7071-exec-1] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+[WARN ] 09:51:06.347 [http-nio-7071-exec-7] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+[WARN ] 10:06:23.419 [main] o.t.templatemode.TemplateMode - [THYMELEAF][main] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+[WARN ] 10:06:33.009 [http-nio-7071-exec-5] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+[WARN ] 10:08:47.356 [http-nio-7071-exec-10] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+[WARN ] 10:10:31.479 [http-nio-7071-exec-6] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+[WARN ] 10:12:30.387 [http-nio-7071-exec-2] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+[WARN ] 10:17:13.564 [http-nio-7071-exec-8] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+[WARN ] 10:17:35.616 [http-nio-7071-exec-1] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+[WARN ] 10:17:52.594 [http-nio-7071-exec-4] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+[WARN ] 10:18:05.013 [http-nio-7071-exec-9] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+[WARN ] 10:18:43.198 [http-nio-7071-exec-3] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+[WARN ] 10:20:32.366 [http-nio-7071-exec-10] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+[WARN ] 10:20:49.232 [http-nio-7071-exec-5] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+[WARN ] 10:21:05.024 [http-nio-7071-exec-7] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+[WARN ] 10:22:09.113 [http-nio-7071-exec-5] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+[WARN ] 10:22:38.040 [http-nio-7071-exec-7] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+[WARN ] 10:24:10.921 [http-nio-7071-exec-2] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+[WARN ] 10:24:59.661 [http-nio-7071-exec-6] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+[WARN ] 10:31:10.057 [http-nio-7071-exec-8] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+[WARN ] 10:32:42.420 [http-nio-7071-exec-2] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+[WARN ] 10:46:16.185 [http-nio-7071-exec-4] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+[WARN ] 10:51:40.062 [http-nio-7071-exec-2] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+[WARN ] 10:56:20.154 [http-nio-7071-exec-10] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+[WARN ] 10:56:33.927 [http-nio-7071-exec-8] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+[WARN ] 11:49:23.180 [http-nio-7071-exec-9] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+[WARN ] 11:54:42.399 [http-nio-7071-exec-2] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+[WARN ] 11:58:49.118 [http-nio-7071-exec-9] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+[WARN ] 16:18:50.874 [main] o.s.b.t.j.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer - 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/E:/mavenPor/org/json/json/20170516/json-20170516.jar!/org/json/JSONObject.class
+	jar:file:/E:/mavenPor/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+[WARN ] 16:18:55.438 [main] o.t.templatemode.TemplateMode - [THYMELEAF][main] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+[WARN ] 16:55:12.887 [main] o.t.templatemode.TemplateMode - [THYMELEAF][main] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.

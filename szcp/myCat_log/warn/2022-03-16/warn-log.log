@@ -1,0 +1,23 @@
+[WARN ] 12:20:21.593 [main] o.t.templatemode.TemplateMode - [THYMELEAF][main] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+[WARN ] 12:25:58.506 [http-nio-7071-exec-9] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+[WARN ] 13:18:46.515 [http-nio-7071-exec-6] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+[WARN ] 13:20:20.061 [http-nio-7071-exec-10] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+[WARN ] 13:55:59.643 [http-nio-7071-exec-2] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+[WARN ] 14:21:09.573 [http-nio-7071-exec-5] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+[WARN ] 14:29:32.812 [http-nio-7071-exec-1] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+[WARN ] 14:40:55.460 [http-nio-7071-exec-5] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+[WARN ] 14:44:14.954 [http-nio-7071-exec-4] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+[WARN ] 14:51:00.258 [http-nio-7071-exec-1] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+[WARN ] 14:53:17.318 [http-nio-7071-exec-3] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+[WARN ] 14:56:26.284 [http-nio-7071-exec-6] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+[WARN ] 15:08:45.506 [http-nio-7071-exec-3] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+[WARN ] 15:11:10.194 [main] o.s.b.t.j.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer - 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/E:/mavenPor/org/json/json/20170516/json-20170516.jar!/org/json/JSONObject.class
+	jar:file:/E:/mavenPor/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+[WARN ] 15:11:14.660 [main] o.t.templatemode.TemplateMode - [THYMELEAF][main] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
