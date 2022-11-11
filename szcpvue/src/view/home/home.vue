@@ -51,8 +51,8 @@ export default {
       inforCardData: [
         { title: '近周新增用户', icon: 'md-person-add', count: 0, color: '#2d8cf0' },
         { title: '平台总用户量', icon: 'ios-people', count: 0, color: '#19be6b' },
-        { title: '近周新增设备', icon: 'md-phone-portrait', count: 0, color: '#ff9900' },
-        { title: '平台总设备量', icon: 'md-phone-portrait', count: 0, color: '#ed3f14' },
+        { title: '近周文章设备', icon: 'md-phone-portrait', count: 0, color: '#ff9900' },
+        { title: '平台总文章量', icon: 'md-phone-portrait', count: 0, color: '#ed3f14' },
         { title: '近周新增订单', icon: 'md-chatbubbles', count: 0, color: '#E46CBB' },
         { title: '平台订单总金额', icon: 'logo-usd', count: 0, color: '#9A66E4' }
       ],
