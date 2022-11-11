@@ -152,7 +152,6 @@
       ...mapActions([
         'addOrganChild',
         'getOrganList',
-        'getArticleMenuList',
         'deleteOrganById',
         'editOrganById'
       ]),
@@ -162,7 +161,8 @@
 
       //获取页面菜单列表
       queryList(){
-        this.getArticleMenuList().then(res => {
+        this.getOrganList().then(res => {
+
 
           this.data=res.data;
           this.loadingTable=false;

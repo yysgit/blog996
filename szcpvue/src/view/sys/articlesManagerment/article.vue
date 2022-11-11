@@ -8,7 +8,7 @@
               <Tree :loading="loadingTable" :data="data1" @on-select-change="selectChange"></Tree>
             </div>
             <div slot="right" class="pane right-pane">
-              <!--添加用户-->
+              <!--添加文章-->
               <Button
                 v-if="buttonVerifAuthention('sys:article:addArticle')"
                 type="primary"
@@ -29,8 +29,8 @@
               ></Table>
               <Page :total="totalPage" show-total :styles="stylePage" @on-change="changePage" />
 
-              <!--添加用户-->
-              <Modal v-model="modalArticleAdd" title="添加用户" :mask-closable="false">
+              <!--添加文章-->
+              <Modal v-model="modalArticleAdd" title="添加文章" :mask-closable="false">
                 <Form
                   ref="formValidateArticleAdd"
                   :model="formValidateArticleAdd"
@@ -58,8 +58,8 @@
                 </div>
               </Modal>
 
-              <!--编辑用户-->
-              <Modal v-model="modalArticleEdit" title="编辑用户" :mask-closable="false">
+              <!--编辑文章-->
+              <Modal v-model="modalArticleEdit" title="编辑文章" :mask-closable="false">
                 <Form
                   ref="formValidateArticleEdit"
                   :model="formValidateArticleEdit"
@@ -561,7 +561,7 @@ export default {
       }
       this.modalArticleAdd = true;
     },
-    //添加用户表单提交
+    //添加文章表单提交
     addArticleButton() {
       this.formValidateArticleAdd.articleMenuId = this.articleMenuId;
       this.handleSubmit("formValidateArticleAdd");
