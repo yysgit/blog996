@@ -50,7 +50,7 @@ public class CustomGenerator {
         });*/
 
         dsc.setDriverName("com.mysql.cj.jdbc.Driver");
-        dsc.setUrl("jdbc:mysql://118.31.187.222:3306/fullstackdevelopment?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone = GMT");
+        dsc.setUrl("jdbc:mysql://localhost:3306/fullstackblog?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone = GMT");
         dsc.setUsername("root");
         dsc.setPassword("123456");
         mpg.setDataSource(dsc);
