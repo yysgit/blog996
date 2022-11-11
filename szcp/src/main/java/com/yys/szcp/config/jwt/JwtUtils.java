@@ -12,7 +12,7 @@ import java.util.Map;
 
 /**
  * JWT工具类
- * Created by Hilox on 2018/11/16 0016.
+ * Created by yys on 2018/11/16 0016.
  */
 public class JwtUtils {
     private static final Logger logger = LoggerFactory.getLogger(JwtUtils.class);

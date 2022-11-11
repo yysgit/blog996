@@ -1,7 +1,0 @@
-[ERROR] 00:07:15.779 [http-nio-7071-exec-3] c.y.s.controller.ArticleController - 查询基金信息错误: 
-### Error updating database.  Cause: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '002943' for key 'PRIMARY'
-### The error may involve com.yys.szcp.mapper.FFundInfoMapper.addFundLevel-Inline
-### The error occurred while setting parameters
-### SQL: insert into f_fund_level (fund_info_code, level1, level2,                                   level3,                                   level4, level5, level6, level7,                                   level8, level9, level10)         values (?,?,?, ?, ?, ?, ?,                 ?, ?, ?, ?);
-### Cause: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '002943' for key 'PRIMARY'
-; Duplicate entry '002943' for key 'PRIMARY'; nested exception is java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '002943' for key 'PRIMARY'

@@ -1,8 +1,0 @@
-[ERROR] 09:48:29.114 [http-nio-7071-exec-6] c.y.s.controller.ArticleController - 查询基金信息错误: null
-[ERROR] 09:48:34.063 [http-nio-7071-exec-9] c.y.s.controller.ArticleController - 查询基金信息错误: null
-[ERROR] 09:48:39.064 [http-nio-7071-exec-10] c.y.s.controller.ArticleController - 查询基金信息错误: null
-[ERROR] 09:48:44.037 [http-nio-7071-exec-2] c.y.s.controller.ArticleController - 查询基金信息错误: null
-[ERROR] 09:48:49.106 [http-nio-7071-exec-4] c.y.s.controller.ArticleController - 查询基金信息错误: null
-[ERROR] 09:48:54.094 [http-nio-7071-exec-6] c.y.s.controller.ArticleController - 查询基金信息错误: null
-[ERROR] 16:55:32.532 [http-nio-7071-exec-4] c.y.s.controller.ArticleController - 查询基金信息错误: null
-[ERROR] 16:57:57.674 [http-nio-7071-exec-10] c.y.s.controller.ArticleController - 查询基金信息错误: null

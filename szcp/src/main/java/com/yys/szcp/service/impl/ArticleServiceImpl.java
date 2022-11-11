@@ -25,8 +25,6 @@ public class ArticleServiceImpl implements TArticleService {
     @Value("${markdown-path}")
     private String markdownPath;
 
-    @Value("${projectHttp}")
-    private String projectHttp;
 
 
     @Override
